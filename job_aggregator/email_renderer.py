@@ -104,6 +104,28 @@ def _should_send(result: RunResult, config: AppConfig) -> bool:
     return config.email.send_empty_digest
 
 
+def _connect(resolved: ResolvedEmail):
+    """Open an SMTP connection with TLS established (SMTPS or STARTTLS) and log in."""
+    context = ssl.create_default_context()
+    if resolved.implicit_tls:  # SMTPS (e.g. port 465): TLS from the first byte
+        server = smtplib.SMTP_SSL(resolved.host, resolved.port, context=context, timeout=30)
+    else:
+        server = smtplib.SMTP(resolved.host, resolved.port, timeout=30)
+    if not resolved.implicit_tls and resolved.use_tls:  # STARTTLS (e.g. port 587)
+        server.starttls(context=context)
+    if resolved.user and resolved.password:
+        server.login(resolved.user, resolved.password)
+    return server
+
+
+def verify_login(resolved: ResolvedEmail) -> None:
+    """Connect + authenticate without sending — used by `doctor`. Raises on failure."""
+    if not resolved.deliverable:
+        raise ValueError("missing host, sender, or recipient")
+    with _connect(resolved):
+        pass
+
+
 def send_email(resolved: ResolvedEmail, subject: str, html: str, text: str) -> None:
     if not resolved.deliverable:
         raise ValueError(
@@ -118,16 +140,7 @@ def send_email(resolved: ResolvedEmail, subject: str, html: str, text: str) -> N
     message.attach(MIMEText(text, "plain", "utf-8"))
     message.attach(MIMEText(html, "html", "utf-8"))
 
-    context = ssl.create_default_context()
-    if resolved.implicit_tls:  # SMTPS (e.g. port 465): TLS from the first byte
-        server = smtplib.SMTP_SSL(resolved.host, resolved.port, context=context, timeout=30)
-    else:
-        server = smtplib.SMTP(resolved.host, resolved.port, timeout=30)
-    with server:
-        if not resolved.implicit_tls and resolved.use_tls:  # STARTTLS (e.g. port 587)
-            server.starttls(context=context)
-        if resolved.user and resolved.password:
-            server.login(resolved.user, resolved.password)
+    with _connect(resolved) as server:
         server.send_message(message)
     logger.info("Sent '{}' to {}", subject, resolved.recipient)
 

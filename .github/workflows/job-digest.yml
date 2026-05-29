@@ -16,11 +16,11 @@ name: Job Digest
 
 on:
   schedule:
-    # Once a day, in the morning. Cron is UTC — SET THIS to your local morning.
-    #   13:00 UTC = 8am US-Eastern (DST) / 9am EST · 6am US-Pacific (DST)
-    #   12:00 UTC = 7am Central (DST) · 1pm UK
-    # GitHub doesn't adjust for daylight saving and may delay scheduled runs a few minutes.
-    - cron: "0 13 * * *"
+    # Once a day in the morning, US Pacific. Cron is UTC and GitHub does NOT adjust for DST:
+    #   15:00 UTC = 8am PDT (Mar–Nov)  ·  7am PST (Nov–Mar)
+    # If you'd rather it always be 8am Pacific year-round, switch to "0 16 * * *" in winter.
+    # GitHub may also delay scheduled runs by a few minutes under load.
+    - cron: "0 15 * * *"
   workflow_dispatch: {}     # manual "Run workflow" button (test anytime)
 
 # Serialize runs so two of them can't write the state branch at once.
@@ -82,6 +82,7 @@ jobs:
           PROXY_URL: ${{ secrets.PROXY_URL }}   # optional; empty if unset
           STORAGE_BACKEND: repo
           STATE_DIR: .state
+          STATE_RETENTION_DAYS: "90"            # auto-prune seen jobs older than 90 days
         # Default shell is `bash -eo pipefail`, so a non-zero exit (all sources failed)
         # fails this step and turns the run red, while tee still captures the log.
         run: python job_aggregator.py run 2>&1 | tee run.log

@@ -9,6 +9,7 @@ logged, but the read/write path is identical either way.
 from __future__ import annotations
 
 import json
+from datetime import timedelta
 from pathlib import Path
 from typing import Iterable, Protocol, runtime_checkable
 
@@ -16,7 +17,7 @@ from loguru import logger
 
 from .config import Secrets
 from .models import Job
-from .util import now_utc
+from .util import now_utc, parse_iso
 
 
 @runtime_checkable
@@ -24,6 +25,7 @@ class Storage(Protocol):
     def load_seen(self) -> set[str]: ...
     def record(self, jobs: Iterable[Job]) -> int: ...
     def reset(self) -> None: ...
+    def prune(self, max_age_days: int) -> int: ...
 
 
 class JsonlStorage:
@@ -82,6 +84,37 @@ class JsonlStorage:
             logger.info("Cleared seen-store at {}", self.path)
         else:
             logger.info("Nothing to clear; {} does not exist", self.path)
+
+    def prune(self, max_age_days: int) -> int:
+        """Drop entries first seen more than ``max_age_days`` ago; return count removed.
+
+        Malformed or undated lines are kept. Pruned jobs may re-appear in a future digest
+        if they're still live — acceptable, since postings that old are usually gone.
+        """
+        if not max_age_days or not self.path.exists():
+            return 0
+        cutoff = now_utc() - timedelta(days=max_age_days)
+        kept: list[str] = []
+        removed = 0
+        for line in self.path.read_text(encoding="utf-8").splitlines():
+            stripped = line.strip()
+            if not stripped:
+                continue
+            drop = False
+            try:
+                first_seen = parse_iso(json.loads(stripped).get("first_seen"))
+                if first_seen is not None and first_seen < cutoff:
+                    drop = True
+            except (json.JSONDecodeError, AttributeError):
+                drop = False  # keep anything we can't parse
+            if drop:
+                removed += 1
+            else:
+                kept.append(stripped)
+        if removed:
+            self.path.write_text(("\n".join(kept) + "\n") if kept else "", encoding="utf-8")
+            logger.info("Pruned {} seen entries older than {} days", removed, max_age_days)
+        return removed
 
 
 def get_storage(secrets: Secrets) -> JsonlStorage:

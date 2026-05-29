@@ -123,10 +123,11 @@ class Secrets(BaseSettings):
     proxy_url: Optional[str] = None
     storage_backend: str = "file"  # "file" (local) | "repo" (CI commits .state/)
     state_dir: str = ".state"
+    state_retention_days: Optional[int] = None  # auto-prune seen entries older than this
 
-    @field_validator("smtp_port", mode="before")
+    @field_validator("smtp_port", "state_retention_days", mode="before")
     @classmethod
-    def _blank_port_to_none(cls, value):
+    def _blank_int_to_none(cls, value):
         # GitHub Actions injects an unset secret as "" (not absent); an empty string
         # would otherwise fail int coercion and crash the whole run at startup.
         if value is None or (isinstance(value, str) and value.strip() == ""):

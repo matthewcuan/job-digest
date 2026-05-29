@@ -52,13 +52,26 @@ seen-store, so it's safe to run repeatedly while tuning `config.yaml`.
 ### CLI
 
 ```
-python job_aggregator.py run               # one-shot: fetch, filter, email, record (what Actions runs)
-python job_aggregator.py run --dry-run      # print digest to stdout; no email, no state change
-python job_aggregator.py run -c other.yaml  # use a different config file
-python job_aggregator.py reset-db           # clear the seen-jobs store (prompts; -y to skip)
+python job_aggregator.py run                 # one-shot: fetch, filter, email, record (what Actions runs)
+python job_aggregator.py run --dry-run        # print digest to stdout; no email, no state change
+python job_aggregator.py run -c other.yaml    # use a different config file
+python job_aggregator.py reset-db             # clear the seen-jobs store (prompts; -y to skip)
+
+# Setup helpers
+python job_aggregator.py probe "Stripe" "Notion"   # find ATS board slugs for companies
+python job_aggregator.py doctor                    # validate config + ping sources + test SMTP login
+python job_aggregator.py test-email                # send a one-off sample digest (confirm delivery/spam)
+python job_aggregator.py prune --days 90           # drop seen entries older than N days
 ```
 
 There is no `schedule` command — GitHub Actions owns scheduling.
+
+**First-time setup flow:** `probe` your target companies → paste the slugs into `config.yaml`
+→ fill in `.env` → `doctor` to confirm everything resolves and SMTP logs in → `test-email`
+to confirm the message arrives → `run --dry-run` to eyeball the digest → push & schedule.
+
+`STATE_RETENTION_DAYS` (env, optional) auto-prunes seen entries older than that many days at
+the end of each `run`, keeping the `state` branch small. The workflow sets it to 90.
 
 ## Configuration
 

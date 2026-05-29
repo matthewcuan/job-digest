@@ -106,3 +106,54 @@ def test_resolve_email_starttls_on_587(monkeypatch):
         Secrets(_env_file=None),
     )
     assert resolved.implicit_tls is False
+
+
+# --- Helpers: probe slug candidates, verify_login, retention parsing ---
+
+def test_slug_candidates():
+    from job_aggregator.probe import slug_candidates
+
+    cands = slug_candidates("Acme Corp")
+    assert "acmecorp" in cands and "acme-corp" in cands and "AcmeCorp" in cands
+    ashby = slug_candidates("Ashby")
+    assert "ashby" in ashby and "Ashby" in ashby  # case-sensitive variant kept
+
+
+def test_verify_login_ok(monkeypatch):
+    from job_aggregator import email_renderer as er
+    from job_aggregator.config import ResolvedEmail
+
+    events = {}
+
+    class FakeServer:
+        def __enter__(self):
+            events["entered"] = True
+            return self
+
+        def __exit__(self, *a):
+            events["exited"] = True
+            return False
+
+    monkeypatch.setattr(er, "_connect", lambda resolved: FakeServer())
+    resolved = ResolvedEmail("h", 587, "u", "p", "s@x.com", "r@x.com", True, False, "[x]")
+    er.verify_login(resolved)
+    assert events == {"entered": True, "exited": True}
+
+
+def test_verify_login_not_deliverable():
+    from job_aggregator import email_renderer as er
+    from job_aggregator.config import ResolvedEmail
+
+    resolved = ResolvedEmail(None, 587, None, None, None, None, True, False, "[x]")
+    with pytest.raises(ValueError):
+        er.verify_login(resolved)
+
+
+def test_empty_retention_days_to_none(monkeypatch):
+    monkeypatch.setenv("STATE_RETENTION_DAYS", "")
+    assert Secrets(_env_file=None).state_retention_days is None
+
+
+def test_retention_days_parsed(monkeypatch):
+    monkeypatch.setenv("STATE_RETENTION_DAYS", "90")
+    assert Secrets(_env_file=None).state_retention_days == 90
