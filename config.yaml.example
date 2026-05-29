@@ -7,6 +7,17 @@ search:
   must_have: ["python", "engineer"]
   # nice_to_have = ranking boost only; never excludes a job.
   nice_to_have: ["backend", "django", "remote"]
+
+  # How must_have terms are matched. Defaults below = broadest recall.
+  #   match_mode:   substring  -> "engineer" also matches "engineering"/"engineers" (loose)
+  #                 word       -> whole word/phrase only: "engineer" != "engineering" (precise)
+  #   match_fields: title_and_description -> match either field (most results)
+  #                 title               -> match the job TITLE only (fewest false positives)
+  # PRECISION RECIPE: to stop e.g. a sales role matching "engineer" because its description
+  # mentions engineers, use `match_fields: title` (and/or `match_mode: word`).
+  match_mode: substring
+  match_fields: title_and_description
+
   location: "Remote"
   work_mode: remote        # any | remote | hybrid | onsite
   experience_level: null   # free-text hint, e.g. "senior" / "entry"; matched client-side

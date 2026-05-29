@@ -34,6 +34,38 @@ def _config(**search) -> AppConfig:
     return cfg
 
 
+def test_match_fields_title_excludes_description_only_hit():
+    # An AE role whose title lacks "engineer" but whose description mentions engineers.
+    source = FakeSource(
+        "greenhouse",
+        [
+            make_job("eng", title="Software Engineer", description="build things"),
+            make_job("ae", title="Account Executive", description="work with our engineers daily"),
+        ],
+    )
+    # Default (title_and_description) lets the AE through; title-only excludes it.
+    default = run(_config(must_have=["engineer"]), Secrets(), sources=[(source, 10)])
+    assert {j.job_id for j in default.new_jobs} == {"eng", "ae"}
+
+    title_only = run(
+        _config(must_have=["engineer"], match_fields="title"), Secrets(), sources=[(source, 10)]
+    )
+    assert {j.job_id for j in title_only.new_jobs} == {"eng"}
+
+
+def test_match_mode_word_vs_substring():
+    source = FakeSource("greenhouse", [make_job("em", title="Engineering Manager", description="")])
+    # substring: "engineer" matches "engineering"
+    substr = run(_config(must_have=["engineer"], match_fields="title"), Secrets(), sources=[(source, 10)])
+    assert len(substr.new_jobs) == 1
+    # word: "engineer" does NOT match "engineering"
+    word = run(
+        _config(must_have=["engineer"], match_mode="word", match_fields="title"),
+        Secrets(), sources=[(source, 10)],
+    )
+    assert word.new_jobs == []
+
+
 def test_must_have_filters_and_remote_required():
     source = FakeSource(
         "greenhouse",

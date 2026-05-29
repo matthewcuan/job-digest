@@ -16,9 +16,12 @@ name: Job Digest
 
 on:
   schedule:
-    - cron: "0 13 * * *"   # 13:00 UTC
-    - cron: "0 23 * * *"   # 23:00 UTC
-  workflow_dispatch: {}     # manual "Run workflow" button
+    # Once a day, in the morning. Cron is UTC — SET THIS to your local morning.
+    #   13:00 UTC = 8am US-Eastern (DST) / 9am EST · 6am US-Pacific (DST)
+    #   12:00 UTC = 7am Central (DST) · 1pm UK
+    # GitHub doesn't adjust for daylight saving and may delay scheduled runs a few minutes.
+    - cron: "0 13 * * *"
+  workflow_dispatch: {}     # manual "Run workflow" button (test anytime)
 
 # Serialize runs so two of them can't write the state branch at once.
 concurrency:

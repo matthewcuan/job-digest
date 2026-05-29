@@ -12,7 +12,7 @@ from .models import Job, SourceResult
 from .rank import rank
 from .sources import JobSource, build_sources
 from .storage import Storage
-from .util import normalize_job_type, now_utc
+from .util import normalize_job_type, now_utc, term_present
 
 
 @dataclass
@@ -77,12 +77,14 @@ def _experience_matches(job: Job, level: str) -> bool:
 def passes_filters(job: Job, criteria: SearchCriteria) -> bool:
     """Authoritative client-side filter. Hard on objective criteria; salary/date use
     keep-but-flag (a job missing that field is NOT excluded)."""
-    haystack = f"{job.title} {job.description}".lower()
-
-    # must_have: every term must appear (AND).
+    # must_have: every term must appear (AND), per the configured match mode/fields.
     for term in criteria.must_have:
-        term = term.lower().strip()
-        if term and term not in haystack:
+        if not term.strip():
+            continue
+        if not term_present(
+            term, job.title, job.description,
+            mode=criteria.match_mode.value, fields=criteria.match_fields.value,
+        ):
             return False
 
     # work_mode.

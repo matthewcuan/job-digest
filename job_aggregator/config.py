@@ -23,11 +23,24 @@ class WorkMode(str, Enum):
     onsite = "onsite"
 
 
+class MatchMode(str, Enum):
+    substring = "substring"  # term matches anywhere (engineer -> "engineering" too)
+    word = "word"            # whole-word/phrase match (engineer != "engineering")
+
+
+class MatchField(str, Enum):
+    title = "title"                                  # only match the job title (most precise)
+    title_and_description = "title_and_description"   # match title or description (most recall)
+
+
 class SearchCriteria(BaseModel):
     """Search criteria. ``must_have`` is an AND filter; ``nice_to_have`` boosts rank."""
 
     must_have: list[str] = Field(default_factory=list)
     nice_to_have: list[str] = Field(default_factory=list)
+    # How must_have terms are matched (see config.yaml.example for the precision recipe).
+    match_mode: MatchMode = MatchMode.substring
+    match_fields: MatchField = MatchField.title_and_description
     location: Optional[str] = None
     work_mode: WorkMode = WorkMode.any
     experience_level: Optional[str] = None  # free-text hint, e.g. "senior", "entry"

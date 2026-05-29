@@ -195,3 +195,44 @@ def normalize_job_type(job_type: Optional[str]) -> Optional[str]:
     key = job_type.strip().lower().replace("-", "").replace("_", "").replace(" ", "")
     return _JOB_TYPE_ALIASES.get(key, key)
 
+
+# --- keyword matching (shared by the filter and the ranker) -------------------------
+# mode: "substring" (term anywhere) | "word" (whole-word/phrase, \bterm\b).
+# fields: "title" | "title_and_description".
+
+def _haystacks(title: str, description: str, fields: str) -> list[str]:
+    hays = [(title or "").lower()]
+    if fields != "title":
+        hays.append((description or "").lower())
+    return hays
+
+
+def term_present(term: str, title: str, description: str, *, mode: str = "substring",
+                 fields: str = "title_and_description") -> bool:
+    """Whether ``term`` appears in the configured field(s) under the configured mode."""
+    t = term.strip().lower()
+    if not t:
+        return False
+    for hay in _haystacks(title, description, fields):
+        if mode == "word":
+            if re.search(r"\b" + re.escape(t) + r"\b", hay):
+                return True
+        elif t in hay:
+            return True
+    return False
+
+
+def term_count(term: str, title: str, description: str, *, mode: str = "substring",
+               fields: str = "title_and_description") -> int:
+    """How many times ``term`` appears (for ranking density)."""
+    t = term.strip().lower()
+    if not t:
+        return 0
+    total = 0
+    for hay in _haystacks(title, description, fields):
+        if mode == "word":
+            total += len(re.findall(r"\b" + re.escape(t) + r"\b", hay))
+        else:
+            total += hay.count(t)
+    return total
+

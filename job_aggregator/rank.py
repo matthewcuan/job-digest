@@ -3,37 +3,31 @@ from __future__ import annotations
 
 from .config import SearchCriteria
 from .models import Job
-from .util import now_utc
-
-
-def _count(haystack: str, term: str) -> int:
-    if not term:
-        return 0
-    return haystack.count(term)
+from .util import now_utc, term_count, term_present
 
 
 def score(job: Job, criteria: SearchCriteria) -> float:
-    title = (job.title or "").lower()
-    description = (job.description or "").lower()
+    mode = criteria.match_mode.value
+    title = job.title or ""
+    description = job.description or ""
     points = 0.0
 
-    # must_have: reward title hits and (capped) description density.
+    # must_have: reward title hits and (capped) description density. Ranking always
+    # considers both fields for richness, regardless of the filter's match_fields.
     for term in criteria.must_have:
-        term = term.lower().strip()
-        if not term:
+        if not term.strip():
             continue
-        if term in title:
+        if term_present(term, title, "", mode=mode, fields="title"):
             points += 3.0
-        points += 0.5 * min(_count(description, term), 5)
+        points += 0.5 * min(term_count(term, "", description, mode=mode, fields="title_and_description"), 5)
 
     # nice_to_have: pure bonus, never required.
     for term in criteria.nice_to_have:
-        term = term.lower().strip()
-        if not term:
+        if not term.strip():
             continue
-        if term in title:
+        if term_present(term, title, "", mode=mode, fields="title"):
             points += 1.5
-        elif term in description:
+        elif term_present(term, "", description, mode=mode, fields="title_and_description"):
             points += 0.75
 
     # recency: ~+5 for a fresh posting, decaying ~1/day; unknown date gets nothing.
