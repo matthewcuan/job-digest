@@ -4,14 +4,14 @@
 search:
   # must_have = AND filter: a job must contain EVERY term (in title or description) to
   # survive. These are also joined into the query string sent to the boards.
-  must_have: ["python", "engineer"]
+  must_have: [".NET", "engineer"] 
   # nice_to_have = ranking boost only; never excludes a job.
-  nice_to_have: ["backend", "django", "remote"]
-  location: "Remote"
-  work_mode: remote        # any | remote | hybrid | onsite
+  nice_to_have: ["backend", "full-stack"]
+  location: "California"
+  work_mode: any        # any | remote | hybrid | onsite
   experience_level: null   # free-text hint, e.g. "senior" / "entry"; matched client-side
-  date_posted_hours: 168   # keep jobs newer than this (168 = 1 week); null = no limit
-  salary_min: null         # annual; only excludes jobs that DO list a lower salary
+  date_posted_hours: 24 # keep jobs newer than this (168 = 1 week); null = no limit
+  salary_min: 120000 # annual; only excludes jobs that DO list a lower salary
   job_type: fulltime       # fulltime | parttime | contract | temporary | internship | null
   distance: 50             # miles (JobSpy boards)
   country: usa             # country_indeed — required by Indeed & Glassdoor
@@ -19,9 +19,7 @@ search:
 sources:
   # --- JobSpy-backed boards (best-effort; often blocked from CI IPs) ---
   google:
-    enabled: false         # disabled: Google withholds its jobs-widget markup from
-                           # datacenter/CI IPs ("initial cursor not found"), so it
-                           # returns 0. Enable only behind a residential PROXY_URL.
+    enabled: true          # Google Jobs tends to survive from CI better than the rest
     limit: 25
   indeed:
     enabled: true          # most tolerant scraper from a single/cloud IP

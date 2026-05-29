@@ -12,10 +12,13 @@ LinkedIn / Indeed / Glassdoor actively block scrapers, and **GitHub Actions runn
 IP ranges these sites block especially aggressively.** So this tool treats **partial
 failure as the normal case**:
 
-- **ATS APIs (Greenhouse/Lever/Ashby) and Google Jobs are the reliable sources** from CI —
-  they're public/programmatic. Add your target companies' ATS board slugs and you'll get
-  data even when the scraped boards are blocked.
-- Scraped boards (LinkedIn/Indeed/Glassdoor) are **best-effort**. Each source is isolated:
+- **ATS APIs (Greenhouse/Lever/Ashby) are the reliable sources** from CI — they're
+  public/programmatic. Add your target companies' ATS board slugs and you'll get data
+  even when the scraped boards are blocked.
+- Scraped boards (LinkedIn/Indeed/Glassdoor/Google) are **best-effort** and off or
+  unreliable from CI IPs. Google in particular returns 0 from datacenter IPs (it withholds
+  its jobs-widget markup), so it ships **disabled** — enable it only behind a residential
+  `PROXY_URL`. Each source is isolated:
   one failing never stops the others, and the email header shows each source's health
   (🟢 ok / ⚪ 0 results / 🔴 failed) so a silently-broken board is visible.
 - The run exits non-zero **only if every source failed** (so the Actions run goes red).
@@ -182,7 +185,8 @@ don't need it.
   the others. Use it for your own personal job search and keep volumes modest. The ATS APIs
   are public and meant to be consumed programmatically — prefer them.
 - **Empty is normal from CI.** Don't be surprised if LinkedIn/Indeed return 0 from Actions;
-  that's why ATS + Google are first-class.
+  that's why the ATS boards are first-class. Google is disabled by default (it returns 0
+  from CI IPs); Indeed is hit-or-miss but often works.
 
 ## Architecture
 
