@@ -1,0 +1,66 @@
+# Copy to config.yaml and edit. This file is committed; secrets live in .env / GitHub
+# Secrets only (see .env.example).
+
+search:
+  # must_have = AND filter: a job must contain EVERY term (in title or description) to
+  # survive. These are also joined into the query string sent to the boards.
+  must_have: ["python", "engineer"]
+  # nice_to_have = ranking boost only; never excludes a job.
+  nice_to_have: ["backend", "django", "remote"]
+  location: "Remote"
+  work_mode: remote        # any | remote | hybrid | onsite
+  experience_level: null   # free-text hint, e.g. "senior" / "entry"; matched client-side
+  date_posted_hours: 168   # keep jobs newer than this (168 = 1 week); null = no limit
+  salary_min: null         # annual; only excludes jobs that DO list a lower salary
+  job_type: fulltime       # fulltime | parttime | contract | temporary | internship | null
+  distance: 50             # miles (JobSpy boards)
+  country: usa             # country_indeed — required by Indeed & Glassdoor
+
+sources:
+  # --- JobSpy-backed boards (best-effort; often blocked from CI IPs) ---
+  google:
+    enabled: true          # Google Jobs tends to survive from CI better than the rest
+    limit: 25
+  indeed:
+    enabled: true          # most tolerant scraper from a single/cloud IP
+    limit: 25
+  linkedin:
+    enabled: false         # rate-limits fast without a proxy
+    limit: 25
+  glassdoor:
+    enabled: false         # needs a resolvable location; frequently 403s
+    limit: 25
+  ziprecruiter:
+    enabled: false         # US/Canada only
+    limit: 25
+
+  # --- ATS public APIs (most reliable from CI; add your target companies' board slugs) ---
+  # Find the slug in the careers URL:
+  #   greenhouse -> job-boards.greenhouse.io/<slug>
+  #   lever      -> jobs.lever.co/<slug>
+  #   ashby      -> jobs.ashbyhq.com/<slug>   (CASE-SENSITIVE)
+  greenhouse:
+    enabled: true
+    limit: 50
+    companies: ["greenhouse"]   # example slug that returns live data; replace with yours
+  lever:
+    enabled: true
+    limit: 50
+    companies: ["leverdemo"]    # example slug
+  ashby:
+    enabled: true
+    limit: 50
+    companies: ["Ashby"]        # example slug (case-sensitive)
+
+dedup:
+  fuzzy_threshold: 88      # rapidfuzz score 0-100; >= this collapses near-duplicate postings
+
+email:
+  smtp_host: smtp.gmail.com   # SMTP_HOST env var overrides this if set
+  smtp_port: 587
+  sender: "you@gmail.com"
+  recipient: "you@gmail.com"  # EMAIL_TO env var overrides this if set
+  use_tls: true               # STARTTLS
+  subject_prefix: "[Job Digest]"
+  send_empty_digest: false    # email even when there are zero new jobs
+  send_on_total_failure: true # email a failure summary when EVERY source failed

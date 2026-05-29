@@ -1,0 +1,28 @@
+Job Digest — {{ generated_at }}
+{{ total_new }} new job{{ '' if total_new == 1 else 's' }}
+
+Sources:
+{% for src, info in source_health.items() %}
+  - {{ src }}: {{ ("FAILED — " ~ (info.error or "?")) if not info.ok else ("ok (0 results)" if info.near_empty else ("ok (" ~ info.count ~ ")")) }}
+{% endfor %}
+
+{% if failed_sources %}
+WARNING: {{ failed_sources|length }} source(s) failed this run.
+{% endif %}
+{% if total_new == 0 %}
+{{ "Every source failed on this run." if all_failed else "No new jobs this run." }}
+{% endif %}
+{% for source, jobs in groups %}
+
+== {{ source|upper }} ({{ jobs|length }}) ==
+{% for job in jobs %}
+
+* {{ job.title }}
+  {{ job.company }}{{ (" · " ~ job.location) if job.location else "" }}{{ (" · " ~ job.salary) if job.salary else "" }} · {{ job.posted_date.strftime('%Y-%m-%d') if job.posted_date else 'date unknown' }}
+  {{ job.description_snippet or '(no description)' }}
+  Apply: {{ job.url }}
+{% endfor %}
+{% endfor %}
+
+--
+fetched {{ stats.fetched }} · after dedup {{ stats.after_dedup }} · after filter {{ stats.after_filter }} · already-seen skipped {{ stats.seen_skipped }}

@@ -1,0 +1,110 @@
+# Scheduled job digest.
+#
+# STATE-BRANCH FLOW (please review):
+#   GitHub Actions runners are ephemeral, so the "seen jobs" store lives on a dedicated
+#   `state` branch instead of the runner's disk. Each run:
+#     1. checks out the code (default branch),
+#     2. checks out the `state` branch into ./.state/ (creating it on the first run),
+#     3. runs the aggregator with STATE_DIR=.state (so it reads/writes .state/seen_jobs.jsonl),
+#     4. commits & pushes .state/seen_jobs.jsonl back to the `state` branch if it changed.
+#   The seen-store is plain JSONL, so the `state` branch's history is a readable audit log.
+#
+# Cron is in UTC. The two schedules below are 08:00 and 18:00 US-Eastern-ish placeholders —
+# adjust them to your timezone (see README "Editing the schedule").
+
+name: Job Digest
+
+on:
+  schedule:
+    - cron: "0 13 * * *"   # 13:00 UTC
+    - cron: "0 23 * * *"   # 23:00 UTC
+  workflow_dispatch: {}     # manual "Run workflow" button
+
+# Serialize runs so two of them can't write the state branch at once.
+concurrency:
+  group: job-digest
+  cancel-in-progress: false
+
+permissions:
+  contents: write           # needed to push to the `state` branch
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Check out state branch into .state/
+        id: state
+        uses: actions/checkout@v4
+        with:
+          ref: state
+          path: .state
+        continue-on-error: true   # the branch won't exist on the very first run
+
+      - name: Initialize state branch if missing
+        if: steps.state.outcome != 'success'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          rm -rf .state && mkdir .state && cd .state
+          git init -q
+          git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git checkout -q --orphan state
+          printf '%s\n' "# Auto-managed seen-jobs state branch. Do not edit by hand." > README.md
+          git add README.md
+          git -c user.name='github-actions[bot]' \
+              -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+              commit -q -m "init state branch"
+          git push -q origin state
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run job aggregator
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          PROXY_URL: ${{ secrets.PROXY_URL }}   # optional; empty if unset
+          STORAGE_BACKEND: repo
+          STATE_DIR: .state
+        # Default shell is `bash -eo pipefail`, so a non-zero exit (all sources failed)
+        # fails this step and turns the run red, while tee still captures the log.
+        run: python job_aggregator.py run 2>&1 | tee run.log
+
+      - name: Commit updated state
+        if: always()   # persist state even if the run reported some source failures
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          cd .state
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git add -A
+            git -c user.name='github-actions[bot]' \
+                -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+                commit -q -m "update seen jobs ($(date -u +%FT%TZ))"
+            git push origin HEAD:state
+            echo "Pushed state update."
+          else
+            echo "No state changes to commit."
+          fi
+
+      - name: Upload logs on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: job-digest-logs
+          path: run.log
+          if-no-files-found: ignore
