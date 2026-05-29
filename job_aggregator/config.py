@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Optional
 
 import yaml
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 # JobSpy boards (scraped) vs ATS boards (public APIs). Used for validation + routing.
@@ -78,7 +78,8 @@ class EmailConfig(BaseModel):
     smtp_port: int = 587
     sender: Optional[str] = None
     recipient: Optional[str] = None  # may also come from EMAIL_TO env (env wins)
-    use_tls: bool = True  # STARTTLS
+    use_tls: bool = True  # STARTTLS (port 587)
+    use_ssl: bool = False  # implicit TLS / SMTPS (port 465); auto-on when port == 465
     subject_prefix: str = "[Job Digest]"
     send_empty_digest: bool = False  # email even when zero new jobs
     send_on_total_failure: bool = True  # email when every source failed
@@ -110,6 +111,15 @@ class Secrets(BaseSettings):
     storage_backend: str = "file"  # "file" (local) | "repo" (CI commits .state/)
     state_dir: str = ".state"
 
+    @field_validator("smtp_port", mode="before")
+    @classmethod
+    def _blank_port_to_none(cls, value):
+        # GitHub Actions injects an unset secret as "" (not absent); an empty string
+        # would otherwise fail int coercion and crash the whole run at startup.
+        if value is None or (isinstance(value, str) and value.strip() == ""):
+            return None
+        return value
+
 
 @dataclass
 class ResolvedEmail:
@@ -122,11 +132,17 @@ class ResolvedEmail:
     sender: Optional[str]
     recipient: Optional[str]
     use_tls: bool
+    use_ssl: bool
     subject_prefix: str
 
     @property
     def deliverable(self) -> bool:
         return bool(self.host and self.recipient and self.sender)
+
+    @property
+    def implicit_tls(self) -> bool:
+        """Use SMTPS (connect over TLS) rather than STARTTLS."""
+        return self.use_ssl or self.port == 465
 
 
 def resolve_email(cfg: EmailConfig, secrets: Secrets) -> ResolvedEmail:
@@ -138,6 +154,7 @@ def resolve_email(cfg: EmailConfig, secrets: Secrets) -> ResolvedEmail:
         sender=cfg.sender or secrets.smtp_user,
         recipient=secrets.email_to or cfg.recipient,
         use_tls=cfg.use_tls,
+        use_ssl=cfg.use_ssl,
         subject_prefix=cfg.subject_prefix,
     )
 

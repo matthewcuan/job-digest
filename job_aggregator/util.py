@@ -11,23 +11,28 @@ _TAG_RE = re.compile(r"<[^>]+>")
 _WS_RE = re.compile(r"\s+")
 
 
-def strip_html(text: Optional[str]) -> str:
-    """Return plain text from HTML/markdown-ish input.
+def strip_html(text: Optional[str], *, escaped: bool = False) -> str:
+    """Return plain text from HTML input.
 
-    Greenhouse serves entity-escaped HTML (``&lt;div&gt;``), so we unescape twice:
-    once to turn ``&lt;`` into ``<`` (revealing real tags), then again after tag
-    removal to decode any remaining entities like ``&amp;`` / ``&nbsp;``.
+    ``escaped=True`` (Greenhouse) means the input is *entity-escaped* HTML
+    (``&lt;div&gt;``): unescape first to reveal the real tags, strip them, then
+    unescape again to decode remaining entities like ``&amp;`` / ``&nbsp;``.
+
+    ``escaped=False`` (Ashby/Lever real HTML, or plain text) strips tags first, so
+    content that legitimately *displays* escaped markup (e.g. a code sample literally
+    showing ``&lt;div&gt;``) survives instead of being unescaped-then-deleted.
     """
     if not text:
         return ""
-    unescaped = html.unescape(text)
-    no_tags = _TAG_RE.sub(" ", unescaped)
+    if escaped:
+        text = html.unescape(text)
+    no_tags = _TAG_RE.sub(" ", text)
     return _WS_RE.sub(" ", html.unescape(no_tags)).strip()
 
 
-def make_snippet(text: Optional[str], length: int = 300) -> str:
+def make_snippet(text: Optional[str], length: int = 300, *, escaped: bool = False) -> str:
     """~``length``-char plain-text snippet, truncated on a word boundary."""
-    clean = strip_html(text)
+    clean = strip_html(text, escaped=escaped)
     if len(clean) <= length:
         return clean
     truncated = clean[:length].rsplit(" ", 1)[0].rstrip(".,;:—-")
@@ -44,6 +49,27 @@ _INTERVAL_SUFFIX = {
     "daily": "/day",
     "hourly": "/hr",
 }
+
+# Lever uses tokens like "per-year-salary" / "per-hour-wage"; JobSpy uses "yearly" etc.
+_INTERVAL_ALIASES = {
+    "year": "yearly", "yr": "yearly", "annum": "yearly",
+    "month": "monthly", "mo": "monthly",
+    "week": "weekly", "wk": "weekly",
+    "day": "daily",
+    "hour": "hourly", "hr": "hourly",
+}
+
+
+def _interval_suffix(interval: Optional[str]) -> str:
+    if not interval:
+        return ""
+    key = interval.strip().lower()
+    if key in _INTERVAL_SUFFIX:
+        return _INTERVAL_SUFFIX[key]
+    # Normalize Lever-style tokens: "per-year-salary" -> "year" -> "yearly".
+    key = key.replace("per-", "").replace("-salary", "").replace("-wage", "").replace("_", "-").strip("- ")
+    key = _INTERVAL_ALIASES.get(key, key)
+    return _INTERVAL_SUFFIX.get(key, "")
 
 
 def coerce_amount(value) -> Optional[float]:
@@ -75,7 +101,7 @@ def format_salary(min_amount=None, max_amount=None, interval=None, currency="USD
         body = f"{fmt(low)}–{fmt(high)}"
     else:
         body = fmt(low or high)
-    return body + _INTERVAL_SUFFIX.get((interval or "").lower(), "")
+    return body + _interval_suffix(interval)
 
 
 def _canonical_url(url: str) -> str:

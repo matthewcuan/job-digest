@@ -31,6 +31,20 @@ _env = Environment(
 )
 
 
+def _safe_url(url) -> str:
+    """Only allow http(s) URLs in links — block javascript:/data: from job sources.
+
+    Autoescaping escapes the attribute value but does NOT validate the scheme, so a
+    malicious posting could otherwise inject ``javascript:`` into the Apply href.
+    """
+    if isinstance(url, str) and url.strip().lower().startswith(("http://", "https://")):
+        return url.strip()
+    return "#"
+
+
+_env.filters["safe_url"] = _safe_url
+
+
 def _group_by_source(jobs: list[Job]) -> list[tuple[str, list[Job]]]:
     """Group jobs by source; within a group sort by posted_date desc (None last).
     Groups ordered by size desc, then name."""
@@ -83,11 +97,11 @@ def build_subject(result: RunResult, config: AppConfig) -> str:
 def _should_send(result: RunResult, config: AppConfig) -> bool:
     if result.new_jobs:
         return True
-    if result.all_failed and config.email.send_on_total_failure:
-        return True
-    if config.email.send_empty_digest:
-        return True
-    return False
+    # All-failed is authoritative: send_on_total_failure decides, so a user who opts
+    # out isn't overridden by send_empty_digest.
+    if result.all_failed:
+        return config.email.send_on_total_failure
+    return config.email.send_empty_digest
 
 
 def send_email(resolved: ResolvedEmail, subject: str, html: str, text: str) -> None:
@@ -104,9 +118,14 @@ def send_email(resolved: ResolvedEmail, subject: str, html: str, text: str) -> N
     message.attach(MIMEText(text, "plain", "utf-8"))
     message.attach(MIMEText(html, "html", "utf-8"))
 
-    with smtplib.SMTP(resolved.host, resolved.port, timeout=30) as server:
-        if resolved.use_tls:
-            server.starttls(context=ssl.create_default_context())
+    context = ssl.create_default_context()
+    if resolved.implicit_tls:  # SMTPS (e.g. port 465): TLS from the first byte
+        server = smtplib.SMTP_SSL(resolved.host, resolved.port, context=context, timeout=30)
+    else:
+        server = smtplib.SMTP(resolved.host, resolved.port, timeout=30)
+    with server:
+        if not resolved.implicit_tls and resolved.use_tls:  # STARTTLS (e.g. port 587)
+            server.starttls(context=context)
         if resolved.user and resolved.password:
             server.login(resolved.user, resolved.password)
         server.send_message(message)

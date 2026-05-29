@@ -60,7 +60,8 @@ email:
   smtp_port: 587
   sender: "you@gmail.com"
   recipient: "you@gmail.com"  # EMAIL_TO env var overrides this if set
-  use_tls: true               # STARTTLS
+  use_tls: true               # STARTTLS (port 587, the Gmail default)
+  use_ssl: false              # implicit TLS / SMTPS (port 465); auto-enabled when port == 465
   subject_prefix: "[Job Digest]"
   send_empty_digest: false    # email even when there are zero new jobs
   send_on_total_failure: true # email a failure summary when EVERY source failed

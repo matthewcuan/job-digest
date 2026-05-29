@@ -34,9 +34,14 @@ class AshbySource(AtsSource):
         description_html = item.get("descriptionHtml") or ""  # real HTML (not escaped)
         description_plain = item.get("descriptionPlain") or ""
         posted = parse_iso(item.get("publishedAt"))
-        workplace = (item.get("workplaceType") or "").lower()
+        # Ashby exposes a boolean isRemote (no workplaceType); fall back to the location
+        # string like the other ATS sources if it's ever absent.
         is_remote_flag = item.get("isRemote")
-        is_remote = is_remote_flag if isinstance(is_remote_flag, bool) else (workplace == "remote")
+        is_remote = (
+            is_remote_flag
+            if isinstance(is_remote_flag, bool)
+            else ("remote" in location.lower() or None)
+        )
         compensation = item.get("compensation") or {}
         salary = (
             compensation.get("compensationTierSummary")

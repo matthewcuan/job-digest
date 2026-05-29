@@ -33,15 +33,15 @@ class GreenhouseSource(AtsSource):
         location = (item.get("location") or {}).get("name") or ""
         url = item.get("absolute_url") or ""
         native_id = item.get("id")
-        content = item.get("content") or ""  # entity-escaped HTML — strip_html unescapes
+        content = item.get("content") or ""  # entity-escaped HTML
         posted = parse_iso(item.get("first_published") or item.get("updated_at"))
         return Job(
             title=title,
             company=company,
             location=location,
             salary=None,  # only on the single-job endpoint with pay_transparency=true
-            description=strip_html(content),
-            description_snippet=make_snippet(content),
+            description=strip_html(content, escaped=True),
+            description_snippet=make_snippet(content, escaped=True),
             url=url,
             source=self.name,
             posted_date=posted,

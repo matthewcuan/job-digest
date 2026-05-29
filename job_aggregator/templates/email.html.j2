@@ -58,7 +58,7 @@
           {% if job.description_snippet %}
             <div style="font-size:13px;color:#333;line-height:1.5;margin-bottom:10px;">{{ job.description_snippet }}</div>
           {% endif %}
-          <a href="{{ job.url }}" style="display:inline-block;background:#2563eb;color:#fff;text-decoration:none;font-size:13px;font-weight:600;padding:8px 16px;border-radius:6px;">Apply &rarr;</a>
+          <a href="{{ job.url|safe_url }}" style="display:inline-block;background:#2563eb;color:#fff;text-decoration:none;font-size:13px;font-weight:600;padding:8px 16px;border-radius:6px;">Apply &rarr;</a>
           <span style="font-size:11px;color:#999;margin-left:10px;">source: {{ job.source }}</span>
         </div>
       {% endfor %}

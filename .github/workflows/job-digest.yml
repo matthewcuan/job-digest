@@ -101,8 +101,10 @@ jobs:
             echo "No state changes to commit."
           fi
 
-      - name: Upload logs on failure
-        if: failure()
+      - name: Upload run log
+        # Always upload: a degraded-but-green run (some sources blocked) still warrants
+        # an inspectable log. if-no-files-found guards the case where run.log was never created.
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: job-digest-logs
