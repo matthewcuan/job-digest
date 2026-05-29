@@ -40,6 +40,9 @@ class SearchCriteria(BaseModel):
 
     must_have: list[str] = Field(default_factory=list)
     nice_to_have: list[str] = Field(default_factory=list)
+    # Target specific employers on the keyword-search boards (Indeed honors a company:
+    # filter). One search is run per company; results are verified by company name.
+    target_companies: list[str] = Field(default_factory=list)
     # How must_have terms are matched (see config.yaml.example for the precision recipe).
     match_mode: MatchMode = MatchMode.substring
     match_fields: MatchField = MatchField.title_and_description

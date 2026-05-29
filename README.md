@@ -118,6 +118,24 @@ sources:
     companies: ["https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite"]
 ```
 
+### Targeting specific companies on Indeed
+
+For big employers that *don't* expose an ATS/Workday board (Apple, Microsoft, Google,
+Amazon, Meta, Tesla — the rest of the "Magnificent 7"), use `search.target_companies`.
+Indeed honors a `company:"…"` query operator, so the aggregator runs one Indeed search per
+listed company and keeps only jobs whose employer actually matches:
+
+```yaml
+search:
+  must_have: ["software engineer"]
+  target_companies: ["Apple", "Google", "Amazon", "Meta"]
+sources:
+  indeed: { enabled: true, limit: 25 }   # this feature is most reliable on Indeed
+```
+
+It applies to any keyword-search board, but Indeed is the one that reliably honors the
+operator (and works best from CI). Leave `target_companies` empty to search all employers.
+
 ## Email (Gmail app password)
 
 Gmail blocks plain password SMTP. With 2-Step Verification enabled, create an **app password**:

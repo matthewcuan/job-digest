@@ -8,6 +8,12 @@ search:
   # nice_to_have = ranking boost only; never excludes a job.
   nice_to_have: ["backend", "django", "remote"]
 
+  # Target specific employers on the keyword-search boards (mainly Indeed, which honors a
+  # company: filter). Use this to chase big companies that AREN'T on the ATS/Workday
+  # adapters — e.g. Apple, Microsoft, Google, Amazon, Meta, Tesla. One Indeed search runs
+  # per company (so keep the list focused). Empty = search all employers.
+  target_companies: []   # e.g. ["Apple", "Google", "Amazon", "Meta"]
+
   # How must_have terms are matched. Defaults below = broadest recall.
   #   match_mode:   substring  -> "engineer" also matches "engineering"/"engineers" (loose)
   #                 word       -> whole word/phrase only: "engineer" != "engineering" (precise)
