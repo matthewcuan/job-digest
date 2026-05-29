@@ -2,7 +2,7 @@
 
 Aggregates job listings from major boards (LinkedIn, Indeed, Glassdoor, Google Jobs,
 ZipRecruiter via [JobSpy](https://github.com/speedyapply/JobSpy)) **and** company-direct
-ATS feeds (Greenhouse, Lever, Ashby), de-duplicates and filters them against your search
+feeds (Greenhouse, Lever, Ashby, and Workday), de-duplicates and filters them against your search
 criteria, remembers what it has already shown you, and emails an HTML digest of **new**
 listings. It runs on a schedule via GitHub Actions.
 
@@ -94,11 +94,17 @@ password in `config.yaml`. See `config.yaml.example` for every option with comme
 Greenhouse/Lever/Ashby APIs serve one company's board given its slug. Find the slug in the
 careers URL and add it under `sources.<ats>.companies`:
 
-| ATS | Careers URL | Slug example |
+| Source | Careers URL | `companies:` value |
 |-----|-------------|--------------|
-| Greenhouse | `job-boards.greenhouse.io/<slug>` | `stripe` |
-| Lever | `jobs.lever.co/<slug>` | `leverdemo` |
-| Ashby | `jobs.ashbyhq.com/<slug>` (**case-sensitive**) | `Ashby` |
+| Greenhouse | `job-boards.greenhouse.io/<slug>` | slug, e.g. `stripe` |
+| Lever | `jobs.lever.co/<slug>` | slug, e.g. `leverdemo` |
+| Ashby | `jobs.ashbyhq.com/<slug>` (**case-sensitive**) | slug, e.g. `Ashby` |
+| Workday | `<tenant>.<dc>.myworkdayjobs.com/.../<Site>` | the **full career-site URL** |
+
+Greenhouse/Lever/Ashby take board **slugs** (use `probe` to find them). **Workday** takes
+the full career-site URL (each company is its own tenant) — it's how to reach large
+employers that don't use the others. Of the "Magnificent 7", only **Nvidia** is on Workday;
+the rest run custom portals. Workday fetches per-job detail, so keep its `limit` modest.
 
 ```yaml
 sources:
@@ -106,6 +112,10 @@ sources:
     enabled: true
     limit: 50
     companies: ["stripe", "airbnb", "databricks"]
+  workday:
+    enabled: true
+    limit: 15
+    companies: ["https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite"]
 ```
 
 ## Email (Gmail app password)
@@ -211,7 +221,8 @@ job_aggregator/
   sources/
     base.py                  JobSource interface (fetch() wraps _fetch with failure isolation)
     jobspy_source.py         one instance per board; per-site scrape_jobs() call
-    greenhouse.py / lever.py / ashby.py   ATS public-API adapters
+    greenhouse.py / lever.py / ashby.py   ATS public-API adapters (by slug)
+    workday.py                 Workday CXS adapter (by career-site URL; list + per-job detail)
   pipeline.py                fetch → flag → dedup → filter → seen-filter → rank
   dedup.py                   exact (job_id) + fuzzy (rapidfuzz) merge, richest description wins
   rank.py                    must_have density + nice_to_have bonus + recency

@@ -65,6 +65,16 @@ sources:
     limit: 50
     companies: ["Ashby"]        # example slug (case-sensitive)
 
+  # Workday: used by many large employers. `companies` here are full CAREER-SITE URLs
+  # (copy from the browser), NOT slugs. Of the "Magnificent 7", only Nvidia is on Workday
+  # (the others run custom portals). Add others like Salesforce/Adobe the same way.
+  # Note: Workday fetches per-job detail, so keep `limit` modest.
+  workday:
+    enabled: false
+    limit: 15
+    companies:
+      - "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite"
+
 dedup:
   fuzzy_threshold: 88      # rapidfuzz score 0-100; >= this collapses near-duplicate postings
 

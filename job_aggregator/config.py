@@ -12,7 +12,9 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 # JobSpy boards (scraped) vs ATS boards (public APIs). Used for validation + routing.
 JOBSPY_SITES = ("linkedin", "indeed", "glassdoor", "google", "ziprecruiter")
-ATS_SITES = ("greenhouse", "lever", "ashby")
+# "ATS"-style sources: configured by a list of company boards. Greenhouse/Lever/Ashby
+# take board slugs; Workday takes full career-site URLs (one tenant per company).
+ATS_SITES = ("greenhouse", "lever", "ashby", "workday")
 ALL_SOURCES = JOBSPY_SITES + ATS_SITES
 
 
@@ -77,6 +79,7 @@ class SourcesConfig(BaseModel):
     greenhouse: SourceConfig = Field(default_factory=SourceConfig)
     lever: SourceConfig = Field(default_factory=SourceConfig)
     ashby: SourceConfig = Field(default_factory=SourceConfig)
+    workday: SourceConfig = Field(default_factory=SourceConfig)  # companies = career-site URLs
 
     def enabled_items(self) -> list[tuple[str, SourceConfig]]:
         return [(name, getattr(self, name)) for name in ALL_SOURCES if getattr(self, name).enabled]

@@ -19,18 +19,33 @@ def _is_retryable(exc: BaseException) -> bool:
     return False
 
 
-@retry(
+_RETRY = dict(
     reraise=True,
     stop=stop_after_attempt(3),
     wait=wait_exponential(multiplier=1, min=2, max=10),
     retry=retry_if_exception(_is_retryable),
 )
+
+
+@retry(**_RETRY)
 def get_json(url: str, *, timeout: int = 15, params: Optional[dict] = None):
     resp = requests.get(
         url,
         timeout=timeout,
         params=params,
         headers={"User-Agent": USER_AGENT, "Accept": "application/json"},
+    )
+    resp.raise_for_status()
+    return resp.json()
+
+
+@retry(**_RETRY)
+def post_json(url: str, *, json: Optional[dict] = None, timeout: int = 15):
+    resp = requests.post(
+        url,
+        json=json,
+        timeout=timeout,
+        headers={"User-Agent": USER_AGENT, "Accept": "application/json", "Content-Type": "application/json"},
     )
     resp.raise_for_status()
     return resp.json()

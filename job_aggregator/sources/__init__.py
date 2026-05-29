@@ -10,8 +10,14 @@ from .ashby import AshbySource
 from .base import JobSource
 from .greenhouse import GreenhouseSource
 from .lever import LeverSource
+from .workday import WorkdaySource
 
-_ATS_CLASSES = {"greenhouse": GreenhouseSource, "lever": LeverSource, "ashby": AshbySource}
+_ATS_CLASSES = {
+    "greenhouse": GreenhouseSource,
+    "lever": LeverSource,
+    "ashby": AshbySource,
+    "workday": WorkdaySource,
+}
 
 
 def build_sources(config: AppConfig, proxy_url: Optional[str] = None) -> list[tuple[JobSource, int]]:
@@ -24,7 +30,8 @@ def build_sources(config: AppConfig, proxy_url: Optional[str] = None) -> list[tu
             built.append((JobSpySource(name, proxy_url=proxy_url), source_cfg.limit))
         elif name in ATS_SITES:
             if not source_cfg.companies:
-                logger.warning("source '{}' is enabled but has no companies configured; skipping", name)
+                label = "career-site URLs" if name == "workday" else "companies"
+                logger.warning("source '{}' is enabled but has no {} configured; skipping", name, label)
                 continue
             built.append((_ATS_CLASSES[name](source_cfg.companies), source_cfg.limit))
         else:  # pragma: no cover — config validation should prevent this
@@ -32,4 +39,11 @@ def build_sources(config: AppConfig, proxy_url: Optional[str] = None) -> list[tu
     return built
 
 
-__all__ = ["build_sources", "JobSource", "GreenhouseSource", "LeverSource", "AshbySource"]
+__all__ = [
+    "build_sources",
+    "JobSource",
+    "GreenhouseSource",
+    "LeverSource",
+    "AshbySource",
+    "WorkdaySource",
+]
