@@ -66,6 +66,36 @@ def test_match_mode_word_vs_substring():
     assert word.new_jobs == []
 
 
+def test_exclude_drops_unwanted_title_disciplines():
+    source = FakeSource(
+        "greenhouse",
+        [
+            make_job("sw", title="Software Engineer"),
+            make_job("be", title="Backend Engineer"),
+            make_job("mech", title="Mechanical Engineer"),
+            make_job("sales", title="Sales Engineer"),
+        ],
+    )
+    res = run(
+        _config(must_have=["engineer"], match_fields="title", exclude=["mechanical", "sales"]),
+        Secrets(), sources=[(source, 10)],
+    )
+    assert {j.job_id for j in res.new_jobs} == {"sw", "be"}
+
+
+def test_exclude_is_whole_word_not_substring():
+    # "rf" must drop "RF Engineer" without tripping "Performance Engineer".
+    source = FakeSource(
+        "greenhouse",
+        [make_job("perf", title="Performance Engineer"), make_job("rf", title="RF Engineer")],
+    )
+    res = run(
+        _config(must_have=["engineer"], match_fields="title", exclude=["rf"]),
+        Secrets(), sources=[(source, 10)],
+    )
+    assert {j.job_id for j in res.new_jobs} == {"perf"}
+
+
 def test_must_have_filters_and_remote_required():
     source = FakeSource(
         "greenhouse",

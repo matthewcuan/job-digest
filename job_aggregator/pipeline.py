@@ -87,6 +87,15 @@ def passes_filters(job: Job, criteria: SearchCriteria) -> bool:
         ):
             return False
 
+    # exclude: drop unwanted title disciplines even if must_have passed. Always a
+    # whole-word, title-only match so "engineer" keeps broad recall while e.g.
+    # "Mechanical Engineer" is rejected (and "rf" won't trip "Performance Engineer").
+    for term in criteria.exclude:
+        if not term.strip():
+            continue
+        if term_present(term, job.title, "", mode="word", fields="title"):
+            return False
+
     # work_mode.
     if criteria.work_mode is WorkMode.remote:
         if not (job.is_remote or "remote" in (job.location or "").lower()):

@@ -8,6 +8,12 @@ search:
   # nice_to_have = ranking boost only; never excludes a job.
   nice_to_have: ["backend", "django", "remote"]
 
+  # exclude = title blocklist. A job whose TITLE contains any of these (whole-word match,
+  # always title-only) is dropped even if it passed must_have. Use it to keep a broad
+  # must_have like "engineer" while removing unwanted disciplines. Whole-word so short
+  # tokens are safe: "rf" matches "RF Engineer", not "Performance Engineer".
+  exclude: []   # e.g. ["mechanical", "electrical", "sales", "field", "hardware"]
+
   # Target specific employers on the keyword-search boards (mainly Indeed, which honors a
   # company: filter). Use this to chase big companies that AREN'T on the ATS/Workday
   # adapters — e.g. Apple, Microsoft, Google, Amazon, Meta, Tesla. One Indeed search runs

@@ -40,6 +40,10 @@ class SearchCriteria(BaseModel):
 
     must_have: list[str] = Field(default_factory=list)
     nice_to_have: list[str] = Field(default_factory=list)
+    # exclude = title blocklist: a job whose TITLE contains any of these (whole-word match,
+    # always title-only) is dropped even if must_have passed. Keeps "engineer" broad while
+    # removing unwanted disciplines, e.g. "Mechanical Engineer" / "Sales Engineer".
+    exclude: list[str] = Field(default_factory=list)
     # Target specific employers on the keyword-search boards (Indeed honors a company:
     # filter). One search is run per company; results are verified by company name.
     target_companies: list[str] = Field(default_factory=list)
