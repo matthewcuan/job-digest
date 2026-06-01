@@ -108,11 +108,33 @@ class EmailConfig(BaseModel):
     send_on_total_failure: bool = True  # email when every source failed
 
 
+class LLMProvider(str, Enum):
+    anthropic = "anthropic"
+    openai_compatible = "openai_compatible"  # planned: Ollama / vLLM / OpenAI-compatible hosts
+
+
+class LLMConfig(BaseModel):
+    """Optional LLM relevance scoring. Scores each new job against ``ideal_role`` and folds
+    the score into ranking; ``min_score`` can additionally hard-filter weak matches."""
+
+    enabled: bool = False
+    provider: LLMProvider = LLMProvider.anthropic
+    model: str = "claude-haiku-4-5"
+    base_url: Optional[str] = None  # for provider=openai_compatible (e.g. http://localhost:11434/v1)
+    ideal_role: str = ""
+    min_score: Optional[int] = None  # None = de-rank only (never drops); int = drop below this
+    weight: float = 1.0  # influence on ranking (0 = scored/shown but does not reorder)
+    max_jobs: int = 100  # safety cap on scoring calls per run (logged if exceeded)
+    concurrency: int = 4
+    timeout: int = 30
+
+
 class AppConfig(BaseModel):
     search: SearchCriteria = Field(default_factory=SearchCriteria)
     sources: SourcesConfig = Field(default_factory=SourcesConfig)
     dedup: DedupConfig = Field(default_factory=DedupConfig)
     email: EmailConfig = Field(default_factory=EmailConfig)
+    llm: LLMConfig = Field(default_factory=LLMConfig)
 
 
 class Secrets(BaseSettings):
@@ -131,6 +153,7 @@ class Secrets(BaseSettings):
     smtp_password: Optional[str] = None
     email_to: Optional[str] = None
     proxy_url: Optional[str] = None
+    anthropic_api_key: Optional[str] = None  # for the optional LLM scoring stage
     storage_backend: str = "file"  # "file" (local) | "repo" (CI commits .state/)
     state_dir: str = ".state"
     state_retention_days: Optional[int] = None  # auto-prune seen entries older than this

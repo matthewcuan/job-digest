@@ -6,7 +6,7 @@ from .models import Job
 from .util import now_utc, term_count, term_present
 
 
-def score(job: Job, criteria: SearchCriteria) -> float:
+def score(job: Job, criteria: SearchCriteria, *, llm_weight: float = 1.0) -> float:
     mode = criteria.match_mode.value
     title = job.title or ""
     description = job.description or ""
@@ -37,11 +37,16 @@ def score(job: Job, criteria: SearchCriteria) -> float:
 
     # de-prioritize flagged jobs (missing salary/date) without excluding them.
     points -= 0.5 * len(job.flags)
+
+    # LLM relevance (additive blend): a 100 adds ~5 pts, on par with a fresh posting.
+    # Only contributes when the optional LLM stage scored this job.
+    if job.llm_score is not None:
+        points += llm_weight * (job.llm_score / 20.0)
     return points
 
 
-def rank(jobs: list[Job], criteria: SearchCriteria) -> list[Job]:
+def rank(jobs: list[Job], criteria: SearchCriteria, *, llm_weight: float = 1.0) -> list[Job]:
     """Score in place and return a new list sorted by relevance desc (stable)."""
     for job in jobs:
-        job.relevance = score(job, criteria)
+        job.relevance = score(job, criteria, llm_weight=llm_weight)
     return sorted(jobs, key=lambda j: j.relevance, reverse=True)

@@ -80,6 +80,7 @@ jobs:
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
           PROXY_URL: ${{ secrets.PROXY_URL }}   # optional; empty if unset
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # optional; only used when llm.enabled
           STORAGE_BACKEND: repo
           STATE_DIR: .state
           STATE_RETENTION_DAYS: "90"            # auto-prune seen jobs older than 90 days

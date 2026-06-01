@@ -149,6 +149,31 @@ def doctor(
         typer.echo(f"✗ SMTP: {type(exc).__name__}: {exc}")
         problems += 1
 
+    if cfg.llm.enabled:
+        from job_aggregator.llm import build_scorer
+        from job_aggregator.models import Job
+        from job_aggregator.util import now_utc
+
+        scorer = build_scorer(cfg.llm, secrets)
+        if scorer is None:
+            typer.echo("✗ llm enabled but not usable (missing ANTHROPIC_API_KEY or `anthropic` not installed)")
+            problems += 1
+        else:
+            sample = Job(
+                title="Senior Backend Engineer", company="Example", location="Remote - US",
+                salary=None, description="Build and operate backend services.",
+                description_snippet="", url="https://example.com", source="doctor",
+                posted_date=now_utc(), job_id="doctor",
+            )
+            try:
+                verdict = scorer.score(sample, cfg.llm.ideal_role)
+                typer.echo(f"✓ LLM {cfg.llm.provider.value}/{cfg.llm.model}: sample scored {verdict.score} ({verdict.verdict})")
+            except Exception as exc:  # noqa: BLE001
+                typer.echo(f"✗ LLM {cfg.llm.provider.value}/{cfg.llm.model}: {type(exc).__name__}: {exc}")
+                problems += 1
+    else:
+        typer.echo("• LLM scoring disabled (set llm.enabled: true to use)")
+
     typer.echo("\nAll good." if problems == 0 else f"\n{problems} problem(s) found.")
     raise typer.Exit(0 if problems == 0 else 1)
 

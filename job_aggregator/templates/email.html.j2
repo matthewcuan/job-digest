@@ -55,6 +55,13 @@
             {% if job.salary %} &middot; {{ job.salary }}{% endif %}
             &middot; {% if job.posted_date %}{{ job.posted_date.strftime('%Y-%m-%d') }}{% else %}date unknown{% endif %}
           </div>
+          {% if job.llm_score is not none %}
+            {% set chip = '#16a34a' if job.llm_verdict == 'strong' else ('#ca8a04' if job.llm_verdict == 'maybe' else '#9ca3af') %}
+            <div style="font-size:12px;margin-bottom:8px;">
+              <span style="display:inline-block;background:{{ chip }};color:#fff;font-weight:600;border-radius:4px;padding:1px 7px;">🎯 {{ job.llm_verdict }} {{ job.llm_score }}</span>
+              {% if job.llm_reason %}<span style="color:#555;margin-left:8px;">{{ job.llm_reason }}</span>{% endif %}
+            </div>
+          {% endif %}
           {% if job.description_snippet %}
             <div style="font-size:13px;color:#333;line-height:1.5;margin-bottom:10px;">{{ job.description_snippet }}</div>
           {% endif %}

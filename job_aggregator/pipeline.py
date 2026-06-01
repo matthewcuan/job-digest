@@ -8,6 +8,7 @@ from loguru import logger
 
 from .config import AppConfig, SearchCriteria, Secrets, WorkMode
 from .dedup import deduplicate
+from .llm import Scorer, build_scorer, score_jobs
 from .models import Job, SourceResult
 from .rank import rank
 from .sources import JobSource, build_sources
@@ -23,6 +24,8 @@ class RunResult:
     after_dedup: int = 0
     after_filter: int = 0
     seen_skipped: int = 0
+    llm_scored: int = 0
+    after_llm: int = 0
 
     @property
     def attempted(self) -> int:
@@ -136,6 +139,7 @@ def run(
     *,
     storage: Optional[Storage] = None,
     sources: Optional[list[tuple[JobSource, int]]] = None,
+    scorer: Optional[Scorer] = None,
 ) -> RunResult:
     """Run the full pipeline. Does NOT record seen jobs — the caller persists after a
     successful send (so a send failure doesn't silently swallow those listings)."""
@@ -174,15 +178,31 @@ def run(
         result.seen_skipped = len(filtered) - len(kept)
         filtered = kept
 
+    # 6.5 Optional LLM relevance scoring (+ optional hard-filter below min_score). Runs on
+    # the already-narrowed new/unseen set, so it only spends tokens on emailable jobs.
+    if config.llm.enabled:
+        active = scorer if scorer is not None else build_scorer(config.llm, secrets)
+        if active is not None:
+            result.llm_scored = score_jobs(filtered, config.llm, active)
+            if config.llm.min_score is not None:
+                before = len(filtered)
+                filtered = [j for j in filtered if (j.llm_score or 0) >= config.llm.min_score]
+                logger.info(
+                    "llm: scored {}, dropped {} below min_score={}",
+                    result.llm_scored, before - len(filtered), config.llm.min_score,
+                )
+    result.after_llm = len(filtered)
+
     # 7. Rank survivors.
-    result.new_jobs = rank(filtered, criteria)
+    result.new_jobs = rank(filtered, criteria, llm_weight=config.llm.weight)
 
     logger.info(
-        "pipeline: fetched={} deduped={} filtered={} seen_skipped={} new={}",
+        "pipeline: fetched={} deduped={} filtered={} seen_skipped={} llm_scored={} new={}",
         result.total_fetched,
         result.after_dedup,
         result.after_filter,
         result.seen_skipped,
+        result.llm_scored,
         len(result.new_jobs),
     )
     return result

@@ -90,6 +90,22 @@ sources:
 dedup:
   fuzzy_threshold: 88      # rapidfuzz score 0-100; >= this collapses near-duplicate postings
 
+# Optional LLM relevance scoring. Each NEW job is scored 0-100 against `ideal_role`; the
+# score folds into ranking (and `min_score` can hard-filter weak matches). Disabled by
+# default — when off, unconfigured, or erroring, the pipeline keyword-ranks as usual.
+# The Anthropic backend needs an ANTHROPIC_API_KEY secret (see .env.example).
+llm:
+  enabled: false
+  provider: anthropic        # anthropic  (openai_compatible / local Ollama planned)
+  model: claude-haiku-4-5    # cheap + fast; per-job scoring is a bounded judgement task
+  ideal_role: |
+    Describe your ideal role in prose — seniority, domain, stack, location, comp, IC vs.
+    manager. The model scores each posting against this, so be specific.
+  min_score: null            # null = de-rank only (never drops); int (e.g. 40) = hard-filter below it
+  weight: 1.0                # ranking influence (0 = scored + shown in the email but no reorder)
+  max_jobs: 100              # safety cap on scoring calls per run (logged if exceeded)
+  concurrency: 4             # parallel scoring calls (set 1 for a single local GPU)
+
 email:
   smtp_host: smtp.gmail.com   # SMTP_HOST env var overrides this if set
   smtp_port: 587

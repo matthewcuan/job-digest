@@ -11,5 +11,7 @@ tenacity==9.1.4
 loguru==0.7.3
 typer==0.26.3
 requests==2.34.2
+# Optional LLM relevance scoring (job_aggregator/llm.py); only used when config.llm.enabled.
+anthropic==0.75.0
 # Transitive but pinned for reproducible CI (pulled in by python-jobspy):
 pandas==2.3.3
