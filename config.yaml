@@ -4,9 +4,21 @@
 search:
   # must_have = AND filter: a job must contain EVERY term (in title or description) to
   # survive. These are also joined into the query string sent to the boards.
-  must_have: [".NET", "engineer"] 
+  must_have: ["engineer"]
   # nice_to_have = ranking boost only; never excludes a job.
-  nice_to_have: ["backend", "full-stack"]
+  nice_to_have: ["backend", "full-stack", ".NET"]
+  # exclude = title blocklist (whole-word, title-only): drops unwanted engineer
+  # disciplines so "engineer" keeps broad recall. Ambiguous-for-security titles left
+  # OUT on purpose: systems, test, network, quality (add them if you want them gone too).
+  exclude: ["mechanical", "electrical", "civil", "hardware", "manufacturing", "industrial",
+            "chemical", "structural", "aerospace", "biomedical", "rf", "optical", "controls",
+            "facilities", "materials", "sales", "field", "process", "validation"]
+  # target_companies: per-employer Indeed searches (company:"X"). Reaches cleared
+  # defense primes that run custom/Workday portals and aren't on the ATS adapters.
+  target_companies: ["Booz Allen", "Leidos", "CACI", "SAIC", "ManTech"]
+  # match_fields: title -> must_have must hit the job TITLE (precision; drops
+  # description-only false positives). Does NOT affect nice_to_have ranking.
+  match_fields: title
   location: "California"
   work_mode: any        # any | remote | hybrid | onsite
   experience_level: null   # free-text hint, e.g. "senior" / "entry"; matched client-side
@@ -42,24 +54,62 @@ sources:
   greenhouse:
     enabled: true
     limit: 50
-    companies: ["greenhouse"]   # example slug that returns live data; replace with yours
+    # Security-focused companies (verified live via `probe`).
+    companies: ["cloudflare", "datadog", "okta", "zscaler", "netskope", "abnormalsecurity",
+                "recordedfuture", "tanium", "chainguard", "tailscale", "huntress",
+                "bugcrowd", "orcasecurity", "censys", "expel", "cybereason",
+                # defense-tech
+                "appliedintuition", "scaleai", "govini", "twosixtechnologies", "vannevarlabs"]
   lever:
     enabled: true
     limit: 50
-    companies: ["leverdemo"]    # example slug
+    companies: ["sysdig", "palantir", "shieldai"]
   ashby:
     enabled: true
     limit: 50
-    companies: ["Ashby"]        # example slug (case-sensitive)
+    # Ashby slugs are case-sensitive; these resolve lowercase.
+    companies: ["vanta", "1password", "drata", "semgrep", "hackerone", "materialsecurity", "saronic"]
+
+  # Workday: `companies` are full CAREER-SITE URLs (copy from the browser), NOT slugs.
+  # Verified live via the CXS API. Fetches per-job detail, so keep `limit` modest.
+  workday:
+    enabled: true
+    limit: 15
+    companies:
+      - "https://cisco.wd5.myworkdayjobs.com/en-US/Cisco_Careers"
+      - "https://crowdstrike.wd5.myworkdayjobs.com/en-US/crowdstrikecareers"
+      - "https://ffive.wd5.myworkdayjobs.com/en-US/f5jobs"
+      - "https://proofpoint.wd5.myworkdayjobs.com/en-US/ProofpointCareers"
+      # cleared defense primes (also covered via target_companies/Indeed; dedup collapses overlap)
+      - "https://bah.wd1.myworkdayjobs.com/en-US/BAH_Jobs"
+      - "https://leidos.wd5.myworkdayjobs.com/en-US/External"
+      - "https://caci.wd1.myworkdayjobs.com/en-US/External"
+      - "https://ngc.wd1.myworkdayjobs.com/en-US/Northrop_Grumman_External_Site"
 
 dedup:
   fuzzy_threshold: 88      # rapidfuzz score 0-100; >= this collapses near-duplicate postings
 
+# Optional LLM relevance scoring. To turn on: add ANTHROPIC_API_KEY (GitHub Secret / .env)
+# and set enabled: true. min_score: null keeps it de-rank-only (a good calibration period);
+# set e.g. 40 once you trust the scores to start dropping weak matches.
+llm:
+  enabled: true
+  provider: anthropic
+  model: claude-haiku-4-5
+  ideal_role: |
+    Senior backend / full-stack engineer (.NET / C# a plus) at a security-focused or
+    defense-tech company. US-based, remote or California. ~$120k+. Individual contributor,
+    not a people-manager. Bonus: cloud platforms, APIs, distributed systems, security tooling.
+  min_score: null
+  weight: 1.0
+  max_jobs: 100
+  concurrency: 4
+
 email:
   smtp_host: smtp.gmail.com   # SMTP_HOST env var overrides this if set
   smtp_port: 587
-  sender: "you@gmail.com"
-  recipient: "you@gmail.com"  # EMAIL_TO env var overrides this if set
+  sender: "matthewcuan@gmail.com"
+  recipient: "matthewcuan@gmail.com"  # EMAIL_TO env var overrides this if set
   use_tls: true               # STARTTLS (port 587, the Gmail default)
   use_ssl: false              # implicit TLS / SMTPS (port 465); auto-enabled when port == 465
   subject_prefix: "[Job Digest]"
