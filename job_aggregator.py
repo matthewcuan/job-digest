@@ -25,13 +25,16 @@ def _log_summary(result: RunResult) -> None:
         else:
             logger.warning("  {} -> FAILED: {}", sr.source, sr.error)
     logger.info(
-        "Summary: {} new (fetched {}, after dedup {}, after filter {}, seen-skipped {})",
+        "Summary: {} new (fetched {}, after dedup {}, after filter {}, seen-skipped {}, llm-scored {})",
         len(result.new_jobs),
         result.total_fetched,
         result.after_dedup,
         result.after_filter,
         result.seen_skipped,
+        result.llm_scored,
     )
+    if result.llm_error:
+        logger.warning("  LLM scoring failed (keyword-ranked instead): {}", result.llm_error)
 
 
 @app.command()

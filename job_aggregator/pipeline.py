@@ -26,6 +26,7 @@ class RunResult:
     seen_skipped: int = 0
     llm_scored: int = 0
     after_llm: int = 0
+    llm_error: Optional[str] = None  # set when LLM scoring failed for every job this run
 
     @property
     def attempted(self) -> int:
@@ -183,10 +184,17 @@ def run(
     if config.llm.enabled:
         active = scorer if scorer is not None else build_scorer(config.llm, secrets)
         if active is not None:
-            result.llm_scored = score_jobs(filtered, config.llm, active)
+            batch = score_jobs(filtered, config.llm, active)
+            result.llm_scored = batch.scored
+            if batch.failed and batch.scored == 0:
+                result.llm_error = batch.error  # whole batch failed — surface it loudly
             if config.llm.min_score is not None:
                 before = len(filtered)
-                filtered = [j for j in filtered if (j.llm_score or 0) >= config.llm.min_score]
+                # Drop only jobs that WERE scored and fell short. Unscored jobs (failed call
+                # or beyond max_jobs) are kept — an LLM outage must never empty the digest.
+                filtered = [
+                    j for j in filtered if j.llm_score is None or j.llm_score >= config.llm.min_score
+                ]
                 logger.info(
                     "llm: scored {}, dropped {} below min_score={}",
                     result.llm_scored, before - len(filtered), config.llm.min_score,

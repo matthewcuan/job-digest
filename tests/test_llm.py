@@ -41,8 +41,8 @@ def test_score_jobs_sets_fields_and_counts():
         "Backend": JobScore(90, "strong", "great fit"),
         "Data": JobScore(20, "weak", "off-target"),
     })
-    n = score_jobs(jobs, LLMConfig(enabled=True, concurrency=1), scorer)
-    assert n == 2
+    batch = score_jobs(jobs, LLMConfig(enabled=True, concurrency=1), scorer)
+    assert (batch.scored, batch.failed, batch.error) == (2, 0, None)
     assert (jobs[0].llm_score, jobs[0].llm_verdict) == (90, "strong")
     assert jobs[1].llm_score == 20
 
@@ -50,17 +50,26 @@ def test_score_jobs_sets_fields_and_counts():
 def test_score_jobs_isolates_failures():
     jobs = [make_job("a", title="Backend Engineer"), make_job("b", title="boom Engineer")]
     scorer = FakeScorer({"Backend": JobScore(80, "strong", "ok"), "boom": None})
-    n = score_jobs(jobs, LLMConfig(enabled=True, concurrency=1), scorer)
-    assert n == 1                       # only the good one scored
+    batch = score_jobs(jobs, LLMConfig(enabled=True, concurrency=1), scorer)
+    assert batch.scored == 1 and batch.failed == 1     # one ok, one failed
+    assert batch.error is not None                     # representative error captured
     assert jobs[0].llm_score == 80
-    assert jobs[1].llm_score is None    # failed job left unscored, not crashed
+    assert jobs[1].llm_score is None                   # failed job left unscored, not crashed
+
+
+def test_score_jobs_total_failure_reports_error():
+    jobs = [make_job("a", title="boom one"), make_job("b", title="boom two")]
+    scorer = FakeScorer({"boom": None})
+    batch = score_jobs(jobs, LLMConfig(enabled=True, concurrency=1), scorer)
+    assert batch.scored == 0 and batch.failed == 2
+    assert "RuntimeError" in batch.error
 
 
 def test_score_jobs_caps_at_max_jobs():
     jobs = [make_job(str(i), title=f"Engineer {i}") for i in range(5)]
     scorer = FakeScorer({"Engineer": JobScore(50, "maybe", "x")})
-    n = score_jobs(jobs, LLMConfig(enabled=True, concurrency=1, max_jobs=3), scorer)
-    assert n == 3
+    batch = score_jobs(jobs, LLMConfig(enabled=True, concurrency=1, max_jobs=3), scorer)
+    assert batch.scored == 3
     assert sum(j.llm_score is not None for j in jobs) == 3
 
 
@@ -104,6 +113,16 @@ def test_run_hard_filters_below_min_score():
     assert {j.job_id for j in res.new_jobs} == {"hi"}   # low score dropped
     assert res.llm_scored == 2
     assert res.after_llm == 1
+
+
+def test_run_llm_total_failure_keeps_jobs_and_reports():
+    # A total LLM outage must NOT empty the digest, even with min_score set.
+    jobs = [make_job("a", title="boom Backend Engineer"), make_job("b", title="boom Data Engineer")]
+    scorer = FakeScorer({"boom": None})  # every job raises
+    res = run(_cfg(min_score=40, concurrency=1), Secrets(), sources=[(_Src(jobs), 10)], scorer=scorer)
+    assert {j.job_id for j in res.new_jobs} == {"a", "b"}   # all kept despite min_score
+    assert res.llm_scored == 0
+    assert res.llm_error is not None                        # surfaced for the email/CLI
 
 
 def test_run_derank_only_keeps_all_and_reorders():

@@ -70,6 +70,7 @@ def build_context(result: RunResult, config: AppConfig) -> dict:
         "failed_sources": [sr.source for sr in result.failed_sources],
         "all_failed": result.all_failed,
         "groups": _group_by_source(result.new_jobs),
+        "llm": {"enabled": config.llm.enabled, "scored": result.llm_scored, "error": result.llm_error},
         "stats": {
             "fetched": result.total_fetched,
             "after_dedup": result.after_dedup,

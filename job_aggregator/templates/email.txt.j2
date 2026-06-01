@@ -9,6 +9,9 @@ Sources:
 {% if failed_sources %}
 WARNING: {{ failed_sources|length }} source(s) failed this run.
 {% endif %}
+{% if llm.error %}
+WARNING: LLM scoring failed this run — jobs keyword-ranked only ({{ llm.error }}).
+{% endif %}
 {% if total_new == 0 %}
 {{ "Every source failed on this run." if all_failed else "No new jobs this run." }}
 {% endif %}

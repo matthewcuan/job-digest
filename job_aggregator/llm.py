@@ -56,6 +56,16 @@ class JobScore:
     reason: str
 
 
+@dataclass
+class ScoreBatch:
+    """Outcome of scoring a batch of jobs. ``error`` holds a representative failure message
+    (the first one seen) so callers can surface a systemic problem (bad key, no credits)."""
+
+    scored: int = 0
+    failed: int = 0
+    error: Optional[str] = None
+
+
 def _user_content(job: Job) -> str:
     parts = [f"Title: {job.title}", f"Company: {job.company}", f"Location: {job.location}"]
     if job.salary:
@@ -135,10 +145,14 @@ def build_scorer(cfg: LLMConfig, secrets: Secrets) -> Optional[Scorer]:
     return None
 
 
-def score_jobs(jobs: list[Job], cfg: LLMConfig, scorer: Scorer) -> int:
+def score_jobs(jobs: list[Job], cfg: LLMConfig, scorer: Scorer) -> ScoreBatch:
     """Score ``jobs`` in place (sets the ``llm_*`` fields). Per-job failures are isolated;
     a failed job is left unscored and keyword-ranked. Caps at ``cfg.max_jobs`` and logs what
-    it skipped (no silent truncation). Returns the number of jobs successfully scored."""
+    it skipped (no silent truncation).
+
+    Failures are logged loudly: a WARNING when every job failed (a systemic key/credit/model
+    problem, not a one-off), and a WARNING listing the count on partial failure. The returned
+    ``ScoreBatch`` carries a representative error so the caller can surface it in the digest."""
     targets = jobs[: cfg.max_jobs]
     if len(jobs) > cfg.max_jobs:
         logger.warning(
@@ -146,19 +160,36 @@ def score_jobs(jobs: list[Job], cfg: LLMConfig, scorer: Scorer) -> int:
             cfg.max_jobs, len(jobs) - cfg.max_jobs,
         )
 
-    def _one(job: Job) -> bool:
+    def _one(job: Job) -> Optional[str]:
+        """Return None on success, or an error string on failure."""
         try:
             result = scorer.score(job, cfg.ideal_role)
         except Exception as exc:  # noqa: BLE001 — isolate per job, like a source fetch
             logger.debug("LLM scoring failed for {!r}: {}: {}", job.title, type(exc).__name__, exc)
-            return False
+            return f"{type(exc).__name__}: {exc}"
         job.llm_score = result.score
         job.llm_verdict = result.verdict
         job.llm_reason = result.reason
-        return True
+        return None
 
     workers = max(1, cfg.concurrency)
     if workers == 1 or len(targets) <= 1:
-        return sum(_one(job) for job in targets)
-    with ThreadPoolExecutor(max_workers=workers) as pool:
-        return sum(pool.map(_one, targets))
+        outcomes = [_one(job) for job in targets]
+    else:
+        with ThreadPoolExecutor(max_workers=workers) as pool:
+            outcomes = list(pool.map(_one, targets))
+
+    errors = [o for o in outcomes if o is not None]
+    batch = ScoreBatch(scored=len(outcomes) - len(errors), failed=len(errors), error=errors[0] if errors else None)
+    if errors and batch.scored == 0:
+        logger.warning(
+            "LLM scoring FAILED for all {} job(s) — check ANTHROPIC_API_KEY, credit balance, and model. "
+            "Falling back to keyword ranking. First error: {}",
+            len(targets), errors[0],
+        )
+    elif errors:
+        logger.warning(
+            "LLM scoring failed for {}/{} job(s) (keyword-ranked); first error: {}",
+            batch.failed, len(targets), errors[0],
+        )
+    return batch
