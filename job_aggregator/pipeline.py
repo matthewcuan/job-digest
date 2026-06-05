@@ -100,6 +100,19 @@ def passes_filters(job: Job, criteria: SearchCriteria) -> bool:
         if term_present(term, job.title, "", mode="word", fields="title"):
             return False
 
+    # location: drop unwanted locations; with an allowlist set, keep ONLY matches. Whole-word
+    # match so short codes ("US"/"CA") don't hit inside other words (e.g. "Australia"). A blank
+    # or unknown location is always kept (benefit of the doubt). Applied to every source — the
+    # ATS boards return a company's whole global board and ignore the `location` search term.
+    location = (job.location or "").strip()
+    if location:
+        if any(term_present(t, location, "", mode="word", fields="title") for t in criteria.location_excludes):
+            return False
+        if criteria.location_includes and not any(
+            term_present(t, location, "", mode="word", fields="title") for t in criteria.location_includes
+        ):
+            return False
+
     # work_mode.
     if criteria.work_mode is WorkMode.remote:
         if not (job.is_remote or "remote" in (job.location or "").lower()):

@@ -51,6 +51,13 @@ class SearchCriteria(BaseModel):
     match_mode: MatchMode = MatchMode.substring
     match_fields: MatchField = MatchField.title_and_description
     location: Optional[str] = None
+    # Client-side location filtering, applied to ALL sources — including the ATS boards that
+    # ignore the `location` search term above and return a company's whole global board.
+    # location_excludes: drop a job whose location matches any term (blocklist).
+    # location_includes: if non-empty, keep ONLY jobs whose location matches a term (allowlist).
+    # Whole-word + case-insensitive; jobs with a blank/unknown location are always kept.
+    location_includes: list[str] = Field(default_factory=list)
+    location_excludes: list[str] = Field(default_factory=list)
     work_mode: WorkMode = WorkMode.any
     experience_level: Optional[str] = None  # free-text hint, e.g. "senior", "entry"
     date_posted_hours: Optional[int] = None  # only jobs newer than this survive

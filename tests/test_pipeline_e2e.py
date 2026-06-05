@@ -96,6 +96,67 @@ def test_exclude_is_whole_word_not_substring():
     assert {j.job_id for j in res.new_jobs} == {"perf"}
 
 
+def test_location_excludes_blocklist_drops_foreign_keeps_us_and_blank():
+    source = FakeSource(
+        "greenhouse",
+        [
+            make_job("us", title="Backend Engineer", location="San Francisco, CA"),
+            make_job("remote", title="Backend Engineer", location="Remote - US"),
+            make_job("blank", title="Backend Engineer", location=""),
+            make_job("india", title="Backend Engineer", location="Bengaluru, India"),
+            make_job("aus", title="Backend Engineer", location="Sydney, Australia"),
+        ],
+    )
+    res = run(_config(must_have=["engineer"], match_fields="title",
+                      location_excludes=["India", "Australia"]),
+              Secrets(), sources=[(source, 10)])
+    assert {j.job_id for j in res.new_jobs} == {"us", "remote", "blank"}
+
+
+def test_location_includes_allowlist_keeps_only_matches_and_blank():
+    source = FakeSource(
+        "greenhouse",
+        [
+            make_job("ca", title="Backend Engineer", location="Sacramento, CA"),
+            make_job("blank", title="Backend Engineer", location=""),
+            make_job("london", title="Backend Engineer", location="London, United Kingdom"),
+        ],
+    )
+    res = run(_config(must_have=["engineer"], match_fields="title",
+                      location_includes=["CA", "United States", "Remote"]),
+              Secrets(), sources=[(source, 10)])
+    assert {j.job_id for j in res.new_jobs} == {"ca", "blank"}   # london dropped, blank kept
+
+
+def test_location_filter_is_whole_word():
+    # "US" must not match "Australia" (substring would); blocklist "US" should not drop it,
+    # and an allowlist of "US" should still drop a job located only in Australia.
+    source = FakeSource("greenhouse", [make_job("aus", title="Backend Engineer", location="Sydney, Australia")])
+    keep = run(_config(must_have=["engineer"], match_fields="title", location_excludes=["US"]),
+               Secrets(), sources=[(source, 10)])
+    assert {j.job_id for j in keep.new_jobs} == {"aus"}          # "US" did not match "Australia"
+    drop = run(_config(must_have=["engineer"], match_fields="title", location_includes=["US"]),
+               Secrets(), sources=[(source, 10)])
+    assert drop.new_jobs == []                                  # not US -> excluded by allowlist
+
+
+def test_experience_mid_drops_senior_keeps_early_and_unlabeled():
+    source = FakeSource(
+        "greenhouse",
+        [
+            make_job("junior", title="Junior Backend Engineer", company="Alpha"),
+            make_job("plain", title="Backend Engineer", company="Bravo"),
+            make_job("ii", title="Software Engineer II", company="Charlie"),
+            make_job("principal", title="Principal Engineer", company="Delta"),
+            make_job("senior", title="Senior Backend Engineer", company="Echo"),
+            make_job("mgr", title="Engineering Manager", company="Foxtrot"),
+        ],
+    )
+    res = run(_config(must_have=["engineer"], match_fields="title", experience_level="mid"),
+              Secrets(), sources=[(source, 10)])
+    assert {j.job_id for j in res.new_jobs} == {"junior", "plain", "ii"}   # senior+ dropped
+
+
 def test_must_have_filters_and_remote_required():
     source = FakeSource(
         "greenhouse",

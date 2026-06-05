@@ -31,8 +31,16 @@ search:
   match_fields: title_and_description
 
   location: "Remote"
+  # Client-side location filter (ATS boards ignore the search `location` above and return a
+  # company's whole global board, so filter here). Whole-word, case-insensitive; a blank/
+  # unknown location is always kept.
+  #   location_excludes -> blocklist: drop jobs whose location matches any term (loose).
+  #   location_includes -> allowlist: if set, keep ONLY jobs whose location matches (strict).
+  location_includes: []    # e.g. ["United States", "USA", "Remote", "California"]
+  location_excludes: []    # e.g. ["India", "Australia", "United Kingdom", "Canada"]
   work_mode: remote        # any | remote | hybrid | onsite
-  experience_level: null   # free-text hint, e.g. "senior" / "entry"; matched client-side
+  experience_level: null   # lenient: drops only clear senior-signal titles (senior/staff/
+                           # principal/lead/director/vp/manager); keeps early/mid/unlabeled
   date_posted_hours: 168   # keep jobs newer than this (168 = 1 week); null = no limit
   salary_min: null         # annual; only excludes jobs that DO list a lower salary
   job_type: fulltime       # fulltime | parttime | contract | temporary | internship | null
