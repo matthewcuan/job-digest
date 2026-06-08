@@ -17,10 +17,11 @@ name: Job Digest
 on:
   schedule:
     # Once a day in the morning, US Pacific. Cron is UTC and GitHub does NOT adjust for DST:
-    #   15:00 UTC = 8am PDT (Mar–Nov)  ·  7am PST (Nov–Mar)
-    # If you'd rather it always be 8am Pacific year-round, switch to "0 16 * * *" in winter.
-    # GitHub may also delay scheduled runs by a few minutes under load.
-    - cron: "0 15 * * *"
+    #   13:23 UTC = 6:23am PDT (Mar–Nov)  ·  5:23am PST (Nov–Mar)
+    # The :23 (off the top of the hour) dodges GitHub's scheduler congestion, which otherwise
+    # delays top-of-hour runs by tens of minutes to hours. Targeting 6:23 leaves headroom so a
+    # delayed run still lands early. For a year-round 6:23am Pacific, use "23 14 * * *" in winter.
+    - cron: "23 13 * * *"
   workflow_dispatch: {}     # manual "Run workflow" button (test anytime)
 
 # Serialize runs so two of them can't write the state branch at once.
