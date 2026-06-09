@@ -1,0 +1,34 @@
+# Continuous integration: run the test suite on every push to main and on PRs.
+# Separate from job-digest.yml (the scheduled digest runner). The tests are network-free
+# (FakeSource/FakeScorer) and need no secrets, so this runs anywhere with no setup.
+name: CI
+
+on:
+  push:
+    branches: [main]          # not the auto-managed `state` branch
+  pull_request:
+    branches: [main]
+
+# A new push to the same ref cancels the in-flight run.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"   # matches the digest workflow
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt   # pulls requirements.txt + pytest
+
+      - name: Run tests
+        run: python -m pytest -q
