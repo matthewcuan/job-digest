@@ -7,12 +7,14 @@ search:
   must_have: ["engineer"]
   # nice_to_have = ranking boost only; never excludes a job.
   nice_to_have: ["backend", "full-stack", ".NET"]
-  # exclude = title blocklist (whole-word, title-only): drops unwanted engineer
-  # disciplines so "engineer" keeps broad recall. Ambiguous-for-security titles left
-  # OUT on purpose: systems, test, network, quality (add them if you want them gone too).
+  # exclude = title blocklist (whole-word, title-only): drops unwanted engineer disciplines
+  # so "engineer" keeps broad recall. Still left OUT (add if you want them gone): test,
+  # network, quality, data.
   exclude: ["mechanical", "electrical", "civil", "hardware", "manufacturing", "industrial",
             "chemical", "structural", "aerospace", "biomedical", "rf", "optical", "controls",
             "facilities", "materials", "sales", "field", "process", "validation",
+            # non-software "engineer" roles (flagged as irrelevant):
+            "systems", "system", "solutions", "support",
             # seniority ABOVE senior (senior/mid/early kept; "staff" is borderline — remove to keep it):
             "principal", "staff", "distinguished", "fellow", "director", "vp", "manager"]
   # target_companies: per-employer Indeed searches (company:"X"). Reaches cleared
@@ -23,19 +25,30 @@ search:
   match_fields: title
   location: "California"
   # location_excludes = blocklist (drop foreign locations the ATS boards return). Whole-word,
-  # case-insensitive; blank locations always kept. Add countries here as you spot them.
-  # For strict US-only, instead populate location_includes (e.g. ["United States","USA","Remote"]).
+  # case-insensitive; blank locations always kept. Comprehensive country + region list so
+  # foreign jobs rarely leak. For STRICT US-only instead, populate location_includes (e.g.
+  # ["United States","USA","US","Remote"] + state codes) — keeps only matches.
   location_includes: []
-  location_excludes: ["India", "Australia", "United Kingdom", "UK", "Canada", "Germany",
-                      "Ireland", "Singapore", "Japan", "Poland", "Spain", "Netherlands",
-                      "France", "Brazil", "Mexico", "China", "Israel", "Costa Rica",
-                      "Portugal", "Romania", "Ukraine", "Philippines", "Colombia"]
+  location_excludes: ["United Kingdom", "UK", "Ireland", "Germany", "France", "Spain", "Portugal",
+                      "Netherlands", "Belgium", "Switzerland", "Austria", "Italy", "Sweden", "Norway",
+                      "Denmark", "Finland", "Poland", "Czechia", "Czech Republic", "Hungary", "Romania",
+                      "Bulgaria", "Greece", "Ukraine", "Lithuania", "Latvia", "Estonia", "Luxembourg",
+                      "Iceland", "Cyprus", "Serbia", "Croatia",
+                      "India", "China", "Japan", "Singapore", "Australia", "New Zealand", "Korea",
+                      "Taiwan", "Hong Kong", "Malaysia", "Indonesia", "Thailand", "Vietnam",
+                      "Philippines", "Pakistan", "Bangladesh", "Sri Lanka",
+                      "Israel", "United Arab Emirates", "UAE", "Saudi Arabia", "Qatar", "Egypt",
+                      "South Africa", "Nigeria", "Kenya", "Turkey",
+                      "Canada", "Mexico", "Brazil", "Argentina", "Chile", "Colombia", "Peru",
+                      "Uruguay", "Costa Rica", "Panama", "Guatemala",
+                      "EMEA", "APAC", "LATAM", "Europe"]
   work_mode: any        # any | remote | hybrid | onsite
   # experience_level: OFF. The built-in heuristic lumps "senior" with principal/staff/lead, so
   # `mid` would drop senior too. We keep senior by leaving this null and dropping only the
   # above-senior titles via the `exclude` list above.
   experience_level: null
-  date_posted_hours: 24 # keep jobs newer than this (168 = 1 week); null = no limit
+  date_posted_hours: 72 # keep jobs newer than this (168 = 1 week); null = no limit. Widened
+                        # from 24h to broaden recall (fewer empty days).
   salary_min: 120000 # annual; only excludes jobs that DO list a lower salary
   job_type: fulltime       # fulltime | parttime | contract | temporary | internship | null
   distance: 50             # miles (JobSpy boards)
@@ -72,7 +85,12 @@ sources:
                 "recordedfuture", "tanium", "chainguard", "tailscale", "huntress",
                 "bugcrowd", "orcasecurity", "censys", "expel", "cybereason",
                 # defense-tech
-                "appliedintuition", "scaleai", "govini", "twosixtechnologies", "vannevarlabs"]
+                "appliedintuition", "scaleai", "govini", "twosixtechnologies", "vannevarlabs", "epirus",
+                # infra / dev-tools / data (backend-heavy)
+                "grafanalabs", "fastly", "mongodb", "elastic", "cockroachlabs", "gitlab",
+                "twilio", "newrelic", "pagerduty", "launchdarkly", "sumologic", "temporaltechnologies",
+                # fintech
+                "affirm", "gusto"]
   lever:
     enabled: true
     limit: 50
@@ -81,7 +99,8 @@ sources:
     enabled: true
     limit: 50
     # Ashby slugs are case-sensitive; these resolve lowercase.
-    companies: ["vanta", "1password", "drata", "semgrep", "hackerone", "materialsecurity", "saronic"]
+    companies: ["vanta", "1password", "drata", "semgrep", "hackerone", "materialsecurity", "saronic",
+                "sentry", "snowflake", "confluent", "skydio", "deel"]
 
   # Workday: `companies` are full CAREER-SITE URLs (copy from the browser), NOT slugs.
   # Verified live via the CXS API. Fetches per-job detail, so keep `limit` modest.
