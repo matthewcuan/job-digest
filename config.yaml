@@ -57,7 +57,7 @@ search:
 sources:
   # --- JobSpy-backed boards (best-effort; often blocked from CI IPs) ---
   google:
-    enabled: true          # Google Jobs tends to survive from CI better than the rest
+    enabled: false         # disabled: slow scrape that returns 0 from datacenter/CI IPs
     limit: 25
   indeed:
     enabled: true          # most tolerant scraper from a single/cloud IP
