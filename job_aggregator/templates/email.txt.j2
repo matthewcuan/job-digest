@@ -23,6 +23,7 @@ WARNING: LLM scoring failed this run — jobs keyword-ranked only ({{ llm.error 
 * {{ job.title }}
   {{ job.company }}{{ (" · " ~ job.location) if job.location else "" }}{{ (" · " ~ job.salary) if job.salary else "" }} · {{ job.posted_date.strftime('%Y-%m-%d') if job.posted_date else 'date unknown' }}
 {% if job.llm_score is not none %}  [fit: {{ job.llm_verdict }} {{ job.llm_score }}{{ (" — " ~ job.llm_reason) if job.llm_reason else "" }}]
+{% endif %}{% if job.skills %}  Skills: {{ job.skills | join(', ') }}
 {% endif %}  {{ job.description_snippet or '(no description)' }}
   Apply: {{ job.url }}
 {% endfor %}

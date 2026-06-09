@@ -68,6 +68,9 @@
               {% if job.llm_reason %}<span style="color:#555;margin-left:8px;">{{ job.llm_reason }}</span>{% endif %}
             </div>
           {% endif %}
+          {% if job.skills %}
+            <div style="font-size:12px;color:#444;margin-bottom:8px;">🛠 {{ job.skills | join(' · ') }}</div>
+          {% endif %}
           {% if job.description_snippet %}
             <div style="font-size:13px;color:#333;line-height:1.5;margin-bottom:10px;">{{ job.description_snippet }}</div>
           {% endif %}

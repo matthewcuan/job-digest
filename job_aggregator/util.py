@@ -236,3 +236,82 @@ def term_count(term: str, title: str, description: str, *, mode: str = "substrin
             total += hay.count(t)
     return total
 
+
+# --- skill / salary extraction (best-effort, deterministic) -------------------------
+# For the digest: pull the tech stack and a salary range out of free-text descriptions
+# that the structured source fields don't expose. Approximate, not authoritative.
+
+# Punctuation-bearing terms matched as substrings (word boundaries don't play well with #/+/.).
+_SKILL_SUB = [
+    (".NET", [".net", "dotnet"]), ("C#", ["c#", "c-sharp", "csharp"]),
+    ("C++", ["c++"]), ("ASP.NET", ["asp.net"]), ("Node.js", ["node.js", "nodejs"]),
+]
+# Alphabetic terms matched on word boundaries (display, [lowercase aliases]).
+_SKILL_WORD = [
+    ("Python", ["python"]), ("JavaScript", ["javascript"]), ("TypeScript", ["typescript"]),
+    ("Java", ["java"]), ("Go", ["golang"]), ("Rust", ["rust"]), ("Ruby", ["ruby"]),
+    ("PHP", ["php"]), ("Scala", ["scala"]), ("Kotlin", ["kotlin"]), ("Swift", ["swift"]),
+    ("Elixir", ["elixir"]),
+    ("React", ["react"]), ("Angular", ["angular"]), ("Vue", ["vue"]),
+    ("Django", ["django"]), ("Flask", ["flask"]), ("FastAPI", ["fastapi"]),
+    ("Spring", ["spring"]), ("Rails", ["rails"]),
+    ("AWS", ["aws"]), ("GCP", ["gcp"]), ("Azure", ["azure"]),
+    ("Kubernetes", ["kubernetes", "k8s"]), ("Docker", ["docker"]), ("Terraform", ["terraform"]),
+    ("Kafka", ["kafka"]), ("Spark", ["spark"]), ("Airflow", ["airflow"]),
+    ("PostgreSQL", ["postgresql", "postgres"]), ("MySQL", ["mysql"]),
+    ("MongoDB", ["mongodb"]), ("Redis", ["redis"]), ("Elasticsearch", ["elasticsearch"]),
+    ("Snowflake", ["snowflake"]), ("GraphQL", ["graphql"]), ("gRPC", ["grpc"]), ("SQL", ["sql"]),
+]
+
+
+def extract_skills(text: str, limit: int = 8) -> list[str]:
+    """Best-effort list of technologies/languages mentioned in ``text`` (title+description).
+    Deterministic keyword match; punctuation terms first so .NET/C# rank ahead of languages."""
+    if not text:
+        return []
+    low = text.lower()
+    found: list[str] = []
+    for display, subs in _SKILL_SUB:
+        if any(s in low for s in subs):
+            found.append(display)
+    for display, words in _SKILL_WORD:
+        if display == "Go":  # the language: "golang", or a capitalized standalone "Go"
+            if "golang" in low or re.search(r"(?<![\w-])Go(?![\w-])", text):
+                found.append(display)
+            continue
+        if any(re.search(r"\b" + re.escape(w) + r"\b", low) for w in words):
+            found.append(display)
+    out: list[str] = []
+    for s in found:  # dedupe preserving order, then cap
+        if s not in out:
+            out.append(s)
+        if len(out) >= limit:
+            break
+    return out
+
+
+# Salary RANGE only (two numbers, each with a comma-group or a "k"), to avoid mistaking a
+# stray "$5 - $8" or a single number for compensation.
+_SALARY_NUM = r"(\d{1,3},\d{3}|\d{2,3}k)"
+_SALARY_RANGE = re.compile(rf"\$\s?{_SALARY_NUM}\s?(?:[-–—]|to)\s?\$?\s?{_SALARY_NUM}", re.IGNORECASE)
+
+
+def extract_salary(text: Optional[str]) -> Optional[str]:
+    """Pull a salary range out of free text, or None. Conservative — requires an explicit
+    range with thousands ($120,000–$160,000 or $120k–$160k). Display-only; does not feed the
+    salary_min filter (we don't trust a fuzzily-parsed number to exclude jobs)."""
+    if not text:
+        return None
+    m = _SALARY_RANGE.search(text)
+    if not m:
+        return None
+
+    def _amt(s: str) -> float:
+        s = s.lower().replace(",", "")
+        return float(s[:-1]) * 1000 if s.endswith("k") else float(s)
+
+    low, high = _amt(m.group(1)), _amt(m.group(2))
+    if not (10_000 <= low <= high <= 2_000_000):
+        return None
+    return format_salary(low, high)
+

@@ -31,6 +31,7 @@ class Job:
     salary_max_amount: Optional[float] = None
     relevance: float = 0.0
     flags: list[str] = field(default_factory=list)
+    skills: list[str] = field(default_factory=list)  # detected tech/languages (best-effort)
     # Optional LLM relevance scoring (set only when the llm stage runs; see job_aggregator.llm).
     llm_score: Optional[int] = None  # 0-100
     llm_verdict: Optional[str] = None  # "strong" | "maybe" | "weak"

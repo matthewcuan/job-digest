@@ -13,7 +13,7 @@ from .models import Job, SourceResult
 from .rank import rank
 from .sources import JobSource, build_sources
 from .storage import Storage
-from .util import normalize_job_type, now_utc, term_present
+from .util import extract_salary, extract_skills, normalize_job_type, now_utc, term_present
 
 
 @dataclass
@@ -173,8 +173,10 @@ def run(
         all_jobs.extend(source_result.jobs)
     result.total_fetched = len(all_jobs)
 
-    # 3. Flag soft-quality gaps (missing salary/date) so rank/email can reflect them.
+    # 3. Enrich (best-effort salary from free text) then flag soft-quality gaps.
     for job in all_jobs:
+        if job.salary is None:
+            job.salary = extract_salary(job.description)
         _flag_missing(job)
 
     # 4. Dedup across sources.
@@ -216,6 +218,10 @@ def run(
 
     # 7. Rank survivors.
     result.new_jobs = rank(filtered, criteria, llm_weight=config.llm.weight)
+
+    # Detect tech/languages for the digest (survivors only — avoids work on dropped jobs).
+    for job in result.new_jobs:
+        job.skills = extract_skills(f"{job.title}\n{job.description}")
 
     logger.info(
         "pipeline: fetched={} deduped={} filtered={} seen_skipped={} llm_scored={} new={}",
