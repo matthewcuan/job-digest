@@ -18,7 +18,8 @@ class AtsSource(JobSource):
     hosts, so parallel requests from one IP don't risk the blocking the scrapers do.
     """
 
-    def __init__(self, companies: list[str], timeout: int = 15, concurrency: int = 8):
+    def __init__(self, companies: list, timeout: int = 15, concurrency: int = 8):
+        # Entries are board slugs (str); Workday also accepts {url, name} WorkdayBoard objects.
         self.companies = list(companies)
         self.timeout = timeout
         self.concurrency = concurrency

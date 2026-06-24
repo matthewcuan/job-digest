@@ -58,18 +58,29 @@ def _group_by_source(jobs: list[Job]) -> list[tuple[str, list[Job]]]:
     return sorted(groups.items(), key=lambda kv: (-len(kv[1]), kv[0]))
 
 
+def displayed_jobs(result: RunResult, config: AppConfig) -> list[Job]:
+    """The (ranked) jobs that actually appear in the email, after ``email.max_jobs``.
+
+    The CLI records ONLY these as seen, so capped-out jobs roll into the next digest
+    instead of being silently lost. Single source of truth for that slice."""
+    cap = config.email.max_jobs
+    return result.new_jobs[:cap] if cap else list(result.new_jobs)
+
+
 def build_context(result: RunResult, config: AppConfig) -> dict:
     source_health = {
         sr.source: {"ok": sr.ok, "count": sr.count, "error": sr.error, "near_empty": sr.near_empty}
         for sr in result.source_results
     }
+    shown = displayed_jobs(result, config)
     return {
         "generated_at": now_utc().strftime("%Y-%m-%d %H:%M UTC"),
         "total_new": len(result.new_jobs),
+        "omitted": len(result.new_jobs) - len(shown),
         "source_health": source_health,
         "failed_sources": [sr.source for sr in result.failed_sources],
         "all_failed": result.all_failed,
-        "groups": _group_by_source(result.new_jobs),
+        "groups": _group_by_source(shown),
         "llm": {"enabled": config.llm.enabled, "scored": result.llm_scored, "error": result.llm_error},
         "stats": {
             "fetched": result.total_fetched,

@@ -18,7 +18,7 @@ from urllib.parse import urlparse
 
 from loguru import logger
 
-from ..config import SearchCriteria
+from ..config import SearchCriteria, WorkdayBoard
 from ..models import Job
 from ..util import make_snippet, normalize_job_type, now_utc, parse_iso, stable_job_id, strip_html
 from ._ats import AtsSource
@@ -64,13 +64,17 @@ def _parse_relative_posted(text: Optional[str]):
 class WorkdaySource(AtsSource):
     name = "workday"
 
-    def _fetch_board(self, url: str, criteria: SearchCriteria, limit: int) -> list[Job]:
+    def _fetch_board(self, board: str | WorkdayBoard, criteria: SearchCriteria, limit: int) -> list[Job]:
+        # Boards are configured as a URL string or a {url, name} mapping. Workday's APIs
+        # don't expose a company name, so the explicit name beats the tenant-slug guess
+        # ("bah" would otherwise render as "Bah").
+        url, name = (board.url, board.name) if isinstance(board, WorkdayBoard) else (board, None)
         host, tenant, site = parse_workday_url(url)
         if not (host and tenant and site):
             raise ValueError(f"could not parse Workday tenant/site from URL: {url}")
         cxs = f"https://{host}/wday/cxs/{tenant}/{site}"
         public_base = f"https://{host}/{site}"
-        company = pretty_company(tenant)
+        company = name or pretty_company(tenant)
 
         data = post_json(
             f"{cxs}/jobs",

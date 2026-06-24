@@ -29,5 +29,8 @@ WARNING: LLM scoring failed this run — jobs keyword-ranked only ({{ llm.error 
 {% endfor %}
 {% endfor %}
 
+{% if omitted %}
++ {{ omitted }} more job{{ '' if omitted == 1 else 's' }} not shown (email capped) — they'll roll into the next digest.
+{% endif %}
 --
 fetched {{ stats.fetched }} · after dedup {{ stats.after_dedup }} · after filter {{ stats.after_filter }} · already-seen skipped {{ stats.seen_skipped }}

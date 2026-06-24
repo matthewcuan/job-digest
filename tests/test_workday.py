@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import pytest
 
-from job_aggregator.config import SearchCriteria
+from job_aggregator.config import AppConfig, SearchCriteria, WorkdayBoard
 from job_aggregator.sources.workday import WorkdaySource, parse_workday_url
 
 
@@ -77,6 +77,38 @@ def test_workday_fetch_board_maps_postings(monkeypatch):
     assert job.posted_date is not None and job.posted_date.year == 2026
     assert "Build GPUs" in job.description and "<" not in job.description  # HTML stripped
     assert job.url.endswith("Senior-Engineer_JR1")
+
+
+def test_workday_named_board_overrides_tenant_guess(monkeypatch):
+    # {url, name} entries set the display name; tenant "bah" would otherwise render "Bah".
+    import job_aggregator.sources.workday as wd
+
+    monkeypatch.setattr(
+        wd, "post_json",
+        lambda url, *, json=None, timeout=15: {
+            "jobPostings": [
+                {"title": "Eng", "externalPath": "/job/x_JR1", "locationsText": "Remote",
+                 "postedOn": "Posted Today", "bulletFields": ["JR1"]}
+            ]
+        },
+    )
+    monkeypatch.setattr(wd, "get_json", lambda url, *, timeout=15, params=None: {"jobPostingInfo": {}})
+
+    board = WorkdayBoard(url="https://bah.wd1.myworkdayjobs.com/en-US/BAH_Jobs", name="Booz Allen Hamilton")
+    result = WorkdaySource([board]).fetch(SearchCriteria(), 5)
+    assert result.ok and result.jobs[0].company == "Booz Allen Hamilton"
+
+
+def test_workday_board_dict_form_parses_from_config():
+    cfg = AppConfig.model_validate(
+        {"sources": {"workday": {"enabled": True, "companies": [
+            {"url": "https://bah.wd1.myworkdayjobs.com/en-US/BAH_Jobs", "name": "Booz Allen Hamilton"},
+            "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite",
+        ]}}}
+    )
+    first, second = cfg.sources.workday.companies
+    assert isinstance(first, WorkdayBoard) and first.name == "Booz Allen Hamilton"
+    assert isinstance(second, str)  # plain URLs still work
 
 
 def test_workday_detail_failure_falls_back_to_list_fields(monkeypatch):

@@ -66,9 +66,17 @@ def run(
         raise typer.Exit(code=1)
 
     # Record only after a successful send so a delivery failure lets the next run retry.
-    if result.new_jobs:
-        recorded = storage.record(result.new_jobs)
+    # Record only the jobs that were actually shown (email.max_jobs cap) — capped-out jobs
+    # stay unseen and roll into the next digest instead of being silently lost.
+    shown = email_renderer.displayed_jobs(result, cfg)
+    if shown:
+        recorded = storage.record(shown)
         logger.info("Recorded {} job(s) to seen-store", recorded)
+        if len(result.new_jobs) > len(shown):
+            logger.info(
+                "{} job(s) over the email cap were NOT recorded; they roll into the next digest",
+                len(result.new_jobs) - len(shown),
+            )
     elif sent:
         logger.info("Email sent (no new jobs to record)")
 

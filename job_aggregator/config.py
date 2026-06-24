@@ -4,7 +4,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from enum import Enum
 from pathlib import Path
-from typing import Optional
+from typing import Optional, Union
 
 import yaml
 from pydantic import BaseModel, Field, field_validator
@@ -76,10 +76,19 @@ class SearchCriteria(BaseModel):
         return self.work_mode is WorkMode.remote
 
 
+class WorkdayBoard(BaseModel):
+    """A Workday board with an explicit display name. Workday's APIs don't expose a company
+    name, so without this the digest derives one from the tenant slug ("bah" -> "Bah")."""
+
+    url: str
+    name: Optional[str] = None  # None -> derive from the tenant slug
+
+
 class SourceConfig(BaseModel):
     enabled: bool = False
     limit: int = 25  # results_wanted (JobSpy) / max kept per ATS board
-    companies: list[str] = Field(default_factory=list)  # ATS board slugs only
+    # ATS board slugs; workday entries may instead be {url, name} mappings (WorkdayBoard).
+    companies: list[Union[str, WorkdayBoard]] = Field(default_factory=list)
 
 
 class SourcesConfig(BaseModel):
@@ -111,6 +120,10 @@ class EmailConfig(BaseModel):
     use_tls: bool = True  # STARTTLS (port 587)
     use_ssl: bool = False  # implicit TLS / SMTPS (port 465); auto-on when port == 465
     subject_prefix: str = "[Job Digest]"
+    # Cap the jobs shown per email (ranked order). Gmail clips messages over ~102KB, which
+    # would hide the bottom of a huge digest. Omitted jobs are NOT recorded as seen, so they
+    # roll into the next digest instead of being lost. None = no cap.
+    max_jobs: Optional[int] = 50
     send_empty_digest: bool = False  # email even when zero new jobs
     send_on_total_failure: bool = True  # email when every source failed
 

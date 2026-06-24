@@ -234,6 +234,47 @@ def test_recency_ranking_orders_newest_higher():
     assert [j.job_id for j in result.new_jobs][0] == "fresh"
 
 
+def test_email_max_jobs_caps_display_and_records_only_shown():
+    from job_aggregator.email_renderer import displayed_jobs, render_digest
+
+    # Distinct titles/companies so fuzzy dedup doesn't collapse them.
+    fixtures = [
+        ("Backend Engineer", "Alpha"), ("Platform Engineer", "Bravo"), ("API Engineer", "Charlie"),
+        ("Infrastructure Engineer", "Delta"), ("Cloud Engineer", "Echo"),
+    ]
+    jobs = [
+        make_job(str(i), title=title, company=co, location=f"Office {co}")
+        for i, (title, co) in enumerate(fixtures)
+    ]
+    cfg = _config(must_have=["engineer"], match_fields="title")
+    cfg.email.max_jobs = 3
+    result = run(cfg, Secrets(), sources=[(FakeSource("greenhouse", jobs), 10)])
+    assert len(result.new_jobs) == 5
+
+    shown = displayed_jobs(result, cfg)
+    assert shown == result.new_jobs[:3]  # ranked order preserved; cap applied
+
+    html, text = render_digest(result, cfg)
+    assert "+ 2 more jobs not shown" in html and "roll into the next digest" in html
+    assert "+ 2 more jobs not shown" in text
+    # All 5 still counted in the header (the cap is display-only).
+    assert "5 new jobs" in text
+
+
+def test_email_max_jobs_null_means_uncapped():
+    from job_aggregator.email_renderer import displayed_jobs, render_digest
+
+    fixtures = [("Backend Engineer", "Alpha"), ("Platform Engineer", "Bravo"),
+                ("API Engineer", "Charlie"), ("Cloud Engineer", "Delta")]
+    jobs = [make_job(str(i), title=t, company=c) for i, (t, c) in enumerate(fixtures)]
+    cfg = _config(must_have=["engineer"], match_fields="title")
+    cfg.email.max_jobs = None
+    result = run(cfg, Secrets(), sources=[(FakeSource("greenhouse", jobs), 10)])
+    assert len(displayed_jobs(result, cfg)) == 4
+    html, _ = render_digest(result, cfg)
+    assert "not shown" not in html
+
+
 def test_end_to_end_render_html_and_text():
     source = FakeSource(
         "greenhouse",

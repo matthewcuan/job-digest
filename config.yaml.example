@@ -93,7 +93,10 @@ sources:
     enabled: false
     limit: 15
     companies:
+      # Plain URL, or {url, name} to set the digest's display name (Workday's API has no
+      # company name, so otherwise it's guessed from the tenant slug — "bah" -> "Bah").
       - "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite"
+      # - { url: "https://bah.wd1.myworkdayjobs.com/en-US/BAH_Jobs", name: "Booz Allen Hamilton" }
 
 dedup:
   fuzzy_threshold: 88      # rapidfuzz score 0-100; >= this collapses near-duplicate postings
@@ -122,5 +125,8 @@ email:
   use_tls: true               # STARTTLS (port 587, the Gmail default)
   use_ssl: false              # implicit TLS / SMTPS (port 465); auto-enabled when port == 465
   subject_prefix: "[Job Digest]"
+  max_jobs: 50                # cap jobs per email (ranked order; Gmail clips ~102KB emails).
+                              # Capped-out jobs aren't marked seen, so they roll into the
+                              # next digest instead of being lost. null = no cap.
   send_empty_digest: false    # email even when there are zero new jobs
   send_on_total_failure: true # email a failure summary when EVERY source failed
