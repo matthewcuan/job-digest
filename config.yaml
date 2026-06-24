@@ -89,18 +89,23 @@ sources:
                 # infra / dev-tools / data (backend-heavy)
                 "grafanalabs", "fastly", "mongodb", "elastic", "cockroachlabs", "gitlab",
                 "twilio", "newrelic", "pagerduty", "launchdarkly", "sumologic", "temporaltechnologies",
+                "databricks", "clickhouse", "cribl", "honeycomb",
                 # fintech
-                "affirm", "gusto"]
+                "affirm", "gusto", "stripe", "brex", "robinhood", "mercury",
+                # more security + defense-tech
+                "axonius", "corelight", "yubico", "helsing"]
   lever:
     enabled: true
     limit: 50
-    companies: ["sysdig", "palantir", "shieldai"]
+    companies: ["sysdig", "palantir", "shieldai",
+                "jumpcloud", "sonatype", "twingate", "hermeus", "neon"]
   ashby:
     enabled: true
     limit: 50
     # Ashby slugs are case-sensitive; these resolve lowercase.
     companies: ["vanta", "1password", "drata", "semgrep", "hackerone", "materialsecurity", "saronic",
-                "sentry", "snowflake", "confluent", "skydio", "deel"]
+                "sentry", "snowflake", "confluent", "skydio", "deel",
+                "gecko-robotics", "supabase", "plaid", "moderntreasury"]
 
   # Workday: `companies` are full CAREER-SITE URLs (copy from the browser), NOT slugs.
   # Verified live via the CXS API. Fetches per-job detail, so keep `limit` modest.
@@ -119,6 +124,8 @@ sources:
       - { url: "https://leidos.wd5.myworkdayjobs.com/en-US/External", name: "Leidos" }
       - { url: "https://caci.wd1.myworkdayjobs.com/en-US/External", name: "CACI" }
       - { url: "https://ngc.wd1.myworkdayjobs.com/en-US/Northrop_Grumman_External_Site", name: "Northrop Grumman" }
+      # security / identity
+      - { url: "https://sailpoint.wd1.myworkdayjobs.com/en-US/SailPoint", name: "SailPoint" }
 
 dedup:
   fuzzy_threshold: 88      # rapidfuzz score 0-100; >= this collapses near-duplicate postings
