@@ -108,15 +108,17 @@ sources:
     enabled: true
     limit: 15
     companies:
-      - "https://cisco.wd5.myworkdayjobs.com/en-US/Cisco_Careers"
-      - "https://crowdstrike.wd5.myworkdayjobs.com/en-US/crowdstrikecareers"
-      - "https://ffive.wd5.myworkdayjobs.com/en-US/f5jobs"
-      - "https://proofpoint.wd5.myworkdayjobs.com/en-US/ProofpointCareers"
+      # `name` sets the display name in the digest (Workday's API has none, so it would
+      # otherwise be guessed from the tenant slug: "bah" -> "Bah").
+      - { url: "https://cisco.wd5.myworkdayjobs.com/en-US/Cisco_Careers", name: "Cisco" }
+      - { url: "https://crowdstrike.wd5.myworkdayjobs.com/en-US/crowdstrikecareers", name: "CrowdStrike" }
+      - { url: "https://ffive.wd5.myworkdayjobs.com/en-US/f5jobs", name: "F5" }
+      - { url: "https://proofpoint.wd5.myworkdayjobs.com/en-US/ProofpointCareers", name: "Proofpoint" }
       # cleared defense primes (also covered via target_companies/Indeed; dedup collapses overlap)
-      - "https://bah.wd1.myworkdayjobs.com/en-US/BAH_Jobs"
-      - "https://leidos.wd5.myworkdayjobs.com/en-US/External"
-      - "https://caci.wd1.myworkdayjobs.com/en-US/External"
-      - "https://ngc.wd1.myworkdayjobs.com/en-US/Northrop_Grumman_External_Site"
+      - { url: "https://bah.wd1.myworkdayjobs.com/en-US/BAH_Jobs", name: "Booz Allen Hamilton" }
+      - { url: "https://leidos.wd5.myworkdayjobs.com/en-US/External", name: "Leidos" }
+      - { url: "https://caci.wd1.myworkdayjobs.com/en-US/External", name: "CACI" }
+      - { url: "https://ngc.wd1.myworkdayjobs.com/en-US/Northrop_Grumman_External_Site", name: "Northrop Grumman" }
 
 dedup:
   fuzzy_threshold: 88      # rapidfuzz score 0-100; >= this collapses near-duplicate postings
@@ -145,5 +147,8 @@ email:
   use_tls: true               # STARTTLS (port 587, the Gmail default)
   use_ssl: false              # implicit TLS / SMTPS (port 465); auto-enabled when port == 465
   subject_prefix: "[Job Digest]"
+  max_jobs: 50                # cap jobs per email (ranked; Gmail clips ~102KB emails).
+                              # Capped-out jobs are not marked seen — they roll into the
+                              # next digest. null = no cap.
   send_empty_digest: false    # email even when there are zero new jobs
   send_on_total_failure: true # email a failure summary when EVERY source failed
