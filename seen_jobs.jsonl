@@ -1,10 +1,3 @@
-{"job_id": "82fb869fcdb56508", "title": "Front- End Software Engineering Technical Leader- Angular v20+", "company": "Cisco", "source": "workday", "first_seen": "2026-06-05T17:23:43.853746+00:00"}
-{"job_id": "4043dd2d12e3576f", "title": "Sr Software Engineer - Cloud (Hybrid)", "company": "Crowdstrike", "source": "workday", "first_seen": "2026-06-05T17:23:43.853746+00:00"}
-{"job_id": "5c7df708c0ed7fa8", "title": "NAVWAR Engineer", "company": "Caci", "source": "workday", "first_seen": "2026-06-05T17:23:43.853746+00:00"}
-{"job_id": "f29cd9de79569d4f", "title": "Senior Solutions Engineer - SLED - North Texas", "company": "Ffive", "source": "workday", "first_seen": "2026-06-05T17:23:43.853746+00:00"}
-{"job_id": "71f499ce47e5602a", "title": "System Integration Engineer", "company": "Caci", "source": "workday", "first_seen": "2026-06-05T17:23:43.853746+00:00"}
-{"job_id": "7077e99ff098574f", "title": "EW Systems Engineer", "company": "Ngc", "source": "workday", "first_seen": "2026-06-06T16:12:20.257115+00:00"}
-{"job_id": "26b8132c0a79e9a1", "title": "Senior Software Engineer - Backend/ Full Stack", "company": "Tanium", "source": "greenhouse", "first_seen": "2026-06-06T16:12:20.257115+00:00"}
 {"job_id": "023bc2906a855ba1", "title": "Data Engineer, Go to Market (Remote)", "company": "Crowdstrike", "source": "workday", "first_seen": "2026-06-08T18:01:34.055458+00:00"}
 {"job_id": "843cefc62645aa88", "title": "Systems Integration & Test Engineer", "company": "Caci", "source": "workday", "first_seen": "2026-06-08T18:01:34.055458+00:00"}
 {"job_id": "e208e443278764dd", "title": "Systems Engineer 1/2", "company": "Ngc", "source": "workday", "first_seen": "2026-06-08T18:01:34.055458+00:00"}
@@ -742,3 +735,15 @@
 {"job_id": "806e36f1ef707479", "title": "AI Software Engineer (AHT)", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-09-03T17:04:33.367282+00:00"}
 {"job_id": "cfd72e7d29c8534d", "title": "Waterfront Engineer", "company": "MANTECH", "source": "indeed", "first_seen": "2026-09-03T17:04:33.367282+00:00"}
 {"job_id": "e5beb6502ad24fde", "title": "Sr Software Engineer--Routing Platform & Infrastructure", "company": "Cisco", "source": "workday", "first_seen": "2026-09-03T17:04:33.367282+00:00"}
+{"job_id": "bebbe67256be9013", "title": "Full Stack Engineer, Observability", "company": "LaunchDarkly", "source": "greenhouse", "first_seen": "2026-09-04T16:53:43.868103+00:00"}
+{"job_id": "c03a775a447d80d1", "title": "Software Engineer - Auth0/AuthZ (Java)", "company": "New Relic", "source": "greenhouse", "first_seen": "2026-09-04T16:53:43.868103+00:00"}
+{"job_id": "f3eb767f1408ff9e", "title": "Lead Full Stack Software Engineer ", "company": "Two Six Technologies", "source": "greenhouse", "first_seen": "2026-09-04T16:53:43.868103+00:00"}
+{"job_id": "f1a6e5dbd3191844", "title": "DevSecOps Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-09-04T16:53:43.868103+00:00"}
+{"job_id": "3f62c0f3e2eae6f3", "title": "MECM Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-09-04T16:53:43.868103+00:00"}
+{"job_id": "948ffa7568251464", "title": "Software Engineering Technical Leader", "company": "Cisco", "source": "workday", "first_seen": "2026-09-04T16:53:43.868103+00:00"}
+{"job_id": "34f2233460505de8", "title": "Sr HW Design Engineer", "company": "F5", "source": "workday", "first_seen": "2026-09-04T16:53:43.868103+00:00"}
+{"job_id": "b7f82ec1aad0de85", "title": "Sr HW Design Engineer", "company": "F5", "source": "workday", "first_seen": "2026-09-04T16:53:43.868103+00:00"}
+{"job_id": "912f63e0dfc4e654", "title": "Software Engineering Technical Leader", "company": "Cisco", "source": "workday", "first_seen": "2026-09-04T16:53:43.868103+00:00"}
+{"job_id": "eae106c7ae1735d3", "title": "Sr. Regulatory Compliance Engineer", "company": "F5", "source": "workday", "first_seen": "2026-09-04T16:53:43.868103+00:00"}
+{"job_id": "e90fa53bb60ede60", "title": "Detection & Mitigation Engineer", "company": "Cloudflare", "source": "greenhouse", "first_seen": "2026-09-04T16:53:43.868103+00:00"}
+{"job_id": "9667a599ed989d9a", "title": "Senior Front End Software Engineer ", "company": "Two Six Technologies", "source": "greenhouse", "first_seen": "2026-09-04T16:53:43.868103+00:00"}
