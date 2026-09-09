@@ -1,13 +1,3 @@
-{"job_id": "fcede69043d19789", "title": "Software Engineer (Full-Stack), GTM Tooling", "company": "Cockroach Labs", "source": "greenhouse", "first_seen": "2026-06-11T17:04:09.475974+00:00"}
-{"job_id": "38c02ba2ddfe954d", "title": "Software Engineer (Front End)", "company": "Caci", "source": "workday", "first_seen": "2026-06-11T17:04:09.475974+00:00"}
-{"job_id": "5d28ac5b0a14947a", "title": " Senior Software Engineer (Experience)", "company": "Chainguard", "source": "greenhouse", "first_seen": "2026-06-11T17:04:09.475974+00:00"}
-{"job_id": "cce8106c1ab686ec", "title": "Automation Test Engineer", "company": "Caci", "source": "workday", "first_seen": "2026-06-11T17:04:09.475974+00:00"}
-{"job_id": "7686f2657f311762", "title": "Senior Software Engineer NAVAIR Product Line", "company": "Caci", "source": "workday", "first_seen": "2026-06-11T17:04:09.475974+00:00"}
-{"job_id": "1af4721f34c0cbad", "title": "Network Engineer, Expert", "company": "Caci", "source": "workday", "first_seen": "2026-06-11T17:04:09.475974+00:00"}
-{"job_id": "531d9849686374d2", "title": "Engineer III, Software Assurance - Product Security (Remote)", "company": "Crowdstrike", "source": "workday", "first_seen": "2026-06-11T17:04:09.475974+00:00"}
-{"job_id": "ac0eb145d8a7e523", "title": "Security Engineer III", "company": "Ffive", "source": "workday", "first_seen": "2026-06-11T17:04:09.475974+00:00"}
-{"job_id": "7a6668956abc38b2", "title": "Reliability Engineer - Reliability & Maintainability (R&M)", "company": "Ngc", "source": "workday", "first_seen": "2026-06-11T17:04:09.475974+00:00"}
-{"job_id": "2c1d3b32720fe09d", "title": "Sr. Software Engineer - Sensor, macOS  (Remote)", "company": "Crowdstrike", "source": "workday", "first_seen": "2026-06-11T17:04:09.475974+00:00"}
 {"job_id": "e66c862d917bca98", "title": "Senior Security Engineer (Cyber Resiliency)", "company": "Chainguard", "source": "greenhouse", "first_seen": "2026-06-12T16:29:43.075722+00:00"}
 {"job_id": "893d7ffd06dfc1ca", "title": "Engineer III - Data Center FinOps (Hybrid)", "company": "Crowdstrike", "source": "workday", "first_seen": "2026-06-12T16:29:43.075722+00:00"}
 {"job_id": "80bb370200668ad8", "title": "Senior ISP/OSP Engineer", "company": "Caci", "source": "workday", "first_seen": "2026-06-12T16:29:43.075722+00:00"}
@@ -721,3 +711,22 @@
 {"job_id": "a41045766ace0298", "title": "Senior Cybersecurity Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-09-08T17:17:08.636801+00:00"}
 {"job_id": "a722b259b53ca603", "title": "Robotics Engineer", "company": "Booz Allen Hamilton", "source": "workday", "first_seen": "2026-09-08T17:17:08.636801+00:00"}
 {"job_id": "4b27a6ac0c0c9b4e", "title": "Software Development Engineer III", "company": "F5", "source": "workday", "first_seen": "2026-09-08T17:17:08.636801+00:00"}
+{"job_id": "fccef6c928fcf566", "title": "Senior AI Product Engineer", "company": "Drata", "source": "ashby", "first_seen": "2026-09-09T17:11:39.698082+00:00"}
+{"job_id": "03d43399eca4e7d9", "title": "Sr Full Stack Engineer", "company": "F5", "source": "workday", "first_seen": "2026-09-09T17:11:39.698082+00:00"}
+{"job_id": "85d5ecbec18e8e12", "title": "Senior Legal AI Platform Engineer", "company": "Cribl", "source": "greenhouse", "first_seen": "2026-09-09T17:11:39.698082+00:00"}
+{"job_id": "d49b9837247f3f8a", "title": "DevSecOps Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-09-09T17:11:39.698082+00:00"}
+{"job_id": "0fadc22f6e21a397", "title": "Chief Cybersecurity Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-09-09T17:11:39.698082+00:00"}
+{"job_id": "2dfec0dbcfabf9ee", "title": "2027 Associate Propulsion Engineer/Propulsion Engineer - Promontory UT", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-09-09T17:11:39.698082+00:00"}
+{"job_id": "16bf75466771b0ed", "title": "Lead Software Engineer - Java", "company": "New Relic", "source": "greenhouse", "first_seen": "2026-09-09T17:11:39.698082+00:00"}
+{"job_id": "e9f81f5c23b87fda", "title": "Senior Site Reliability Engineer, AI Inference", "company": "F5", "source": "workday", "first_seen": "2026-09-09T17:11:39.698082+00:00"}
+{"job_id": "753b579f8a218c56", "title": "Site Reliability Engineer III", "company": "F5", "source": "workday", "first_seen": "2026-09-09T17:11:39.698082+00:00"}
+{"job_id": "88bce9ba3dffb459", "title": "Software Development Engineer III", "company": "F5", "source": "workday", "first_seen": "2026-09-09T17:11:39.698082+00:00"}
+{"job_id": "a834be53dded9b2a", "title": "HCM Test Automation & Quality Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-09-09T17:11:39.698082+00:00"}
+{"job_id": "260ff90b9437a7c3", "title": "Engineer Propulsion Level 1/2", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-09-09T17:11:39.698082+00:00"}
+{"job_id": "0d807a7d0362ab23", "title": "Associate Design Engineer (CSA) - No clearance required for consideration", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-09-09T17:11:39.698082+00:00"}
+{"job_id": "1f620957e2374a7a", "title": "Abuse Research Engineer", "company": "Stripe", "source": "greenhouse", "first_seen": "2026-09-09T17:11:39.698082+00:00"}
+{"job_id": "0d890f1464669ded", "title": "Software Engineer", "company": "Booz Allen Hamilton", "source": "workday", "first_seen": "2026-09-09T17:11:39.698082+00:00"}
+{"job_id": "87d74e26e91a85a3", "title": "Product Security Engineer", "company": "SailPoint", "source": "workday", "first_seen": "2026-09-09T17:11:39.698082+00:00"}
+{"job_id": "3f74f66dcb91f9ce", "title": "Consulting Engineer", "company": "MongoDB", "source": "greenhouse", "first_seen": "2026-09-09T17:11:39.698082+00:00"}
+{"job_id": "4a0acf3c50079aff", "title": "Senior Software Engineer – Platform Security", "company": "F5", "source": "workday", "first_seen": "2026-09-09T17:11:39.698082+00:00"}
+{"job_id": "b7eef96dccf252b2", "title": "Security Engineer III", "company": "F5", "source": "workday", "first_seen": "2026-09-09T17:11:39.698082+00:00"}
