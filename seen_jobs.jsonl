@@ -1,16 +1,3 @@
-{"job_id": "e66c862d917bca98", "title": "Senior Security Engineer (Cyber Resiliency)", "company": "Chainguard", "source": "greenhouse", "first_seen": "2026-06-12T16:29:43.075722+00:00"}
-{"job_id": "893d7ffd06dfc1ca", "title": "Engineer III - Data Center FinOps (Hybrid)", "company": "Crowdstrike", "source": "workday", "first_seen": "2026-06-12T16:29:43.075722+00:00"}
-{"job_id": "80bb370200668ad8", "title": "Senior ISP/OSP Engineer", "company": "Caci", "source": "workday", "first_seen": "2026-06-12T16:29:43.075722+00:00"}
-{"job_id": "609a5108df55410f", "title": "Splunk Software Engineer-TS/SCI with Poly", "company": "Caci", "source": "workday", "first_seen": "2026-06-12T16:29:43.075722+00:00"}
-{"job_id": "a5d3f1c428e5e2fe", "title": "Software Development Engineer II", "company": "Ffive", "source": "workday", "first_seen": "2026-06-12T16:29:43.075722+00:00"}
-{"job_id": "d582d3c66bdecae4", "title": "Machine Learning Engineer (Clearance Sponsorship)", "company": "Caci", "source": "workday", "first_seen": "2026-06-12T16:29:43.075722+00:00"}
-{"job_id": "f176bf81a118acb8", "title": "Software Engineer - Webex Web Clients", "company": "Cisco", "source": "workday", "first_seen": "2026-06-12T16:29:43.075722+00:00"}
-{"job_id": "6e7ef3dd6c1b4fc8", "title": "Software Engineer – Classification & Access Control", "company": "Caci", "source": "workday", "first_seen": "2026-06-12T16:29:43.075722+00:00"}
-{"job_id": "1c964990f85b7c4f", "title": "Release Train Software Engineer - Level 6", "company": "Ngc", "source": "workday", "first_seen": "2026-06-12T16:29:43.075722+00:00"}
-{"job_id": "c66e6a414b5cb8eb", "title": "Security Research Engineering Technical Leader", "company": "Cisco", "source": "workday", "first_seen": "2026-06-12T16:29:43.075722+00:00"}
-{"job_id": "d67a2bdd8c547bba", "title": "Junior Signal Processing Engineer", "company": "Leidos", "source": "indeed", "first_seen": "2026-06-12T16:29:43.075722+00:00"}
-{"job_id": "04d7bd01c00c8538", "title": "Software Engineer - Level 4", "company": "Ngc", "source": "workday", "first_seen": "2026-06-12T16:29:43.075722+00:00"}
-{"job_id": "264ded64fb0e6f56", "title": "Senior Security Engineer (AI Platform)", "company": "Chainguard", "source": "greenhouse", "first_seen": "2026-06-12T16:29:43.075722+00:00"}
 {"job_id": "ea960b1647686307", "title": "Senior Developer Success Engineer - West", "company": "Temporal Technologies", "source": "greenhouse", "first_seen": "2026-06-13T15:14:00.470239+00:00"}
 {"job_id": "c2dfd64f0e3df425", "title": "Sr. Full Stack Engineer (Remote)", "company": "Crowdstrike", "source": "workday", "first_seen": "2026-06-13T15:14:00.470239+00:00"}
 {"job_id": "bb35774a0845ac9f", "title": "Senior AI/ML Engineer Lead", "company": "Caci", "source": "workday", "first_seen": "2026-06-13T15:14:00.470239+00:00"}
@@ -730,3 +717,14 @@
 {"job_id": "3f74f66dcb91f9ce", "title": "Consulting Engineer", "company": "MongoDB", "source": "greenhouse", "first_seen": "2026-09-09T17:11:39.698082+00:00"}
 {"job_id": "4a0acf3c50079aff", "title": "Senior Software Engineer – Platform Security", "company": "F5", "source": "workday", "first_seen": "2026-09-09T17:11:39.698082+00:00"}
 {"job_id": "b7eef96dccf252b2", "title": "Security Engineer III", "company": "F5", "source": "workday", "first_seen": "2026-09-09T17:11:39.698082+00:00"}
+{"job_id": "03261d34e1992d5f", "title": "Digital Signal Processing Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-09-10T17:02:04.611641+00:00"}
+{"job_id": "7ea96a816d9a7ee3", "title": "Expert DevOps Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-09-10T17:02:04.611641+00:00"}
+{"job_id": "abd0eea5ef68bd91", "title": "Guidance, Navigation, & Control Engineer ", "company": "Helsing", "source": "greenhouse", "first_seen": "2026-09-10T17:02:04.611641+00:00"}
+{"job_id": "744465b9043e2550", "title": "Network Engineer", "company": "Booz Allen Hamilton", "source": "indeed", "first_seen": "2026-09-10T17:02:04.611641+00:00"}
+{"job_id": "4f1fe0e48e433804", "title": "Cloud Engineer III (RAS)", "company": "SAIC", "source": "indeed", "first_seen": "2026-09-10T17:02:04.611641+00:00"}
+{"job_id": "363102d3f0be1bb9", "title": "Senior Platform Engineer (OpAI)", "company": "SAIC", "source": "indeed", "first_seen": "2026-09-10T17:02:04.611641+00:00"}
+{"job_id": "81d803881a6522a3", "title": "Engineer Aeronautical", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-09-10T17:02:04.611641+00:00"}
+{"job_id": "6c80bdc0fcd11d18", "title": "Senior Machine Learning Engineer, AISWP (Hybrid)", "company": "Cisco", "source": "workday", "first_seen": "2026-09-10T17:02:04.611641+00:00"}
+{"job_id": "0601bd3aae986fd4", "title": "Site Reliability Engineer I", "company": "F5", "source": "workday", "first_seen": "2026-09-10T17:02:04.611641+00:00"}
+{"job_id": "42ab8482dd7f91b8", "title": "Software Engineering Technical Leader", "company": "Cisco", "source": "workday", "first_seen": "2026-09-10T17:02:04.611641+00:00"}
+{"job_id": "4994f431fb518e02", "title": "Software Engineer Apprentice", "company": "F5", "source": "workday", "first_seen": "2026-09-10T17:02:04.611641+00:00"}
