@@ -1,17 +1,3 @@
-{"job_id": "ea960b1647686307", "title": "Senior Developer Success Engineer - West", "company": "Temporal Technologies", "source": "greenhouse", "first_seen": "2026-06-13T15:14:00.470239+00:00"}
-{"job_id": "c2dfd64f0e3df425", "title": "Sr. Full Stack Engineer (Remote)", "company": "Crowdstrike", "source": "workday", "first_seen": "2026-06-13T15:14:00.470239+00:00"}
-{"job_id": "bb35774a0845ac9f", "title": "Senior AI/ML Engineer Lead", "company": "Caci", "source": "workday", "first_seen": "2026-06-13T15:14:00.470239+00:00"}
-{"job_id": "636b3d88680451f1", "title": "Senior People Partner - Engineering", "company": "Snowflake", "source": "ashby", "first_seen": "2026-06-13T15:14:00.470239+00:00"}
-{"job_id": "8e131451a9317d55", "title": "Senior Suppler Quality Engineer ", "company": "Skydio", "source": "ashby", "first_seen": "2026-06-13T15:14:00.470239+00:00"}
-{"job_id": "2e448c2a5155d4db", "title": "Senior Network Engineer", "company": "Caci", "source": "workday", "first_seen": "2026-06-13T15:14:00.470239+00:00"}
-{"job_id": "e0ea20c1e74ca45c", "title": "DevSecOps AWS Engineer", "company": "Caci", "source": "workday", "first_seen": "2026-06-13T15:14:00.470239+00:00"}
-{"job_id": "2377fc8d843ea36d", "title": "Cyber Software Engineer", "company": "Caci", "source": "workday", "first_seen": "2026-06-13T15:14:00.470239+00:00"}
-{"job_id": "d50280945a79c6f1", "title": "Silicon Photonics Design Engineer Technical Lead- (Hybrid)", "company": "Cisco", "source": "workday", "first_seen": "2026-06-13T15:14:00.470239+00:00"}
-{"job_id": "951cab823d9fea75", "title": "Software Development Engineers (Level 2 or 3)", "company": "Ngc", "source": "workday", "first_seen": "2026-06-13T15:14:00.470239+00:00"}
-{"job_id": "23dde09e9b819e49", "title": "Software Engineer (Level 3/4)", "company": "Ngc", "source": "workday", "first_seen": "2026-06-13T15:14:00.470239+00:00"}
-{"job_id": "762776b03ed8f453", "title": "Reliability & Maintainability Engineer - Level 3 or 4", "company": "Ngc", "source": "workday", "first_seen": "2026-06-13T15:14:00.470239+00:00"}
-{"job_id": "5df68c1476bae5ea", "title": "Senior AI/ML Engineer", "company": "Caci", "source": "workday", "first_seen": "2026-06-13T15:14:00.470239+00:00"}
-{"job_id": "450cae2e08b8ef97", "title": "Customer Relibility Engineer - Isovalent", "company": "Cisco", "source": "workday", "first_seen": "2026-06-13T15:14:00.470239+00:00"}
 {"job_id": "9d22afbf5805ecd4", "title": "Junior C# Software Engineer", "company": "Caci", "source": "workday", "first_seen": "2026-06-15T18:03:52.441166+00:00"}
 {"job_id": "52af56423dd1369c", "title": "Software Engineer", "company": "Caci", "source": "workday", "first_seen": "2026-06-15T18:03:52.441166+00:00"}
 {"job_id": "9bea28bcdea0d4ed", "title": "Software Development Engineer III", "company": "Ffive", "source": "workday", "first_seen": "2026-06-15T18:03:52.441166+00:00"}
@@ -728,3 +714,19 @@
 {"job_id": "0601bd3aae986fd4", "title": "Site Reliability Engineer I", "company": "F5", "source": "workday", "first_seen": "2026-09-10T17:02:04.611641+00:00"}
 {"job_id": "42ab8482dd7f91b8", "title": "Software Engineering Technical Leader", "company": "Cisco", "source": "workday", "first_seen": "2026-09-10T17:02:04.611641+00:00"}
 {"job_id": "4994f431fb518e02", "title": "Software Engineer Apprentice", "company": "F5", "source": "workday", "first_seen": "2026-09-10T17:02:04.611641+00:00"}
+{"job_id": "e133009ffeeb7db6", "title": "Backend Engineer, Control Plane", "company": "Tailscale", "source": "greenhouse", "first_seen": "2026-09-11T17:03:28.869475+00:00"}
+{"job_id": "7c0f13f72d549847", "title": "Software Engineer, Networking (Edge)", "company": "Tailscale", "source": "greenhouse", "first_seen": "2026-09-11T17:03:28.869475+00:00"}
+{"job_id": "50ac5cdd58ae82c7", "title": "DevSecOps Engineer (AI/ML)", "company": "CACI", "source": "workday", "first_seen": "2026-09-11T17:03:28.869475+00:00"}
+{"job_id": "19f8b72466f7eceb", "title": "Test Automation Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-09-11T17:03:28.869475+00:00"}
+{"job_id": "c9486b496eb162ee", "title": "Server Engineer (SME)", "company": "CACI", "source": "workday", "first_seen": "2026-09-11T17:03:28.869475+00:00"}
+{"job_id": "f1d2c90e090a66be", "title": "Enterprise Services Engineer", "company": "Tanium", "source": "greenhouse", "first_seen": "2026-09-11T17:03:28.869475+00:00"}
+{"job_id": "3e3b56052cb6e4f7", "title": "Software Engineering Intern – Summer 2027", "company": "Tanium", "source": "greenhouse", "first_seen": "2026-09-11T17:03:28.869475+00:00"}
+{"job_id": "14bf9e1ace70410f", "title": "Antenna Test Engineer 2nd Shift", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-09-11T17:03:28.869475+00:00"}
+{"job_id": "42264044573ffb7c", "title": "Senior Software Engineer, Edge Security", "company": "Fastly", "source": "greenhouse", "first_seen": "2026-09-11T17:03:28.869475+00:00"}
+{"job_id": "82bbbef0bb388eea", "title": "Radio Frequency Test Engineer, Mid", "company": "Booz Allen Hamilton", "source": "indeed", "first_seen": "2026-09-11T17:03:28.869475+00:00"}
+{"job_id": "bcbe0a592e6313d3", "title": "Operational Test and Evaluation Engineer", "company": "Leidos", "source": "indeed", "first_seen": "2026-09-11T17:03:28.869475+00:00"}
+{"job_id": "1208f0f3c42039f6", "title": "Cloud Engineer", "company": "SAIC", "source": "indeed", "first_seen": "2026-09-11T17:03:28.869475+00:00"}
+{"job_id": "8cd531b569fa3d9e", "title": "Falcon Structures Project Engineer", "company": "MANTECH", "source": "indeed", "first_seen": "2026-09-11T17:03:28.869475+00:00"}
+{"job_id": "61c7b2129bcf05f5", "title": "Network Engineer Sr", "company": "SAIC", "source": "indeed", "first_seen": "2026-09-11T17:03:28.869475+00:00"}
+{"job_id": "846edd155f36543b", "title": "Guidance Navigation Control (GNC) Engineer - Level 6", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-09-11T17:03:28.869475+00:00"}
+{"job_id": "2476fb0766ac8995", "title": "Application Engineer", "company": "MongoDB", "source": "greenhouse", "first_seen": "2026-09-11T17:03:28.869475+00:00"}
