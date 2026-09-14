@@ -1,23 +1,3 @@
-{"job_id": "9d22afbf5805ecd4", "title": "Junior C# Software Engineer", "company": "Caci", "source": "workday", "first_seen": "2026-06-15T18:03:52.441166+00:00"}
-{"job_id": "52af56423dd1369c", "title": "Software Engineer", "company": "Caci", "source": "workday", "first_seen": "2026-06-15T18:03:52.441166+00:00"}
-{"job_id": "9bea28bcdea0d4ed", "title": "Software Development Engineer III", "company": "Ffive", "source": "workday", "first_seen": "2026-06-15T18:03:52.441166+00:00"}
-{"job_id": "288fd1059d85dbd1", "title": "ServiceNow Software Development Engineer (Data & Implementation)", "company": "Caci", "source": "workday", "first_seen": "2026-06-15T18:03:52.441166+00:00"}
-{"job_id": "b36c57569ecbac24", "title": "Senior Middleware Integration Engineer", "company": "Caci", "source": "workday", "first_seen": "2026-06-15T18:03:52.441166+00:00"}
-{"job_id": "f3b84ff6b2da4b4a", "title": "ServiceNow Integration Engineer", "company": "Caci", "source": "workday", "first_seen": "2026-06-15T18:03:52.441166+00:00"}
-{"job_id": "963959130f10e52d", "title": "DevOps Engineer - Level 3", "company": "Ngc", "source": "workday", "first_seen": "2026-06-15T18:03:52.441166+00:00"}
-{"job_id": "256f990a2415c181", "title": "Senior Programmability Engineer - Webassembly", "company": "Ffive", "source": "workday", "first_seen": "2026-06-15T18:03:52.441166+00:00"}
-{"job_id": "413ffba472f6a181", "title": "Engineer III, Software", "company": "Ffive", "source": "workday", "first_seen": "2026-06-15T18:03:52.441166+00:00"}
-{"job_id": "ecb89749f99ad9e3", "title": "Lead Full Stack Engineer ", "company": "Two Six Technologies", "source": "greenhouse", "first_seen": "2026-06-16T18:12:52.870491+00:00"}
-{"job_id": "48975538949dfe48", "title": "Software Engineer - Core Product ", "company": "PagerDuty", "source": "greenhouse", "first_seen": "2026-06-16T18:12:52.870491+00:00"}
-{"job_id": "8751dbb3c68c436a", "title": "Senior Enterprise Services Engineer", "company": "Tanium", "source": "greenhouse", "first_seen": "2026-06-16T18:12:52.870491+00:00"}
-{"job_id": "a102dea6964f4cd8", "title": "Senior Software Engineer - Endpoint Services Portal (Ruby/Rails)", "company": "Huntress", "source": "greenhouse", "first_seen": "2026-06-16T18:12:52.870491+00:00"}
-{"job_id": "ae92eb8f966d9974", "title": "Modernization Engineer", "company": "Caci", "source": "workday", "first_seen": "2026-06-16T18:12:52.870491+00:00"}
-{"job_id": "6b3f8c217e84af9d", "title": "Forward Deployed Engineer - Software Modernization (TS/SCI Clearance Required)", "company": "Vannevar", "source": "greenhouse", "first_seen": "2026-06-16T18:12:52.870491+00:00"}
-{"job_id": "0d2ed47913b3c956", "title": "ASIC Engineer", "company": "Cisco", "source": "workday", "first_seen": "2026-06-16T18:12:52.870491+00:00"}
-{"job_id": "91d3fd160dcc5487", "title": "Software Engineer", "company": "Bah", "source": "workday", "first_seen": "2026-06-16T18:12:52.870491+00:00"}
-{"job_id": "d5f6157b41ca3f15", "title": "Software Development Engineer II", "company": "Ffive", "source": "workday", "first_seen": "2026-06-16T18:12:52.870491+00:00"}
-{"job_id": "fe397d225f5a309b", "title": "Cyber Security Engineer (Elastic)", "company": "Caci", "source": "workday", "first_seen": "2026-06-16T18:12:52.870491+00:00"}
-{"job_id": "04584a243a367bb0", "title": "Sr Software Development Engineer", "company": "Ffive", "source": "workday", "first_seen": "2026-06-16T18:12:52.870491+00:00"}
 {"job_id": "2d29b194ca1663d3", "title": "Sr. Data Pipeline Engineer (Remote)", "company": "Crowdstrike", "source": "workday", "first_seen": "2026-06-17T16:45:22.934082+00:00"}
 {"job_id": "fb5a984d4cff6cf7", "title": "Forward Deployed Software Engineer", "company": "Caci", "source": "workday", "first_seen": "2026-06-17T16:45:22.934082+00:00"}
 {"job_id": "c47fe3c4757f6dc7", "title": "Oracle HCM Cloud Platform & DevOps Engineer", "company": "Caci", "source": "workday", "first_seen": "2026-06-17T16:45:22.934082+00:00"}
@@ -739,3 +719,6 @@
 {"job_id": "13d5379ac11c2161", "title": "Radio Frequency Test Engineer, Mid", "company": "Booz Allen Hamilton", "source": "indeed", "first_seen": "2026-09-12T16:21:55.548106+00:00"}
 {"job_id": "d5eeac2b7f8f41a0", "title": "Senior Software Engineer, Control Plane (Go) - Hypershield", "company": "Cisco", "source": "workday", "first_seen": "2026-09-12T16:21:55.548106+00:00"}
 {"job_id": "20c38d4acc623d92", "title": "Senior Software Engineer", "company": "Cisco", "source": "workday", "first_seen": "2026-09-13T16:59:24.335416+00:00"}
+{"job_id": "b3b80284a33856da", "title": "Chief EO/IR Architect Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-09-14T18:40:56.710593+00:00"}
+{"job_id": "5185755f3d5fdae0", "title": "Cyber Reverse Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-09-14T18:40:56.710593+00:00"}
+{"job_id": "a827f07c40a0b5a1", "title": "EMIR/ESD Engineer", "company": "Cisco", "source": "workday", "first_seen": "2026-09-14T18:40:56.710593+00:00"}
