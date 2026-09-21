@@ -1,25 +1,3 @@
-{"job_id": "fa519f5c3a8ac27b", "title": "Software Engineer", "company": "Caci", "source": "workday", "first_seen": "2026-06-22T17:55:28.604874+00:00"}
-{"job_id": "a659526f3e3be34e", "title": "Senior Software Engineer,  Developer Productivity Cloud Infrastructure", "company": "Skydio", "source": "ashby", "first_seen": "2026-06-22T17:55:28.604874+00:00"}
-{"job_id": "71521fa42849b029", "title": "SRE/Dev Ops Engineer (Hybrid, Sunnyvale)", "company": "Crowdstrike", "source": "workday", "first_seen": "2026-06-22T17:55:28.604874+00:00"}
-{"job_id": "bf8b542716938229", "title": "Security Engineer - Vulnerability Detection (Hybrid)", "company": "Crowdstrike", "source": "workday", "first_seen": "2026-06-22T17:55:28.604874+00:00"}
-{"job_id": "7e8190576eb691bd", "title": "Forward Deployed Software Engineer", "company": "Caci", "source": "workday", "first_seen": "2026-06-22T17:55:28.604874+00:00"}
-{"job_id": "0955d62ccae96868", "title": "(DoD SkillBridge) Guidance Navigation Control (GNC) Engineer - level 3 or 4", "company": "Ngc", "source": "workday", "first_seen": "2026-06-22T17:55:28.604874+00:00"}
-{"job_id": "6e536f6cc5711ea1", "title": "QA Engineer ", "company": "Cybereason", "source": "greenhouse", "first_seen": "2026-06-22T17:55:28.604874+00:00"}
-{"job_id": "5a4c9e998c1b6485", "title": "Engineer II, Software", "company": "Ffive", "source": "workday", "first_seen": "2026-06-22T17:55:28.604874+00:00"}
-{"job_id": "e3ee02c03b75deef", "title": "Corporate AI Engineer", "company": "Tanium", "source": "greenhouse", "first_seen": "2026-06-22T17:55:28.604874+00:00"}
-{"job_id": "c23c639184cb8d5f", "title": "Network Platform Engineer", "company": "Ffive", "source": "workday", "first_seen": "2026-06-22T17:55:28.604874+00:00"}
-{"job_id": "28e698ce18a8cdb1", "title": "Backend Engineer, Flag Delivery", "company": "LaunchDarkly", "source": "greenhouse", "first_seen": "2026-06-23T16:07:23.968400+00:00"}
-{"job_id": "079c35af31cd8639", "title": "Senior Infrastructure Engineer — Certification Authority", "company": "Fastly", "source": "greenhouse", "first_seen": "2026-06-23T16:07:23.968400+00:00"}
-{"job_id": "25ab85a977efd58d", "title": "IT Infrastructure Engineer", "company": "Tanium", "source": "greenhouse", "first_seen": "2026-06-23T16:07:23.968400+00:00"}
-{"job_id": "dfaf34fa3d8c29bc", "title": "ICAM / EPACS - Lenel Certified Engineer", "company": "Caci", "source": "workday", "first_seen": "2026-06-23T16:07:23.968400+00:00"}
-{"job_id": "3281e2d1f3cd25bf", "title": "Senior Thermal Engineering Technical Leader", "company": "Cisco", "source": "workday", "first_seen": "2026-06-23T16:07:23.968400+00:00"}
-{"job_id": "84a0dd5cc3b1d594", "title": "AI/ML Software Development Engineer III", "company": "Ffive", "source": "workday", "first_seen": "2026-06-23T16:07:23.968400+00:00"}
-{"job_id": "99e228a554db7bfc", "title": "1444179 Customer Delivery Consulting Engineer - Security", "company": "Cisco", "source": "workday", "first_seen": "2026-06-23T16:07:23.968400+00:00"}
-{"job_id": "606723c8eff78184", "title": "Senior Data Engineer", "company": "Ffive", "source": "workday", "first_seen": "2026-06-23T16:07:23.968400+00:00"}
-{"job_id": "b6c19cb1fd471602", "title": "Cyber Software Engineer", "company": "Ngc", "source": "workday", "first_seen": "2026-06-23T16:07:23.968400+00:00"}
-{"job_id": "9b28abe0768cb4c1", "title": "Software Engineering Technical Leader", "company": "Cisco", "source": "workday", "first_seen": "2026-06-23T16:07:23.968400+00:00"}
-{"job_id": "1b65bca3230a6df1", "title": "Software Engineer - Mid level", "company": "Caci", "source": "workday", "first_seen": "2026-06-23T16:07:23.968400+00:00"}
-{"job_id": "f62d9035eecb5791", "title": "Security Engineer III", "company": "Ffive", "source": "workday", "first_seen": "2026-06-23T16:07:23.968400+00:00"}
 {"job_id": "f948a98d3cb09eac", "title": "AI Engineer", "company": "Ffive", "source": "workday", "first_seen": "2026-06-24T15:39:52.203257+00:00"}
 {"job_id": "6ab84ecc7fb5a97f", "title": "Customer Reliability Engineer", "company": "Cloudflare", "source": "greenhouse", "first_seen": "2026-06-24T15:39:52.203257+00:00"}
 {"job_id": "094a2fb1ea33520c", "title": "Senior Software Engineer", "company": "Confluent", "source": "ashby", "first_seen": "2026-06-24T15:39:52.203257+00:00"}
@@ -729,3 +707,10 @@
 {"job_id": "915ff13a0e2f3997", "title": "Tool Design Engineer - Level 2 or Level 3", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-09-19T16:32:30.935126+00:00"}
 {"job_id": "4677f35ad148cf01", "title": "Network Engineer", "company": "Hermeus", "source": "lever", "first_seen": "2026-09-19T16:32:30.935126+00:00"}
 {"job_id": "3b4246fd07bae705", "title": "Software Development Engineer I (Former Summer 2026 Interns)", "company": "F5", "source": "workday", "first_seen": "2026-09-19T16:32:30.935126+00:00"}
+{"job_id": "15ed98f2559c0ad3", "title": "Solution Engineer", "company": "Snowflake", "source": "ashby", "first_seen": "2026-09-21T18:45:44.642205+00:00"}
+{"job_id": "911a11d0778a4f11", "title": "Senior Data Engineer - Army Vantage/Palantir Foundry", "company": "CACI", "source": "workday", "first_seen": "2026-09-21T18:45:44.642205+00:00"}
+{"job_id": "aced31753310e0bd", "title": "Test Automation Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-09-21T18:45:44.642205+00:00"}
+{"job_id": "5f6fab7e7f76984e", "title": "Account Engineer", "company": "Snowflake", "source": "ashby", "first_seen": "2026-09-21T18:45:44.642205+00:00"}
+{"job_id": "50d41b5249931f63", "title": "Network Engineer I", "company": "F5", "source": "workday", "first_seen": "2026-09-21T18:45:44.642205+00:00"}
+{"job_id": "466fa43bd431f969", "title": "Engineering Technician 2/3", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-09-21T18:45:44.642205+00:00"}
+{"job_id": "e327400eadffa213", "title": "2026 Associate Engineer Software Dulles VA", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-09-21T18:45:44.642205+00:00"}
