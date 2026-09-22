@@ -1,11 +1,3 @@
-{"job_id": "f948a98d3cb09eac", "title": "AI Engineer", "company": "Ffive", "source": "workday", "first_seen": "2026-06-24T15:39:52.203257+00:00"}
-{"job_id": "6ab84ecc7fb5a97f", "title": "Customer Reliability Engineer", "company": "Cloudflare", "source": "greenhouse", "first_seen": "2026-06-24T15:39:52.203257+00:00"}
-{"job_id": "094a2fb1ea33520c", "title": "Senior Software Engineer", "company": "Confluent", "source": "ashby", "first_seen": "2026-06-24T15:39:52.203257+00:00"}
-{"job_id": "33e1d3043a88c874", "title": "Software Engineer - Mobile", "company": "Cisco", "source": "workday", "first_seen": "2026-06-24T15:39:52.203257+00:00"}
-{"job_id": "adcaf89b7d4d3216", "title": "Sr. Software Engineer II, MacOS Sensor - CTIO (Hybrid)", "company": "Crowdstrike", "source": "workday", "first_seen": "2026-06-24T15:39:52.203257+00:00"}
-{"job_id": "f8843a15a8ffa585", "title": "Senior Firewall Engineer", "company": "Caci", "source": "workday", "first_seen": "2026-06-24T15:39:52.203257+00:00"}
-{"job_id": "300278696c400e48", "title": "Senior  Embedded Software Engineer", "company": "Cisco", "source": "workday", "first_seen": "2026-06-24T15:39:52.203257+00:00"}
-{"job_id": "35d8bce07ceb1d8a", "title": "Software Engineering Technical Leader", "company": "Cisco", "source": "workday", "first_seen": "2026-06-24T15:39:52.203257+00:00"}
 {"job_id": "e41c23bcc4606dbd", "title": "Senior Software Engineer", "company": "Hackerone", "source": "ashby", "first_seen": "2026-06-25T15:47:39.256913+00:00"}
 {"job_id": "1872a740b3b16272", "title": "Senior Engineer - Security Products (Backend APIs)", "company": "Fastly", "source": "greenhouse", "first_seen": "2026-06-25T15:47:39.256913+00:00"}
 {"job_id": "4800ced7ed1f1eb3", "title": "AI Engineer, Product", "company": "Brex", "source": "greenhouse", "first_seen": "2026-06-25T15:47:39.256913+00:00"}
@@ -714,3 +706,11 @@
 {"job_id": "50d41b5249931f63", "title": "Network Engineer I", "company": "F5", "source": "workday", "first_seen": "2026-09-21T18:45:44.642205+00:00"}
 {"job_id": "466fa43bd431f969", "title": "Engineering Technician 2/3", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-09-21T18:45:44.642205+00:00"}
 {"job_id": "e327400eadffa213", "title": "2026 Associate Engineer Software Dulles VA", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-09-21T18:45:44.642205+00:00"}
+{"job_id": "37f9efe430be9f9c", "title": "Network Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-09-22T17:40:01.100955+00:00"}
+{"job_id": "00d370a666cb24c6", "title": "Senior Platform Engineer", "company": "Recorded Future", "source": "greenhouse", "first_seen": "2026-09-22T17:40:01.100955+00:00"}
+{"job_id": "929d578244882cd4", "title": "Senior Forward Deployed Engineer", "company": "F5", "source": "workday", "first_seen": "2026-09-22T17:40:01.100955+00:00"}
+{"job_id": "066e0bff89e2f933", "title": "Global AV Events and Production Engineer", "company": "Fastly", "source": "greenhouse", "first_seen": "2026-09-22T17:40:01.100955+00:00"}
+{"job_id": "ffe03c0a32833037", "title": "Cybersecurity Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-09-22T17:40:01.100955+00:00"}
+{"job_id": "5fdafdc807663c42", "title": "Senior Build Reliability Engineer", "company": "Hermeus", "source": "lever", "first_seen": "2026-09-22T17:40:01.100955+00:00"}
+{"job_id": "754833c4e0e33456", "title": "Signal Processing Engineer", "company": "Leidos", "source": "indeed", "first_seen": "2026-09-22T17:40:01.100955+00:00"}
+{"job_id": "21908f627e408a2e", "title": "2027 Cyber Software Engineer Intern - Tampa FL", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-09-22T17:40:01.100955+00:00"}
