@@ -1,18 +1,3 @@
-{"job_id": "e41c23bcc4606dbd", "title": "Senior Software Engineer", "company": "Hackerone", "source": "ashby", "first_seen": "2026-06-25T15:47:39.256913+00:00"}
-{"job_id": "1872a740b3b16272", "title": "Senior Engineer - Security Products (Backend APIs)", "company": "Fastly", "source": "greenhouse", "first_seen": "2026-06-25T15:47:39.256913+00:00"}
-{"job_id": "4800ced7ed1f1eb3", "title": "AI Engineer, Product", "company": "Brex", "source": "greenhouse", "first_seen": "2026-06-25T15:47:39.256913+00:00"}
-{"job_id": "3d640fc9b3e918d9", "title": "Senior Software Engineer -Alerts", "company": "New Relic", "source": "greenhouse", "first_seen": "2026-06-25T15:47:39.256913+00:00"}
-{"job_id": "ff94d533ec47b93e", "title": "Embedded Software Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-06-25T15:47:39.256913+00:00"}
-{"job_id": "624f964c20645447", "title": "Modeling and Simulation Engineer - Level 2 or 3", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-06-25T15:47:39.256913+00:00"}
-{"job_id": "5660d530c206f6c3", "title": "Prin Engineer Supplier Quality / Sr Prin Engineer Supplier Quality (Manchester- NH)", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-06-25T15:47:39.256913+00:00"}
-{"job_id": "1d081bbc59afb6e9", "title": "Mission Assurance Engineer Military and Veterans Encouraged To Apply", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-06-25T15:47:39.256913+00:00"}
-{"job_id": "b25f9ace9b92c4b6", "title": "Senior Solution Engineer - Insurance", "company": "Snowflake", "source": "ashby", "first_seen": "2026-06-25T15:47:39.256913+00:00"}
-{"job_id": "56a5ca318add0d95", "title": "Software Engineer - Level 4", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-06-25T15:47:39.256913+00:00"}
-{"job_id": "46a892b48b5bb092", "title": "2026 Associate Antenna Test Engineer - Waynesboro VA", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-06-25T15:47:39.256913+00:00"}
-{"job_id": "a35857f5858d55ce", "title": "Sr. Engineer, Cloud Native - AI Detection and Response (AIDR) (Hybrid)", "company": "CrowdStrike", "source": "workday", "first_seen": "2026-06-25T15:47:39.256913+00:00"}
-{"job_id": "8d7644f3b22e986c", "title": "AI Engineer, Ecosystem", "company": "Brex", "source": "greenhouse", "first_seen": "2026-06-25T15:47:39.256913+00:00"}
-{"job_id": "2533a4000c2a86d6", "title": "AI Engineer, Ecosystem", "company": "Brex", "source": "greenhouse", "first_seen": "2026-06-25T15:47:39.256913+00:00"}
-{"job_id": "43334212d51c6481", "title": "Software Engineer Technical Leader - Tetragon", "company": "Cisco", "source": "workday", "first_seen": "2026-06-25T15:47:39.256913+00:00"}
 {"job_id": "2670744adb8ceadc", "title": "Senior Software Engineer - Business Platform (Ruby/Rails)", "company": "Huntress", "source": "greenhouse", "first_seen": "2026-06-26T15:31:46.223474+00:00"}
 {"job_id": "f57871d46856a0ce", "title": "Sr. Backend Engineer II (Hybrid)", "company": "CrowdStrike", "source": "workday", "first_seen": "2026-06-26T15:31:46.223474+00:00"}
 {"job_id": "0c63b4c2800f017a", "title": "Senior Cloud Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-06-26T15:31:46.223474+00:00"}
@@ -714,3 +699,14 @@
 {"job_id": "5fdafdc807663c42", "title": "Senior Build Reliability Engineer", "company": "Hermeus", "source": "lever", "first_seen": "2026-09-22T17:40:01.100955+00:00"}
 {"job_id": "754833c4e0e33456", "title": "Signal Processing Engineer", "company": "Leidos", "source": "indeed", "first_seen": "2026-09-22T17:40:01.100955+00:00"}
 {"job_id": "21908f627e408a2e", "title": "2027 Cyber Software Engineer Intern - Tampa FL", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-09-22T17:40:01.100955+00:00"}
+{"job_id": "06961a0543b4ddde", "title": "Senior Software Engineer", "company": "Tanium", "source": "greenhouse", "first_seen": "2026-09-23T17:52:54.245161+00:00"}
+{"job_id": "3f40307cc9c7f6ed", "title": "SCOPES Data Integrator/Data Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-09-23T17:52:54.245161+00:00"}
+{"job_id": "0959fe7aca982aa2", "title": "Cyber Software Engineer, Junior", "company": "CACI", "source": "workday", "first_seen": "2026-09-23T17:52:54.245161+00:00"}
+{"job_id": "5c2c67110f038fa1", "title": "Senior Software Engineer 2", "company": "Drata", "source": "ashby", "first_seen": "2026-09-23T17:52:54.245161+00:00"}
+{"job_id": "01db7b277f3d2e11", "title": "Senior Detection Engineering & Threat Hunting Analyst", "company": "Huntress", "source": "greenhouse", "first_seen": "2026-09-23T17:52:54.245161+00:00"}
+{"job_id": "3173dd7b75e4bd51", "title": "Cloud Operations Engineer", "company": "MongoDB", "source": "greenhouse", "first_seen": "2026-09-23T17:52:54.245161+00:00"}
+{"job_id": "4da898ff0878a3ab", "title": "Detection Engineering Technical Leader", "company": "Cisco", "source": "workday", "first_seen": "2026-09-23T17:52:54.245161+00:00"}
+{"job_id": "dff59fc80e47bf32", "title": "Packaging Engineer", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-09-23T17:52:54.245161+00:00"}
+{"job_id": "9708dcb5d07700f4", "title": "Databricks Data Governance Engineer", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-09-23T17:52:54.245161+00:00"}
+{"job_id": "c57b994e49c7ee8d", "title": "Security Engineer", "company": "Censys", "source": "greenhouse", "first_seen": "2026-09-23T17:52:54.245161+00:00"}
+{"job_id": "40619ffc1750a868", "title": "Software Engineer II", "company": "F5", "source": "workday", "first_seen": "2026-09-23T17:52:54.245161+00:00"}
