@@ -1,19 +1,3 @@
-{"job_id": "2670744adb8ceadc", "title": "Senior Software Engineer - Business Platform (Ruby/Rails)", "company": "Huntress", "source": "greenhouse", "first_seen": "2026-06-26T15:31:46.223474+00:00"}
-{"job_id": "f57871d46856a0ce", "title": "Sr. Backend Engineer II (Hybrid)", "company": "CrowdStrike", "source": "workday", "first_seen": "2026-06-26T15:31:46.223474+00:00"}
-{"job_id": "0c63b4c2800f017a", "title": "Senior Cloud Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-06-26T15:31:46.223474+00:00"}
-{"job_id": "fd8b3cdfdf7da970", "title": "Munitions Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-06-26T15:31:46.223474+00:00"}
-{"job_id": "b737d767a00832dd", "title": "Machine Learning Engineer", "company": "Netskope", "source": "greenhouse", "first_seen": "2026-06-26T15:31:46.223474+00:00"}
-{"job_id": "4ca698d4d345d500", "title": "Postgres Deployment Engineer (Nix)", "company": "Supabase", "source": "ashby", "first_seen": "2026-06-26T15:31:46.223474+00:00"}
-{"job_id": "8fe18856facaa423", "title": "Lead Cloud Infrastructure Engineer / Site Reliability Engineer (SRE)", "company": "Job Board", "source": "greenhouse", "first_seen": "2026-06-26T15:31:46.223474+00:00"}
-{"job_id": "241af60903a95494", "title": "Senior Silicon Photonics Design Engineer- (Hybrid)", "company": "Cisco", "source": "workday", "first_seen": "2026-06-26T15:31:46.223474+00:00"}
-{"job_id": "91447213a57f48f5", "title": "Flight Test Instrumentation Engineer", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-06-26T15:31:46.223474+00:00"}
-{"job_id": "d4c5bd7ca0af6e6b", "title": "Engineering Test Technician 4 (AHT)", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-06-26T15:31:46.223474+00:00"}
-{"job_id": "d5254b5e1d2d2ad2", "title": "EO/IR Laser Engineer", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-06-26T15:31:46.223474+00:00"}
-{"job_id": "7fb0eccd3c37e3e6", "title": "Cloud DevOps Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-06-26T15:31:46.223474+00:00"}
-{"job_id": "cb8dd2502616f6fc", "title": "Cloud Engineer - Product Metrics", "company": "ClickHouse", "source": "greenhouse", "first_seen": "2026-06-26T15:31:46.223474+00:00"}
-{"job_id": "e1014bccf2b15892", "title": "Sr Infrastructure Capacity Engineer", "company": "F5", "source": "workday", "first_seen": "2026-06-26T15:31:46.223474+00:00"}
-{"job_id": "f6939eac130c00de", "title": "Data Engineer", "company": "Booz Allen Hamilton", "source": "workday", "first_seen": "2026-06-26T15:31:46.223474+00:00"}
-{"job_id": "98d5136b000ee7d7", "title": "Professional Services Engineer ", "company": "Job Board", "source": "greenhouse", "first_seen": "2026-06-26T15:31:46.223474+00:00"}
 {"job_id": "958aeff63719185f", "title": "Sr. Software Engineer, Backend - Ingestion (Hybrid)", "company": "CrowdStrike", "source": "workday", "first_seen": "2026-06-27T14:57:14.631712+00:00"}
 {"job_id": "96d8fbd6a00a890b", "title": "Models Engineer, AI Platform", "company": "Cloudflare", "source": "greenhouse", "first_seen": "2026-06-27T14:57:14.631712+00:00"}
 {"job_id": "f3c345f4843166f8", "title": "Sr Software Engineer II", "company": "Materialsecurity", "source": "ashby", "first_seen": "2026-06-27T14:57:14.631712+00:00"}
@@ -710,3 +694,12 @@
 {"job_id": "9708dcb5d07700f4", "title": "Databricks Data Governance Engineer", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-09-23T17:52:54.245161+00:00"}
 {"job_id": "c57b994e49c7ee8d", "title": "Security Engineer", "company": "Censys", "source": "greenhouse", "first_seen": "2026-09-23T17:52:54.245161+00:00"}
 {"job_id": "40619ffc1750a868", "title": "Software Engineer II", "company": "F5", "source": "workday", "first_seen": "2026-09-23T17:52:54.245161+00:00"}
+{"job_id": "1c965b5cf83cd839", "title": "Senior Fullstack Software Engineer, Risk ", "company": "Vanta", "source": "ashby", "first_seen": "2026-09-24T17:53:44.058048+00:00"}
+{"job_id": "f9580576d22ae097", "title": "Software Engineer - Container Fabric", "company": "New Relic", "source": "greenhouse", "first_seen": "2026-09-24T17:53:44.058048+00:00"}
+{"job_id": "ab5dd70ad2143bee", "title": "Network/Cloud Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-09-24T17:53:44.058048+00:00"}
+{"job_id": "8b41c3ce1b9a79c4", "title": "Platform Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-09-24T17:53:44.058048+00:00"}
+{"job_id": "8139438e5c4589ff", "title": "Engineering Technician secret clearance 17398", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-09-24T17:53:44.058048+00:00"}
+{"job_id": "c9b27fdbfe5b11d0", "title": "Software Development Engineer II (Former Summer 2026 Interns)", "company": "F5", "source": "workday", "first_seen": "2026-09-24T17:53:44.058048+00:00"}
+{"job_id": "a799fbde67dd9d54", "title": "Software Integration & Test Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-09-24T17:53:44.058048+00:00"}
+{"job_id": "57f91b25d66f8c8b", "title": "Software Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-09-24T17:53:44.058048+00:00"}
+{"job_id": "3cbbe7e0d544ca3d", "title": "Forward Deployed Engineer, Professional Services", "company": "Cloudflare", "source": "greenhouse", "first_seen": "2026-09-24T17:53:44.058048+00:00"}
