@@ -1,14 +1,3 @@
-{"job_id": "958aeff63719185f", "title": "Sr. Software Engineer, Backend - Ingestion (Hybrid)", "company": "CrowdStrike", "source": "workday", "first_seen": "2026-06-27T14:57:14.631712+00:00"}
-{"job_id": "96d8fbd6a00a890b", "title": "Models Engineer, AI Platform", "company": "Cloudflare", "source": "greenhouse", "first_seen": "2026-06-27T14:57:14.631712+00:00"}
-{"job_id": "f3c345f4843166f8", "title": "Sr Software Engineer II", "company": "Materialsecurity", "source": "ashby", "first_seen": "2026-06-27T14:57:14.631712+00:00"}
-{"job_id": "0adf0ef2d7487443", "title": "Sr. Engineer - Dev Experience Sensor", "company": "CrowdStrike", "source": "workday", "first_seen": "2026-06-27T14:57:14.631712+00:00"}
-{"job_id": "daeeca348b492438", "title": "DevOps Engineer - Junior", "company": "CACI", "source": "workday", "first_seen": "2026-06-27T14:57:14.631712+00:00"}
-{"job_id": "216944e01bfe86f6", "title": "Senior Software Reverse Engineer", "company": "Two Six Technologies", "source": "greenhouse", "first_seen": "2026-06-27T14:57:14.631712+00:00"}
-{"job_id": "2039f2465e43e5f6", "title": "Technical Marketing Engineering Technical Leader (Hybrid)", "company": "Cisco", "source": "workday", "first_seen": "2026-06-27T14:57:14.631712+00:00"}
-{"job_id": "9c1a95e777ecdc3b", "title": "Sr Software Engineer, Cloud – Platform Foundations (Hybrid)", "company": "CrowdStrike", "source": "workday", "first_seen": "2026-06-27T14:57:14.631712+00:00"}
-{"job_id": "ddcccf98a01be801", "title": "Software Engineer Level 2 (AHT)", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-06-27T14:57:14.631712+00:00"}
-{"job_id": "2c70b5405c976304", "title": "Network Engineer - Level 3/4", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-06-27T14:57:14.631712+00:00"}
-{"job_id": "712e7c970397ef2d", "title": "ASIC Engineering Technical Leader - CDC", "company": "Cisco", "source": "workday", "first_seen": "2026-06-27T14:57:14.631712+00:00"}
 {"job_id": "a2003ac0ee624661", "title": "Sr. Engineer, Backend - Lightning (Hybrid)", "company": "CrowdStrike", "source": "workday", "first_seen": "2026-06-28T14:58:50.587681+00:00"}
 {"job_id": "3db347206d483603", "title": "AI Research Engineer -  3D Computer Vision", "company": "Helsing", "source": "greenhouse", "first_seen": "2026-06-29T16:43:56.076646+00:00"}
 {"job_id": "37b57068ea5b5a2d", "title": "Senior Endpoint Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-06-29T16:43:56.076646+00:00"}
@@ -703,3 +692,13 @@
 {"job_id": "a799fbde67dd9d54", "title": "Software Integration & Test Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-09-24T17:53:44.058048+00:00"}
 {"job_id": "57f91b25d66f8c8b", "title": "Software Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-09-24T17:53:44.058048+00:00"}
 {"job_id": "3cbbe7e0d544ca3d", "title": "Forward Deployed Engineer, Professional Services", "company": "Cloudflare", "source": "greenhouse", "first_seen": "2026-09-24T17:53:44.058048+00:00"}
+{"job_id": "33a7d612f20691ae", "title": "Senior Platform Engineer", "company": "Two Six Technologies", "source": "greenhouse", "first_seen": "2026-09-25T17:59:30.945309+00:00"}
+{"job_id": "9e9332e7170e7387", "title": "Senior Security Engineer, Identity and Access Management", "company": "Hackerone", "source": "ashby", "first_seen": "2026-09-25T17:59:30.945309+00:00"}
+{"job_id": "4940c1a3681b3be9", "title": "Senior Full-Stack Engineer - Product (TS/SCI Required)", "company": "Vannevar", "source": "greenhouse", "first_seen": "2026-09-25T17:59:30.945309+00:00"}
+{"job_id": "f7bc609bdb9ea87f", "title": "Sr Wireless Network Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-09-25T17:59:30.945309+00:00"}
+{"job_id": "2e6eac6e5f717e42", "title": "Database Engineer 3", "company": "CACI", "source": "workday", "first_seen": "2026-09-25T17:59:30.945309+00:00"}
+{"job_id": "76ac82af81720990", "title": "Software Engineer - Java Platform", "company": "Snowflake", "source": "ashby", "first_seen": "2026-09-25T17:59:30.945309+00:00"}
+{"job_id": "c66c289992013b39", "title": "2026 Associate Electronics Engineer - Baltimore MD", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-09-25T17:59:30.945309+00:00"}
+{"job_id": "e9568ee03732aa96", "title": "Tool Design Engineer - Level 3 or Level 4", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-09-25T17:59:30.945309+00:00"}
+{"job_id": "51c6450354e3be88", "title": "2027 Associate Propulsion Engineer - Palm Beach Gardens FL", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-09-25T17:59:30.945309+00:00"}
+{"job_id": "9dda7e130c7c7938", "title": "Software Engineer", "company": "Proofpoint", "source": "workday", "first_seen": "2026-09-25T17:59:30.945309+00:00"}
