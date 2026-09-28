@@ -1,12 +1,3 @@
-{"job_id": "3c4b1dd6f11fb8cd", "title": "Sr. Product Security Engineer, Network and Infrastructure", "company": "CrowdStrike", "source": "workday", "first_seen": "2026-06-30T15:43:37.494026+00:00"}
-{"job_id": "9ac7ae85af6806a1", "title": "Data Engineer, Go To Market (Remote)", "company": "CrowdStrike", "source": "workday", "first_seen": "2026-06-30T15:43:37.494026+00:00"}
-{"job_id": "c6827e71ae039c72", "title": "MECM Engineering Lead", "company": "CACI", "source": "workday", "first_seen": "2026-06-30T15:43:37.494026+00:00"}
-{"job_id": "8b9a13d42f9cc9a8", "title": "Senior Software Test Engineer ", "company": "Two Six Technologies", "source": "greenhouse", "first_seen": "2026-06-30T15:43:37.494026+00:00"}
-{"job_id": "8c7b3a7ff18cc022", "title": "Databricks Engineer", "company": "Booz Allen Hamilton", "source": "workday", "first_seen": "2026-06-30T15:43:37.494026+00:00"}
-{"job_id": "aef877de6ab9af10", "title": "ASIC DFT Engineer", "company": "Cisco", "source": "workday", "first_seen": "2026-06-30T15:43:37.494026+00:00"}
-{"job_id": "92dbc18af425e783", "title": "Software Engineer (Full Stack & Python)", "company": "CACI", "source": "workday", "first_seen": "2026-06-30T15:43:37.494026+00:00"}
-{"job_id": "c3771374cda9fc51", "title": "Cloud Engineer", "company": "Booz Allen Hamilton", "source": "workday", "first_seen": "2026-06-30T15:43:37.494026+00:00"}
-{"job_id": "252fe68c6bc97bdc", "title": "Sr. Software Engineer - Linux Sensor (Hybrid)", "company": "CrowdStrike", "source": "workday", "first_seen": "2026-06-30T15:43:37.494026+00:00"}
 {"job_id": "a92c6f1162a48c49", "title": "Full-stack Software Engineer Level 3 or 4", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-07-01T15:57:10.329168+00:00"}
 {"job_id": "3eba813188d65386", "title": "Sr. Software Engineer - Risk Platform (Hybrid)", "company": "CrowdStrike", "source": "workday", "first_seen": "2026-07-01T15:57:10.329168+00:00"}
 {"job_id": "b38aa8f157077872", "title": "Cyber Software Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-07-01T15:57:10.329168+00:00"}
@@ -694,3 +685,9 @@
 {"job_id": "da585afcd00dac59", "title": "Senior Engineer - Production Cloud and Container Services", "company": "Fastly", "source": "greenhouse", "first_seen": "2026-09-26T17:14:29.099377+00:00"}
 {"job_id": "43d40876315bd8db", "title": "Test Engineer TS SCI", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-09-26T17:14:29.099377+00:00"}
 {"job_id": "c625740383a54a7f", "title": "Solution Engineer", "company": "SailPoint", "source": "workday", "first_seen": "2026-09-26T17:14:29.099377+00:00"}
+{"job_id": "c31819b59383e2e6", "title": "RVP, Solution Engineering - Mid-Market/Commercial ", "company": "Tanium", "source": "greenhouse", "first_seen": "2026-09-28T20:08:56.110558+00:00"}
+{"job_id": "080e199332fa5050", "title": "Quality Engineering Software Engineer, Senior", "company": "Booz Allen Hamilton", "source": "workday", "first_seen": "2026-09-28T20:08:56.110558+00:00"}
+{"job_id": "e26049da2e91a72c", "title": "Associate Software Engineer / Software Engineer", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-09-28T20:08:56.110558+00:00"}
+{"job_id": "c7caebc57ba192b8", "title": "Electronics Engineer", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-09-28T20:08:56.110558+00:00"}
+{"job_id": "86525178b48aa211", "title": "HelpDesk Engineer II", "company": "PagerDuty", "source": "greenhouse", "first_seen": "2026-09-28T20:08:56.110558+00:00"}
+{"job_id": "49b6c62d8fbd4336", "title": "Senior AI/ML Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-09-28T20:08:56.110558+00:00"}
