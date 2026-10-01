@@ -1,19 +1,3 @@
-{"job_id": "619afa05d5d0b7a8", "title": "AI Engineer", "company": "Stripe", "source": "greenhouse", "first_seen": "2026-07-03T15:27:48.693685+00:00"}
-{"job_id": "ee8d0509f148ebdf", "title": "Billing Engineer", "company": "Tailscale", "source": "greenhouse", "first_seen": "2026-07-03T15:27:48.693685+00:00"}
-{"job_id": "0eefccfa046d61cb", "title": "Senior Data Engineer", "company": "Supabase", "source": "ashby", "first_seen": "2026-07-03T15:27:48.693685+00:00"}
-{"job_id": "d55d8a75ea7638ea", "title": "Senior Embedded Security Software Engineer", "company": "Two Six Technologies", "source": "greenhouse", "first_seen": "2026-07-03T15:27:48.693685+00:00"}
-{"job_id": "2b66951d20c76a79", "title": "Senior Platform Engineer", "company": "Recorded Future", "source": "greenhouse", "first_seen": "2026-07-03T15:27:48.693685+00:00"}
-{"job_id": "1c1f2816319764bf", "title": "Software Engineer - Cloud Infrastructure", "company": "CACI", "source": "workday", "first_seen": "2026-07-03T15:27:48.693685+00:00"}
-{"job_id": "1220c808fec4460f", "title": "Senior Security Engineer", "company": "F5", "source": "workday", "first_seen": "2026-07-03T15:27:48.693685+00:00"}
-{"job_id": "857be422516f422e", "title": "Forward Deployed Engineer", "company": "Twilio", "source": "greenhouse", "first_seen": "2026-07-03T15:27:48.693685+00:00"}
-{"job_id": "b67f86d3b5df80b5", "title": "Data Access Layer Data Engineer (Mid-Level) – Managed Kafka", "company": "CACI", "source": "workday", "first_seen": "2026-07-03T15:27:48.693685+00:00"}
-{"job_id": "43d975b5796a369e", "title": "Data Access Layer Data Engineer (Mid-Level) – AWS DMS, Glue", "company": "CACI", "source": "workday", "first_seen": "2026-07-03T15:27:48.693685+00:00"}
-{"job_id": "f78fe99be066e797", "title": "PostgreSQL Database Engineer (Mid-Level)", "company": "CACI", "source": "workday", "first_seen": "2026-07-03T15:27:48.693685+00:00"}
-{"job_id": "98ebad7a627b667c", "title": "Falcon Structures Project Engineer", "company": "MANTECH", "source": "indeed", "first_seen": "2026-07-03T15:27:48.693685+00:00"}
-{"job_id": "ee7a0249fa2f5820", "title": "FPGA HW Engineering Technical Leader", "company": "Cisco", "source": "workday", "first_seen": "2026-07-03T15:27:48.693685+00:00"}
-{"job_id": "f368b8becd87bb5d", "title": "Network Engineer", "company": "Leidos", "source": "workday", "first_seen": "2026-07-03T15:27:48.693685+00:00"}
-{"job_id": "961a879d223df697", "title": "Engineer Software - Cloud & Applications", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-07-03T15:27:48.693685+00:00"}
-{"job_id": "0470a4dbb796415d", "title": "Security Software Engineer", "company": "Proofpoint", "source": "workday", "first_seen": "2026-07-03T15:27:48.693685+00:00"}
 {"job_id": "d09ac8e0e03edac3", "title": "Control Plane Engineer ", "company": "Supabase", "source": "ashby", "first_seen": "2026-07-04T14:47:00.945905+00:00"}
 {"job_id": "1498d56188f79349", "title": "AI Engineer - Application Development", "company": "CACI", "source": "workday", "first_seen": "2026-07-06T16:31:49.947817+00:00"}
 {"job_id": "3769a481497ee47e", "title": "Cybersecurity Engineer- Junior level", "company": "CACI", "source": "workday", "first_seen": "2026-07-06T16:31:49.947817+00:00"}
@@ -694,3 +678,12 @@
 {"job_id": "c2b9ef22fd884657", "title": "Chief Engineer", "company": "Leidos", "source": "indeed", "first_seen": "2026-09-30T18:28:09.490471+00:00"}
 {"job_id": "db64073b04ce3244", "title": "Software Engineer II - Query Gateway", "company": "New Relic", "source": "greenhouse", "first_seen": "2026-09-30T18:28:09.490471+00:00"}
 {"job_id": "4bf0af72c1d5f978", "title": "Escalations Engineer - Turkiye", "company": "Jumpcloud", "source": "lever", "first_seen": "2026-09-30T18:28:09.490471+00:00"}
+{"job_id": "ed3cf69d255d414e", "title": "Digital Customer Engineer", "company": "Cloudflare", "source": "greenhouse", "first_seen": "2026-10-01T18:55:41.067307+00:00"}
+{"job_id": "190a264eb7cf204d", "title": "PCB Design Engineer - High-speed", "company": "Cisco", "source": "workday", "first_seen": "2026-10-01T18:55:41.067307+00:00"}
+{"job_id": "2b88650a4f89192f", "title": "Site Reliability Engineer I I", "company": "F5", "source": "workday", "first_seen": "2026-10-01T18:55:41.067307+00:00"}
+{"job_id": "33684bb1710d32eb", "title": "Cloud Infrastructure Engineer / OCI Engineer", "company": "Leidos", "source": "workday", "first_seen": "2026-10-01T18:55:41.067307+00:00"}
+{"job_id": "5140ea99b5338777", "title": "Cybersecurity Engineer - Network Security Tools", "company": "CACI", "source": "workday", "first_seen": "2026-10-01T18:55:41.067307+00:00"}
+{"job_id": "69b9d22a5460426f", "title": "Flight Dynamics Modelling Engineer", "company": "Helsing", "source": "greenhouse", "first_seen": "2026-10-01T18:55:41.067307+00:00"}
+{"job_id": "402feee8af7e6f5d", "title": "Guidance Navigation Control (GNC) Engineering Analyst – Level 5", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-10-01T18:55:41.067307+00:00"}
+{"job_id": "192219dc5a621b17", "title": "2027 Software Engineering Intern - Colorado Springs CO", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-10-01T18:55:41.067307+00:00"}
+{"job_id": "6f19994ef003ae1d", "title": "AI/ML Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-10-01T18:55:41.067307+00:00"}
