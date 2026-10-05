@@ -1,17 +1,3 @@
-{"job_id": "1b11d32c872d821d", "title": "Data Engineer Intern (Fall 2026)", "company": "Cloudflare", "source": "greenhouse", "first_seen": "2026-07-07T15:58:35.736273+00:00"}
-{"job_id": "6fa0b1d5a87a0253", "title": "Naval Architecture and Marine Engineering", "company": "CACI", "source": "workday", "first_seen": "2026-07-07T15:58:35.736273+00:00"}
-{"job_id": "530fc4af7afec0e4", "title": "Customer Reliability Engineer", "company": "Cloudflare", "source": "greenhouse", "first_seen": "2026-07-07T15:58:35.736273+00:00"}
-{"job_id": "ba4bf66d20e8eaf3", "title": "Software Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-07-07T15:58:35.736273+00:00"}
-{"job_id": "300353e9cf7302c2", "title": "Senior Data Engineer (FedRAMP)", "company": "SailPoint", "source": "workday", "first_seen": "2026-07-07T15:58:35.736273+00:00"}
-{"job_id": "641497ebd45959b8", "title": "Software Engineer - Sensor, macOS  (Hybrid)", "company": "CrowdStrike", "source": "workday", "first_seen": "2026-07-07T15:58:35.736273+00:00"}
-{"job_id": "eaed0d2e652ee026", "title": "DevOps Engineer", "company": "Leidos", "source": "workday", "first_seen": "2026-07-07T15:58:35.736273+00:00"}
-{"job_id": "41235926ef2164b4", "title": "2027 Intern Electronics Engineer", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-07-07T15:58:35.736273+00:00"}
-{"job_id": "94872ddfb09fdfbc", "title": "Mission Operations Engineer - UK", "company": "Saronic", "source": "ashby", "first_seen": "2026-07-07T15:58:35.736273+00:00"}
-{"job_id": "0c789873d3e2a6f4", "title": "Salesforce Applications Engineer", "company": "Robinhood", "source": "greenhouse", "first_seen": "2026-07-07T15:58:35.736273+00:00"}
-{"job_id": "183a00c1e0a27dea", "title": "NOC Engineer", "company": "Proofpoint", "source": "workday", "first_seen": "2026-07-07T15:58:35.736273+00:00"}
-{"job_id": "3961a5f0ed146655", "title": "Software Engineer", "company": "Cisco", "source": "workday", "first_seen": "2026-07-07T15:58:35.736273+00:00"}
-{"job_id": "958aae856a0718a1", "title": "Signal Processing Engineer", "company": "Leidos", "source": "indeed", "first_seen": "2026-07-07T15:58:35.736273+00:00"}
-{"job_id": "5c41d0313386a4e5", "title": "ASIC Engineering Technical Leader - DFT", "company": "Cisco", "source": "workday", "first_seen": "2026-07-07T15:58:35.736273+00:00"}
 {"job_id": "02a540ff94ae2070", "title": "Senior Android Engineer, Trading Products", "company": "Robinhood", "source": "greenhouse", "first_seen": "2026-07-08T15:37:32.777683+00:00"}
 {"job_id": "de40a23ca3b30432", "title": "Senior Android Engineer, iRAD", "company": "Robinhood", "source": "greenhouse", "first_seen": "2026-07-08T15:37:32.777683+00:00"}
 {"job_id": "0db1c74022b33084", "title": "Software Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-07-08T15:37:32.777683+00:00"}
@@ -692,3 +678,20 @@
 {"job_id": "faf43ed9f340d0a9", "title": "Engineer Guidance Navigation Control (AHT)", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-10-03T17:19:23.511038+00:00"}
 {"job_id": "11d4d8e7a1f498dd", "title": "ServiceNow Quality Assurance Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-10-03T17:19:23.511038+00:00"}
 {"job_id": "3077d71a03073ce4", "title": "Senior Software Engineer, Billing Platform", "company": "Sentry", "source": "ashby", "first_seen": "2026-10-04T17:37:35.271095+00:00"}
+{"job_id": "64ec45b85bb8b48e", "title": "Software Engineer III", "company": "Hackerone", "source": "ashby", "first_seen": "2026-10-05T21:18:37.075996+00:00"}
+{"job_id": "fffed8201486df6a", "title": "Software Engineer - Forward Deployed", "company": "Saronic", "source": "ashby", "first_seen": "2026-10-05T21:18:37.075996+00:00"}
+{"job_id": "c99c5c6d84f2b01e", "title": "Senior Software Engineer - Forward Deployed", "company": "Saronic", "source": "ashby", "first_seen": "2026-10-05T21:18:37.075996+00:00"}
+{"job_id": "26e31c3b24c5474b", "title": "Sr. Corporate Security Engineer", "company": "Cockroach Labs", "source": "greenhouse", "first_seen": "2026-10-05T21:18:37.075996+00:00"}
+{"job_id": "5ac073878bf4f11f", "title": "Digital Signal Processing Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-10-05T21:18:37.075996+00:00"}
+{"job_id": "5ee59a930e1d1e0b", "title": "Security Engineer - Incident response", "company": "F5", "source": "workday", "first_seen": "2026-10-05T21:18:37.075996+00:00"}
+{"job_id": "ae7c24b3d8961747", "title": "HCM Test Automation & Quality Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-10-05T21:18:37.075996+00:00"}
+{"job_id": "6a2d590412ce736b", "title": "Construction Design Engineer 3/4 (AHT)", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-10-05T21:18:37.075996+00:00"}
+{"job_id": "f11e277c38e47d89", "title": "Embedded Software Engineer-Level 3/4 (AHT)", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-10-05T21:18:37.075996+00:00"}
+{"job_id": "2827c5c71ce0147b", "title": "Engineering Designer – Level 3/4", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-10-05T21:18:37.075996+00:00"}
+{"job_id": "779dabdd384b8083", "title": "Site Reliability Engineer (SRE) – II", "company": "F5", "source": "workday", "first_seen": "2026-10-05T21:18:37.075996+00:00"}
+{"job_id": "54e2930e3a6bef26", "title": "Tanium Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-10-05T21:18:37.075996+00:00"}
+{"job_id": "a87085523766c7c0", "title": "Senior Site Reliability Engineer - FedRAMP", "company": "F5", "source": "workday", "first_seen": "2026-10-05T21:18:37.075996+00:00"}
+{"job_id": "387a66113d520a1c", "title": "Memory Layout Design Engineer", "company": "Cisco", "source": "workday", "first_seen": "2026-10-05T21:18:37.075996+00:00"}
+{"job_id": "12cb76d7888eb833", "title": "Cyber Hunt Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-10-05T21:18:37.075996+00:00"}
+{"job_id": "68bf31bec9f7f844", "title": "Analytics Engineer, HR Analytics", "company": "Elastic", "source": "greenhouse", "first_seen": "2026-10-05T21:18:37.075996+00:00"}
+{"job_id": "a7d525232398a077", "title": "ASIC Design Verification Engineer", "company": "Cisco", "source": "workday", "first_seen": "2026-10-05T21:18:37.075996+00:00"}
