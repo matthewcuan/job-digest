@@ -1,14 +1,3 @@
-{"job_id": "83ac5f35d0468f79", "title": "Business Money Engineering", "company": "Gusto, Inc.", "source": "greenhouse", "first_seen": "2026-07-11T14:34:01.583888+00:00"}
-{"job_id": "29e3f4a4d0214b7f", "title": "Senior Software Engineer - AI Tooling", "company": "Plaid", "source": "ashby", "first_seen": "2026-07-11T14:34:01.583888+00:00"}
-{"job_id": "abcfa1d5a4d8e7e9", "title": "Data Collection Engineer", "company": "Two Six Technologies", "source": "greenhouse", "first_seen": "2026-07-11T14:34:01.583888+00:00"}
-{"job_id": "ac48946de0ec7266", "title": "Space Technology Engineer", "company": "Booz Allen Hamilton", "source": "indeed", "first_seen": "2026-07-11T14:34:01.583888+00:00"}
-{"job_id": "e58d3d63ed04da1f", "title": "Mid Security Information Assurance Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-07-11T14:34:01.583888+00:00"}
-{"job_id": "d1c9fdc9ba9d8739", "title": "Customer Reliability Engineer, Hypershield (remote)", "company": "Cisco", "source": "workday", "first_seen": "2026-07-11T14:34:01.583888+00:00"}
-{"job_id": "3c2a50b92439c658", "title": "Engineer II, Threat Detection - Windows (Hybrid)", "company": "CrowdStrike", "source": "workday", "first_seen": "2026-07-11T14:34:01.583888+00:00"}
-{"job_id": "01815edbf20d0b4a", "title": "2019369 Customer Delivery Consulting Engineer - Security", "company": "Cisco", "source": "workday", "first_seen": "2026-07-11T14:34:01.583888+00:00"}
-{"job_id": "4c348b8c8bbb37d3", "title": "Senior Platform Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-07-11T14:34:01.583888+00:00"}
-{"job_id": "82881ed377c51847", "title": "DevOps Engineer", "company": "Two Six Technologies", "source": "greenhouse", "first_seen": "2026-07-11T14:34:01.583888+00:00"}
-{"job_id": "b9c50ce73642041f", "title": "DevOps Engineer - Level 2", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-07-11T14:34:01.583888+00:00"}
 {"job_id": "5fd5a016129de22d", "title": "AI/ML Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-07-13T16:01:14.079296+00:00"}
 {"job_id": "4a7864336c37d284", "title": "Distribution Engineer", "company": "Leidos", "source": "workday", "first_seen": "2026-07-13T16:01:14.079296+00:00"}
 {"job_id": "e85a9e3a18af182a", "title": "Chief Engineer", "company": "Booz Allen Hamilton", "source": "workday", "first_seen": "2026-07-13T16:01:14.079296+00:00"}
@@ -707,3 +696,19 @@
 {"job_id": "4ca698d4d345d500", "title": "Postgres Deployment Engineer", "company": "Supabase", "source": "ashby", "first_seen": "2026-10-08T19:18:37.506626+00:00"}
 {"job_id": "bb9fbf0a0eccd9f6", "title": "Zero Trust Engineer", "company": "Booz Allen Hamilton", "source": "indeed", "first_seen": "2026-10-08T19:18:37.506626+00:00"}
 {"job_id": "2b208b3df48c3f96", "title": "Test and Evaluation Engineer", "company": "Booz Allen Hamilton", "source": "indeed", "first_seen": "2026-10-08T19:18:37.506626+00:00"}
+{"job_id": "468d0ac2ba0863b3", "title": "Developer Success Engineer", "company": "Twilio", "source": "greenhouse", "first_seen": "2026-10-09T18:51:29.069948+00:00"}
+{"job_id": "4f077a835e3798d0", "title": "Engineer - Structures", "company": "Saronic", "source": "ashby", "first_seen": "2026-10-09T18:51:29.069948+00:00"}
+{"job_id": "5ba7c91f542fedce", "title": "Senior DevOps Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-10-09T18:51:29.069948+00:00"}
+{"job_id": "b2253248b55e4216", "title": "2027 - Software Engineer Intern, Dublin - 6 Month Internship", "company": "MongoDB", "source": "greenhouse", "first_seen": "2026-10-09T18:51:29.069948+00:00"}
+{"job_id": "2d44727fa0a1a349", "title": "Associate Technical Services Engineer II", "company": "MongoDB", "source": "greenhouse", "first_seen": "2026-10-09T18:51:29.069948+00:00"}
+{"job_id": "7d67ae6031af18cf", "title": "Senior Solution Engineer", "company": "Tanium", "source": "greenhouse", "first_seen": "2026-10-09T18:51:29.069948+00:00"}
+{"job_id": "377ebe1ae0c25278", "title": "Platform Engineer, Managed Postgres", "company": "Supabase", "source": "ashby", "first_seen": "2026-10-09T18:51:29.069948+00:00"}
+{"job_id": "b37aca7394c43c81", "title": "Modeling and Simulation Engineer", "company": "Booz Allen Hamilton", "source": "indeed", "first_seen": "2026-10-09T18:51:29.069948+00:00"}
+{"job_id": "7c0b55672d1ea0f7", "title": "Integration and Risk Engineer", "company": "Booz Allen Hamilton", "source": "indeed", "first_seen": "2026-10-09T18:51:29.069948+00:00"}
+{"job_id": "3a5b7b45a89c120c", "title": "Senior Electric Motor Propulsion Engineer", "company": "Skydio", "source": "ashby", "first_seen": "2026-10-09T18:51:29.069948+00:00"}
+{"job_id": "03e0de7304782491", "title": "Senior Solution Engineer", "company": "Snowflake", "source": "ashby", "first_seen": "2026-10-09T18:51:29.069948+00:00"}
+{"job_id": "53a2164e5e0adc29", "title": "Software Engineer", "company": "Cisco", "source": "workday", "first_seen": "2026-10-09T18:51:29.069948+00:00"}
+{"job_id": "4c3550b2485d5298", "title": "Cybersecurity Engineer and Risk Analyst", "company": "Booz Allen Hamilton", "source": "indeed", "first_seen": "2026-10-09T18:51:29.069948+00:00"}
+{"job_id": "4ce4e8682f8c10c1", "title": "Senior Security Engineer - Vulnerability Research ", "company": "Tanium", "source": "greenhouse", "first_seen": "2026-10-09T18:51:29.069948+00:00"}
+{"job_id": "4d00156d47716d6f", "title": "Senior Software Engineer", "company": "SAIC", "source": "indeed", "first_seen": "2026-10-09T18:51:29.069948+00:00"}
+{"job_id": "64adbf0ca32cbb9b", "title": "Mid-Level Integration Test Engineer", "company": "SAIC", "source": "indeed", "first_seen": "2026-10-09T18:51:29.069948+00:00"}
