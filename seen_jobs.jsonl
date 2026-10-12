@@ -1,14 +1,3 @@
-{"job_id": "5b953f7afbe73a49", "title": "Senior AI Automation Engineer", "company": "Hackerone", "source": "ashby", "first_seen": "2026-07-14T15:04:52.415017+00:00"}
-{"job_id": "1b58c301310fc0aa", "title": "Software Engineer - Infrastructure ", "company": "Moderntreasury", "source": "ashby", "first_seen": "2026-07-14T15:04:52.415017+00:00"}
-{"job_id": "02bbdc01577282b4", "title": "Senior Software Development Engineer", "company": "F5", "source": "workday", "first_seen": "2026-07-14T15:04:52.415017+00:00"}
-{"job_id": "260e722d8a2f5f38", "title": "Electronics Engineer", "company": "Helsing", "source": "greenhouse", "first_seen": "2026-07-14T15:04:52.415017+00:00"}
-{"job_id": "5d1ad7bf1bce6f83", "title": "Product Test Engineer ", "company": "Epirus", "source": "greenhouse", "first_seen": "2026-07-14T15:04:52.415017+00:00"}
-{"job_id": "dffac375ca4da37e", "title": " Senior Technical Operations Engineer ", "company": "Two Six Technologies", "source": "greenhouse", "first_seen": "2026-07-14T15:04:52.415017+00:00"}
-{"job_id": "325f5f01679e17c1", "title": "Network Engineer", "company": "Booz Allen Hamilton", "source": "workday", "first_seen": "2026-07-14T15:04:52.415017+00:00"}
-{"job_id": "6db8f55efdd79be9", "title": "Test Automation Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-07-14T15:04:52.415017+00:00"}
-{"job_id": "8b9b3064e48e1b33", "title": "Network Engineer", "company": "F5", "source": "workday", "first_seen": "2026-07-14T15:04:52.415017+00:00"}
-{"job_id": "1292b760f59e3cde", "title": "OpenShift Engineer", "company": "Booz Allen Hamilton", "source": "workday", "first_seen": "2026-07-14T15:04:52.415017+00:00"}
-{"job_id": "e175bc18741e98d8", "title": "Senior Data Engineer", "company": "Fastly", "source": "greenhouse", "first_seen": "2026-07-14T15:04:52.415017+00:00"}
 {"job_id": "1503ecf18c117643", "title": "AppSec Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-07-15T15:03:07.185058+00:00"}
 {"job_id": "69fbc169a749b0d0", "title": "Cloud Operations Engineer (2nd Shift, Weekend)", "company": "MongoDB", "source": "greenhouse", "first_seen": "2026-07-15T15:03:07.185058+00:00"}
 {"job_id": "23bae16686721813", "title": "Test Engineer Level 2/3", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-07-15T15:03:07.185058+00:00"}
@@ -720,3 +709,11 @@
 {"job_id": "66f32cd360afab21", "title": "IT Engineer Intern (Early Careers Summer 2027)", "company": "Affirm", "source": "greenhouse", "first_seen": "2026-10-10T17:53:24.948883+00:00"}
 {"job_id": "ba297ef09c70f33a", "title": "GTM AI Engineer (Automation & AI)", "company": "New Relic", "source": "greenhouse", "first_seen": "2026-10-10T17:53:24.948883+00:00"}
 {"job_id": "44cf51dfeeab553b", "title": "Cyber Data Analysis Engineer III", "company": "CACI", "source": "workday", "first_seen": "2026-10-10T17:53:24.948883+00:00"}
+{"job_id": "f40c6325674a5c9a", "title": "Software Engineer Technical Leader – Network Data Plane – Hypershield", "company": "Cisco", "source": "workday", "first_seen": "2026-10-12T21:45:57.991592+00:00"}
+{"job_id": "02a5a6769bda5d7f", "title": "Senior Network Operations Engineer – Tier 3- Clearance Sponsorship", "company": "CACI", "source": "workday", "first_seen": "2026-10-12T21:45:57.991592+00:00"}
+{"job_id": "2c941fd635149c26", "title": "Flight Software Engineer - Level 3 or 4 (Active Secret) - AHT", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-10-12T21:45:57.991592+00:00"}
+{"job_id": "10a2e7b72c11e4cd", "title": "ASIC DFT Engineer", "company": "Cisco", "source": "workday", "first_seen": "2026-10-12T21:45:57.991592+00:00"}
+{"job_id": "076e77268829fb08", "title": "Sr. Engineer  Engineer - Cloud, Auth (Hybrid)", "company": "CrowdStrike", "source": "workday", "first_seen": "2026-10-12T21:45:57.991592+00:00"}
+{"job_id": "01815edbf20d0b4a", "title": "2019369 Customer Delivery Consulting Engineer - Security", "company": "Cisco", "source": "workday", "first_seen": "2026-10-12T21:45:57.991592+00:00"}
+{"job_id": "f47f88ff98bfeffb", "title": "Network Engineer- Tier 3- Intelligence Community", "company": "CACI", "source": "workday", "first_seen": "2026-10-12T21:45:57.991592+00:00"}
+{"job_id": "f7701d43aac97cbf", "title": "Senior Lead Machine Learning Engineer , AISWP (Hybrid)", "company": "Cisco", "source": "workday", "first_seen": "2026-10-12T21:45:57.991592+00:00"}
