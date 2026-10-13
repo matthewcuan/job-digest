@@ -1,12 +1,3 @@
-{"job_id": "1503ecf18c117643", "title": "AppSec Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-07-15T15:03:07.185058+00:00"}
-{"job_id": "69fbc169a749b0d0", "title": "Cloud Operations Engineer (2nd Shift, Weekend)", "company": "MongoDB", "source": "greenhouse", "first_seen": "2026-07-15T15:03:07.185058+00:00"}
-{"job_id": "23bae16686721813", "title": "Test Engineer Level 2/3", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-07-15T15:03:07.185058+00:00"}
-{"job_id": "6b1af0c988cbd4b2", "title": "Space Payload Integration and Test Engineer Level 2-3", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-07-15T15:03:07.185058+00:00"}
-{"job_id": "58c976c05293f634", "title": "DevOps Engineer/CI/CD Pipeline", "company": "CACI", "source": "workday", "first_seen": "2026-07-15T15:03:07.185058+00:00"}
-{"job_id": "a963f4ea86e6e6af", "title": "DevOps Engineer - Level 3", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-07-15T15:03:07.185058+00:00"}
-{"job_id": "7381837938fc15a8", "title": "Leader, Software Engineering", "company": "Cisco", "source": "workday", "first_seen": "2026-07-15T15:03:07.185058+00:00"}
-{"job_id": "2976be60b384d934", "title": "Data Engineer", "company": "Booz Allen Hamilton", "source": "workday", "first_seen": "2026-07-15T15:03:07.185058+00:00"}
-{"job_id": "56134641d95bc8c5", "title": "DevOps Engineer – Level 5", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-07-15T15:03:07.185058+00:00"}
 {"job_id": "740371559ed51086", "title": "Senior Software Engineer, Full Stack - Marketplace", "company": "Snowflake", "source": "ashby", "first_seen": "2026-07-16T15:16:03.613751+00:00"}
 {"job_id": "0dc4ec4d0a9074c9", "title": "Lead Software Engineer - Applications", "company": "Job Board", "source": "greenhouse", "first_seen": "2026-07-16T15:16:03.613751+00:00"}
 {"job_id": "e5b8c7fe2e98967c", "title": "Senior Software Engineer, Open Source Server", "company": "Temporal Technologies", "source": "greenhouse", "first_seen": "2026-07-16T15:16:03.613751+00:00"}
@@ -717,3 +708,14 @@
 {"job_id": "01815edbf20d0b4a", "title": "2019369 Customer Delivery Consulting Engineer - Security", "company": "Cisco", "source": "workday", "first_seen": "2026-10-12T21:45:57.991592+00:00"}
 {"job_id": "f47f88ff98bfeffb", "title": "Network Engineer- Tier 3- Intelligence Community", "company": "CACI", "source": "workday", "first_seen": "2026-10-12T21:45:57.991592+00:00"}
 {"job_id": "f7701d43aac97cbf", "title": "Senior Lead Machine Learning Engineer , AISWP (Hybrid)", "company": "Cisco", "source": "workday", "first_seen": "2026-10-12T21:45:57.991592+00:00"}
+{"job_id": "ec728884321e3ff3", "title": "Senior Software Engineer, Foundational Storage", "company": "Sentry", "source": "ashby", "first_seen": "2026-10-13T19:53:52.649984+00:00"}
+{"job_id": "e3db33da77b4556c", "title": "Associate Technical Services Engineer II", "company": "MongoDB", "source": "greenhouse", "first_seen": "2026-10-13T19:53:52.649984+00:00"}
+{"job_id": "e858b4f72ca57708", "title": "Senior Software Engineer", "company": "Tanium", "source": "greenhouse", "first_seen": "2026-10-13T19:53:52.649984+00:00"}
+{"job_id": "ea27be5583797a82", "title": "Software Engineer", "company": "Leidos", "source": "workday", "first_seen": "2026-10-13T19:53:52.649984+00:00"}
+{"job_id": "5f3dacdd607f8680", "title": "DevOps Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-10-13T19:53:52.649984+00:00"}
+{"job_id": "6a0f67e9e3c9a660", "title": "Software Engineering Technical Leader", "company": "Cisco", "source": "workday", "first_seen": "2026-10-13T19:53:52.649984+00:00"}
+{"job_id": "6d61e352824a377b", "title": "Platform Engineer - Datacenter Infrastructure", "company": "F5", "source": "workday", "first_seen": "2026-10-13T19:53:52.649984+00:00"}
+{"job_id": "0748853d910f099c", "title": "Site Reliability Engineer II", "company": "F5", "source": "workday", "first_seen": "2026-10-13T19:53:52.649984+00:00"}
+{"job_id": "04fab0a927d147a6", "title": "2027 Computer Engineer Intern - Manhattan Beach CA", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-10-13T19:53:52.649984+00:00"}
+{"job_id": "6276dcd52d6a4404", "title": "ASIC Physical Design Engineer", "company": "Cisco", "source": "workday", "first_seen": "2026-10-13T19:53:52.649984+00:00"}
+{"job_id": "567fbadcda173f52", "title": "ASIC Design Verification Engineer", "company": "Cisco", "source": "workday", "first_seen": "2026-10-13T19:53:52.649984+00:00"}
