@@ -1,4 +1,3 @@
-{"job_id": "cc3a4e865e4f9b7d", "title": "Engineering Technician (Level 2/3)", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-07-19T14:35:53.019888+00:00"}
 {"job_id": "f321edae1141db1e", "title": "Data Engineer/Software Integrator", "company": "CACI", "source": "workday", "first_seen": "2026-07-20T15:22:49.556874+00:00"}
 {"job_id": "b0d0b93b5962b527", "title": "Data Scientist/Software Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-07-20T15:22:49.556874+00:00"}
 {"job_id": "5e1b3b30fbf90d5c", "title": "Engineer II, Software Assurance, Product Security (Remote)", "company": "CrowdStrike", "source": "workday", "first_seen": "2026-07-20T15:22:49.556874+00:00"}
@@ -722,3 +721,10 @@
 {"job_id": "742168d14c78466a", "title": "SDK Engineer - Python", "company": "Supabase", "source": "ashby", "first_seen": "2026-10-16T17:29:19.135996+00:00"}
 {"job_id": "791f9dbdc38fab8e", "title": "Network Security Engineer", "company": "Booz Allen Hamilton", "source": "indeed", "first_seen": "2026-10-16T17:29:19.135996+00:00"}
 {"job_id": "157db8c2d74a7a21", "title": "Software Test Engineer", "company": "SAIC", "source": "indeed", "first_seen": "2026-10-16T17:29:19.135996+00:00"}
+{"job_id": "8f80498e4af83c9f", "title": "Senior Analytics Engineer", "company": "Plaid", "source": "ashby", "first_seen": "2026-10-17T16:28:45.898382+00:00"}
+{"job_id": "be0a1d51863c55ce", "title": "Associate Escalation Engineer", "company": "Corelight", "source": "greenhouse", "first_seen": "2026-10-17T16:28:45.898382+00:00"}
+{"job_id": "0d90ece4d9eb5202", "title": "Senior SaaS Operations Engineer", "company": "Fastly", "source": "greenhouse", "first_seen": "2026-10-17T16:28:45.898382+00:00"}
+{"job_id": "e038bb0dcd655c0c", "title": "Senior Embedded Software Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-10-17T16:28:45.898382+00:00"}
+{"job_id": "786fe4838943cfdd", "title": "Azure Cloud Engineer - Intermediate Cloud Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-10-17T16:28:45.898382+00:00"}
+{"job_id": "c150cd7e95f4d7fe", "title": "Senior Network Engineer", "company": "F5", "source": "workday", "first_seen": "2026-10-17T16:28:45.898382+00:00"}
+{"job_id": "97b9e4f94a81dc80", "title": "Senior Cyber Security Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-10-17T16:28:45.898382+00:00"}
