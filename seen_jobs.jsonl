@@ -1,13 +1,3 @@
-{"job_id": "3b752917068552a5", "title": "Senior Cybersecurity Engineer – SOAR & UEBA", "company": "CACI", "source": "workday", "first_seen": "2026-07-22T15:18:16.039510+00:00"}
-{"job_id": "b32fc088c97791e2", "title": "Senior Machine Learning Engineer, Developer Advocacy | US | Remote", "company": "Grafana Labs", "source": "greenhouse", "first_seen": "2026-07-22T15:18:16.039510+00:00"}
-{"job_id": "4e615725067e08cd", "title": "Sr. Engineer - Database Engineering (Hybrid)", "company": "CrowdStrike", "source": "workday", "first_seen": "2026-07-22T15:18:16.039510+00:00"}
-{"job_id": "4f704bca2b58c792", "title": "Digital Signal Processing Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-07-22T15:18:16.039510+00:00"}
-{"job_id": "ec261bd142c529d1", "title": "Coating Engineering Team Lead", "company": "CACI", "source": "workday", "first_seen": "2026-07-22T15:18:16.039510+00:00"}
-{"job_id": "642312154b2828a7", "title": "Software Development Engineer II", "company": "F5", "source": "workday", "first_seen": "2026-07-22T15:18:16.039510+00:00"}
-{"job_id": "240a6774fb7c1f72", "title": "Lead Test Automation Engineer - Level 4", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-07-22T15:18:16.039510+00:00"}
-{"job_id": "0c48a8009e3c722a", "title": "Quality Engineer", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-07-22T15:18:16.039510+00:00"}
-{"job_id": "5148c403c8d9165f", "title": "Managed Security Services Engineer", "company": "F5", "source": "workday", "first_seen": "2026-07-22T15:18:16.039510+00:00"}
-{"job_id": "9011ed56194c9813", "title": "Associate Software Engineer- Infrastructure", "company": "New Relic", "source": "greenhouse", "first_seen": "2026-07-22T15:18:16.039510+00:00"}
 {"job_id": "d711d87a55f6b17c", "title": "Senior Software Engineer II - LLM Observability ", "company": "Honeycomb.io", "source": "greenhouse", "first_seen": "2026-07-23T15:27:09.006309+00:00"}
 {"job_id": "02eae195070a5c5a", "title": "Backend Engineer", "company": "Cybereason", "source": "greenhouse", "first_seen": "2026-07-23T15:27:09.006309+00:00"}
 {"job_id": "8b53a48860377b34", "title": "AI Prompt Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-07-23T15:27:09.006309+00:00"}
@@ -718,3 +708,12 @@
 {"job_id": "5987fbf3c05cd2bd", "title": "Senior Cloud Engineering Technical Leader", "company": "Cisco", "source": "workday", "first_seen": "2026-10-19T19:21:58.643794+00:00"}
 {"job_id": "3b854fe58f3e6241", "title": "Electromechanical Engineer Level 2 - Electronics Packaging - Linthicum", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-10-19T19:21:58.643794+00:00"}
 {"job_id": "3ec62c6837a7030a", "title": "Senior ASIC RTL Engineer", "company": "Cisco", "source": "workday", "first_seen": "2026-10-19T19:21:58.643794+00:00"}
+{"job_id": "51bd26c32f5ef8e8", "title": "Backend Software Engineer, SDK", "company": "LaunchDarkly", "source": "greenhouse", "first_seen": "2026-10-20T18:01:05.013344+00:00"}
+{"job_id": "0c60b618b6febe9c", "title": "IAM Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-10-20T18:01:05.013344+00:00"}
+{"job_id": "d21d34e32b1d599e", "title": "Satellite Control Network Modifications Network Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-10-20T18:01:05.013344+00:00"}
+{"job_id": "d7dfdce812e5fa8b", "title": "ServiceNow Security Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-10-20T18:01:05.013344+00:00"}
+{"job_id": "c24c7d736a805cab", "title": "2027 Associate Hazards Analyst Engineer/ Hazard Analyst Engineer - Utah", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-10-20T18:01:05.013344+00:00"}
+{"job_id": "a0603caee99583a3", "title": "Software Engineer I", "company": "Leidos", "source": "indeed", "first_seen": "2026-10-20T18:01:05.013344+00:00"}
+{"job_id": "b86ab261480aa3c7", "title": "Sr Software Engineer, Cloud - Vulnerability Management (Hybrid)", "company": "CrowdStrike", "source": "workday", "first_seen": "2026-10-20T18:01:05.013344+00:00"}
+{"job_id": "c535c9dfb355a509", "title": "2027 Engineering Intern (ME/EE) -  Wallops VA", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-10-20T18:01:05.013344+00:00"}
+{"job_id": "00746ce83390ddeb", "title": "Software Test Engineer", "company": "SAIC", "source": "indeed", "first_seen": "2026-10-20T18:01:05.013344+00:00"}
