@@ -1,13 +1,3 @@
-{"job_id": "d711d87a55f6b17c", "title": "Senior Software Engineer II - LLM Observability ", "company": "Honeycomb.io", "source": "greenhouse", "first_seen": "2026-07-23T15:27:09.006309+00:00"}
-{"job_id": "02eae195070a5c5a", "title": "Backend Engineer", "company": "Cybereason", "source": "greenhouse", "first_seen": "2026-07-23T15:27:09.006309+00:00"}
-{"job_id": "8b53a48860377b34", "title": "AI Prompt Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-07-23T15:27:09.006309+00:00"}
-{"job_id": "d30964e540fac28b", "title": "Agentic AI Engineer", "company": "Elastic", "source": "greenhouse", "first_seen": "2026-07-23T15:27:09.006309+00:00"}
-{"job_id": "131eb33915e0bcba", "title": "Software Engineer III - Security", "company": "F5", "source": "workday", "first_seen": "2026-07-23T15:27:09.006309+00:00"}
-{"job_id": "ae45c01341ca334e", "title": "Mgr, Software Development Engineering - Security", "company": "F5", "source": "workday", "first_seen": "2026-07-23T15:27:09.006309+00:00"}
-{"job_id": "0bb389c1e86dce78", "title": "GTM Engineer, AI & Automation", "company": "ClickHouse", "source": "greenhouse", "first_seen": "2026-07-23T15:27:09.006309+00:00"}
-{"job_id": "ff8e5d4e091fe173", "title": "Software Development Engineer III — Salesforce", "company": "F5", "source": "workday", "first_seen": "2026-07-23T15:27:09.006309+00:00"}
-{"job_id": "f3492d39b725e248", "title": "Senior Cloud Engineer", "company": "SailPoint", "source": "workday", "first_seen": "2026-07-23T15:27:09.006309+00:00"}
-{"job_id": "dacff7d56a240ef5", "title": "Senior Software Engineer – Control Plane (Go/Kubernetes) - Hypershield", "company": "Cisco", "source": "workday", "first_seen": "2026-07-23T15:27:09.006309+00:00"}
 {"job_id": "2ffae03b4c271cd3", "title": "Software Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-07-24T15:09:37.699163+00:00"}
 {"job_id": "3938d2681a87ecf0", "title": "Software Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-07-24T15:09:37.699163+00:00"}
 {"job_id": "c0e375949c733e88", "title": "Associate Embedded Software Engineer / Embedded Software Engineer", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-07-24T15:09:37.699163+00:00"}
@@ -717,3 +707,16 @@
 {"job_id": "b86ab261480aa3c7", "title": "Sr Software Engineer, Cloud - Vulnerability Management (Hybrid)", "company": "CrowdStrike", "source": "workday", "first_seen": "2026-10-20T18:01:05.013344+00:00"}
 {"job_id": "c535c9dfb355a509", "title": "2027 Engineering Intern (ME/EE) -  Wallops VA", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-10-20T18:01:05.013344+00:00"}
 {"job_id": "00746ce83390ddeb", "title": "Software Test Engineer", "company": "SAIC", "source": "indeed", "first_seen": "2026-10-20T18:01:05.013344+00:00"}
+{"job_id": "61609480b732331f", "title": "Senior Backend Software Engineer - Loki | NASA | Remote", "company": "Grafana Labs", "source": "greenhouse", "first_seen": "2026-10-21T18:06:26.802643+00:00"}
+{"job_id": "faab44e395049de4", "title": "Senior Forward Deployed Software Engineer", "company": "Saronic", "source": "ashby", "first_seen": "2026-10-21T18:06:26.802643+00:00"}
+{"job_id": "6224276a95651aa0", "title": "Software Engineer - Security Engineering", "company": "Plaid", "source": "ashby", "first_seen": "2026-10-21T18:06:26.802643+00:00"}
+{"job_id": "51b26a05fd90d515", "title": "Senior Applied AI Engineer 2", "company": "Drata", "source": "ashby", "first_seen": "2026-10-21T18:06:26.802643+00:00"}
+{"job_id": "6eef3000ec130f66", "title": "Senior Network Engineer", "company": "F5", "source": "workday", "first_seen": "2026-10-21T18:06:26.802643+00:00"}
+{"job_id": "208a214c5bc7f763", "title": "Electronics Test Engineer Level 2 or 3 (AHT)", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-10-21T18:06:26.802643+00:00"}
+{"job_id": "dfe99c8e0741888a", "title": "Software Engineers (Level 2 or 3) AHT", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-10-21T18:06:26.802643+00:00"}
+{"job_id": "62bc357856a0f07f", "title": "Software Engineer - Webex Web Clients", "company": "Cisco", "source": "workday", "first_seen": "2026-10-21T18:06:26.802643+00:00"}
+{"job_id": "59e51d51f8dd6c24", "title": "Senior Electronic Warfare Radio Frequency Engineer", "company": "SAIC", "source": "indeed", "first_seen": "2026-10-21T18:06:26.802643+00:00"}
+{"job_id": "d8321e067fcf917b", "title": "Capacity Engineer", "company": "Cloudflare", "source": "greenhouse", "first_seen": "2026-10-21T18:06:26.802643+00:00"}
+{"job_id": "b40ddf15b9590c57", "title": "Senior ASIC Design Verification Engineer", "company": "Cisco", "source": "workday", "first_seen": "2026-10-21T18:06:26.802643+00:00"}
+{"job_id": "bfe3598ae0efef70", "title": "Global AV Events and Production Engineer", "company": "Fastly", "source": "greenhouse", "first_seen": "2026-10-21T18:06:26.802643+00:00"}
+{"job_id": "43967324202e78d2", "title": "Software Test Engineer", "company": "SAIC", "source": "indeed", "first_seen": "2026-10-21T18:06:26.802643+00:00"}
