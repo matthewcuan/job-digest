@@ -1,10 +1,3 @@
-{"job_id": "2ffae03b4c271cd3", "title": "Software Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-07-24T15:09:37.699163+00:00"}
-{"job_id": "3938d2681a87ecf0", "title": "Software Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-07-24T15:09:37.699163+00:00"}
-{"job_id": "c0e375949c733e88", "title": "Associate Embedded Software Engineer / Embedded Software Engineer", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-07-24T15:09:37.699163+00:00"}
-{"job_id": "dd3bc5d9530217ce", "title": "Senior Integration Engineer", "company": "SAIC", "source": "indeed", "first_seen": "2026-07-24T15:09:37.699163+00:00"}
-{"job_id": "c1ccfb4d1b59e415", "title": "Mission Engineer Requirements Verification", "company": "SAIC", "source": "indeed", "first_seen": "2026-07-24T15:09:37.699163+00:00"}
-{"job_id": "b2289b8d3d1a709f", "title": "Software Engineer-NetENG", "company": "New Relic", "source": "greenhouse", "first_seen": "2026-07-24T15:09:37.699163+00:00"}
-{"job_id": "da835317dfd85331", "title": "Software Engineer– Full Stack", "company": "Cisco", "source": "workday", "first_seen": "2026-07-24T15:09:37.699163+00:00"}
 {"job_id": "9c9fa82a25bf6204", "title": "Software Engineer, AI Enablement ", "company": "Tailscale", "source": "greenhouse", "first_seen": "2026-07-25T14:42:55.147640+00:00"}
 {"job_id": "7904edb38a2164eb", "title": "Sr. Software Engineer, Cloud - Analytics Platform", "company": "CrowdStrike", "source": "workday", "first_seen": "2026-07-25T14:42:55.147640+00:00"}
 {"job_id": "08bb644cd83b0d27", "title": "Senior Quality Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-07-25T14:42:55.147640+00:00"}
@@ -720,3 +713,14 @@
 {"job_id": "b40ddf15b9590c57", "title": "Senior ASIC Design Verification Engineer", "company": "Cisco", "source": "workday", "first_seen": "2026-10-21T18:06:26.802643+00:00"}
 {"job_id": "bfe3598ae0efef70", "title": "Global AV Events and Production Engineer", "company": "Fastly", "source": "greenhouse", "first_seen": "2026-10-21T18:06:26.802643+00:00"}
 {"job_id": "43967324202e78d2", "title": "Software Test Engineer", "company": "SAIC", "source": "indeed", "first_seen": "2026-10-21T18:06:26.802643+00:00"}
+{"job_id": "ac6b6b971fc98016", "title": "ASIC DFT Engineering Technical Leader", "company": "Cisco", "source": "workday", "first_seen": "2026-10-22T18:01:57.425569+00:00"}
+{"job_id": "3ded56d28dd1f17d", "title": "Sr Full Stack Engineer", "company": "F5", "source": "workday", "first_seen": "2026-10-22T18:01:57.425569+00:00"}
+{"job_id": "439491206e457944", "title": "Environmental Engineer", "company": "Helsing", "source": "greenhouse", "first_seen": "2026-10-22T18:01:57.425569+00:00"}
+{"job_id": "07a2c0e52bcdb659", "title": "Senior Infrastructure Engineer, Observe by Snowflake", "company": "Snowflake", "source": "ashby", "first_seen": "2026-10-22T18:01:57.425569+00:00"}
+{"job_id": "606723c8eff78184", "title": "Data Engineer II — Product Data Group", "company": "F5", "source": "workday", "first_seen": "2026-10-22T18:01:57.425569+00:00"}
+{"job_id": "b4128c2865c1645f", "title": "GNC Engineering Mgr 2 - Secret (Chandler)", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-10-22T18:01:57.425569+00:00"}
+{"job_id": "e81d6036ff295183", "title": "Software Engineer - Mobile", "company": "Cisco", "source": "workday", "first_seen": "2026-10-22T18:01:57.425569+00:00"}
+{"job_id": "b5746510bb0d8d1a", "title": "Test and Evaluation Engineer", "company": "Booz Allen Hamilton", "source": "indeed", "first_seen": "2026-10-22T18:01:57.425569+00:00"}
+{"job_id": "d6f2ce1cee0b7361", "title": "Data Engineer", "company": "Booz Allen Hamilton", "source": "indeed", "first_seen": "2026-10-22T18:01:57.425569+00:00"}
+{"job_id": "3f6e86ebdeae8cff", "title": "ASIC DFT STA Engineer", "company": "Cisco", "source": "workday", "first_seen": "2026-10-22T18:01:57.425569+00:00"}
+{"job_id": "f3e5a0688715ed52", "title": "Senior QA Engineer", "company": "Cisco", "source": "workday", "first_seen": "2026-10-22T18:01:57.425569+00:00"}
