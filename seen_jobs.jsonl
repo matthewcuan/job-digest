@@ -1,10 +1,3 @@
-{"job_id": "9c9fa82a25bf6204", "title": "Software Engineer, AI Enablement ", "company": "Tailscale", "source": "greenhouse", "first_seen": "2026-07-25T14:42:55.147640+00:00"}
-{"job_id": "7904edb38a2164eb", "title": "Sr. Software Engineer, Cloud - Analytics Platform", "company": "CrowdStrike", "source": "workday", "first_seen": "2026-07-25T14:42:55.147640+00:00"}
-{"job_id": "08bb644cd83b0d27", "title": "Senior Quality Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-07-25T14:42:55.147640+00:00"}
-{"job_id": "303efdbfb1a53791", "title": "Senior Machine Learning Engineer (REMOTE)", "company": "SailPoint", "source": "workday", "first_seen": "2026-07-25T14:42:55.147640+00:00"}
-{"job_id": "3c56466cedb961bc", "title": "Software Engineer Technical Leader – Network Data Plane – Hypershield", "company": "Cisco", "source": "workday", "first_seen": "2026-07-25T14:42:55.147640+00:00"}
-{"job_id": "d16efa2dd5396df6", "title": "Flight Test Instrumentation Engineer", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-07-25T14:42:55.147640+00:00"}
-{"job_id": "0df6e5acc43138cc", "title": "ASIC Engineering Technical Leader- STA", "company": "Cisco", "source": "workday", "first_seen": "2026-07-25T14:42:55.147640+00:00"}
 {"job_id": "ea99d7d42e883ecc", "title": "Environmental Test Engineer Level 4", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-07-26T14:45:32.113881+00:00"}
 {"job_id": "b9c3dedf7dc8d3d1", "title": "Senior Cloud Engineer", "company": "Fastly", "source": "greenhouse", "first_seen": "2026-07-27T15:53:51.244691+00:00"}
 {"job_id": "690cab0b3f49ca57", "title": "Cloud Engineer", "company": "Two Six Technologies", "source": "greenhouse", "first_seen": "2026-07-27T15:53:51.244691+00:00"}
@@ -724,3 +717,13 @@
 {"job_id": "d6f2ce1cee0b7361", "title": "Data Engineer", "company": "Booz Allen Hamilton", "source": "indeed", "first_seen": "2026-10-22T18:01:57.425569+00:00"}
 {"job_id": "3f6e86ebdeae8cff", "title": "ASIC DFT STA Engineer", "company": "Cisco", "source": "workday", "first_seen": "2026-10-22T18:01:57.425569+00:00"}
 {"job_id": "f3e5a0688715ed52", "title": "Senior QA Engineer", "company": "Cisco", "source": "workday", "first_seen": "2026-10-22T18:01:57.425569+00:00"}
+{"job_id": "f2d392aa7cc14598", "title": "Associate Forward Deployed Engineer", "company": "Databricks", "source": "greenhouse", "first_seen": "2026-10-23T17:54:02.981736+00:00"}
+{"job_id": "c8e68648a8486e29", "title": "Data Center Network Operations Engineer", "company": "Cloudflare", "source": "greenhouse", "first_seen": "2026-10-23T17:54:02.981736+00:00"}
+{"job_id": "7572953de9b30e58", "title": "2027 - Software Engineering Intern, AMER", "company": "MongoDB", "source": "greenhouse", "first_seen": "2026-10-23T17:54:02.981736+00:00"}
+{"job_id": "d667857f76924216", "title": "DevOps Engineer", "company": "Vannevar", "source": "greenhouse", "first_seen": "2026-10-23T17:54:02.981736+00:00"}
+{"job_id": "8db38763bd649e6a", "title": "2027 - Summer Software Engineer Intern, Dublin", "company": "MongoDB", "source": "greenhouse", "first_seen": "2026-10-23T17:54:02.981736+00:00"}
+{"job_id": "1dadcc25319fdd72", "title": "Network Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-10-23T17:54:02.981736+00:00"}
+{"job_id": "59e556f6012a3512", "title": "Cyber Software Test Engineer", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-10-23T17:54:02.981736+00:00"}
+{"job_id": "8c043a3e227422c0", "title": "Sr Software Engineer, Cloud - Fusion (Hybrid, Sunnyvale)", "company": "CrowdStrike", "source": "workday", "first_seen": "2026-10-23T17:54:02.981736+00:00"}
+{"job_id": "3dce15b5121f7961", "title": "Network Security Engineer", "company": "Booz Allen Hamilton", "source": "indeed", "first_seen": "2026-10-23T17:54:02.981736+00:00"}
+{"job_id": "5680e8dfa2cbfbbd", "title": "Test and Evaluation Engineer", "company": "Booz Allen Hamilton", "source": "indeed", "first_seen": "2026-10-23T17:54:02.981736+00:00"}
