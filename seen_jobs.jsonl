@@ -1,14 +1,3 @@
-{"job_id": "d278e5946122eec6", "title": "Security Engineer", "company": "Chainguard", "source": "greenhouse", "first_seen": "2026-07-28T15:37:20.534568+00:00"}
-{"job_id": "0f457365cdbe1732", "title": "Engineering Lead, Web Platform", "company": "ClickHouse", "source": "greenhouse", "first_seen": "2026-07-28T15:37:20.534568+00:00"}
-{"job_id": "f823baec4e073cf8", "title": "Signals Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-07-28T15:37:20.534568+00:00"}
-{"job_id": "5c6b2deb52ffe3e0", "title": "Wind Tunnel Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-07-28T15:37:20.534568+00:00"}
-{"job_id": "27fe19333b6abc2b", "title": "2026 Associate Electromechanical Engineer/Electromechanical Engineer", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-07-28T15:37:20.534568+00:00"}
-{"job_id": "cefc57feb0b89b90", "title": "Camera Engineer ", "company": "Helsing", "source": "greenhouse", "first_seen": "2026-07-28T15:37:20.534568+00:00"}
-{"job_id": "f9110e2cdf0079ba", "title": "Distribution Engineer", "company": "Leidos", "source": "workday", "first_seen": "2026-07-28T15:37:20.534568+00:00"}
-{"job_id": "344f55d03acb8eea", "title": "Software Engineer", "company": "Cisco", "source": "workday", "first_seen": "2026-07-28T15:37:20.534568+00:00"}
-{"job_id": "ba16b5c67eb5b7ed", "title": "Senior Solution Engineer", "company": "Tanium", "source": "greenhouse", "first_seen": "2026-07-28T15:37:20.534568+00:00"}
-{"job_id": "56d04b8da99c48ec", "title": "ASIC Physical Design Engineer", "company": "Cisco", "source": "workday", "first_seen": "2026-07-28T15:37:20.534568+00:00"}
-{"job_id": "66445be4c4be2dec", "title": "Sr. Windows Sensor Engineer", "company": "CrowdStrike", "source": "workday", "first_seen": "2026-07-28T15:37:20.534568+00:00"}
 {"job_id": "4d21f27208667577", "title": "Software Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-07-29T15:34:17.119316+00:00"}
 {"job_id": "736c855e7e0086ce", "title": "2026 Associate Software / Software Engineer - Huntsville AL", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-07-29T15:34:17.119316+00:00"}
 {"job_id": "f3cde991ae71fe34", "title": "Software Engineer - Database Engineering", "company": "Snowflake", "source": "ashby", "first_seen": "2026-07-29T15:34:17.119316+00:00"}
@@ -729,3 +718,16 @@
 {"job_id": "336b72735895d1a2", "title": "Data API Engineer", "company": "Supabase", "source": "ashby", "first_seen": "2026-10-24T16:39:26.116596+00:00"}
 {"job_id": "ba94dce42b77e909", "title": "Oracle Cybersecurity Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-10-24T16:39:26.116596+00:00"}
 {"job_id": "0d8421d18a182c42", "title": "Network Engineer (Journeyman)", "company": "CACI", "source": "workday", "first_seen": "2026-10-24T16:39:26.116596+00:00"}
+{"job_id": "43c3ed8fa9a8e55f", "title": "Senior Software Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-10-26T19:23:01.285190+00:00"}
+{"job_id": "d71832460d8a2f53", "title": "Senior Integrations Engineer ", "company": "Censys", "source": "greenhouse", "first_seen": "2026-10-26T19:23:01.285190+00:00"}
+{"job_id": "990244177396093d", "title": "Lead Backend Engineer,  Studio (Hybrid)", "company": "Cisco", "source": "workday", "first_seen": "2026-10-26T19:23:01.285190+00:00"}
+{"job_id": "def3547d7d621104", "title": "Senior Software Engineer", "company": "F5", "source": "workday", "first_seen": "2026-10-26T19:23:01.285190+00:00"}
+{"job_id": "df8413ee52c75e52", "title": "DevSecOps Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-10-26T19:23:01.285190+00:00"}
+{"job_id": "3e67247706017066", "title": "Lead Tenable Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-10-26T19:23:01.285190+00:00"}
+{"job_id": "08bbcb8ff935f531", "title": "Customer Reliability Engineer", "company": "Cloudflare", "source": "greenhouse", "first_seen": "2026-10-26T19:23:01.285190+00:00"}
+{"job_id": "5e1abfa469ebc6b1", "title": "Sr Software Development Engineer", "company": "F5", "source": "workday", "first_seen": "2026-10-26T19:23:01.285190+00:00"}
+{"job_id": "ab7fc4f13f960fda", "title": "Sr. Security Engineer", "company": "F5", "source": "workday", "first_seen": "2026-10-26T19:23:01.285190+00:00"}
+{"job_id": "832da9bc8c3754b7", "title": "Energetics Lead Engineer Propulsion – Level 4: Active Secret Clearance", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-10-26T19:23:01.285190+00:00"}
+{"job_id": "78f57781c56d1f25", "title": "Algorithm Software Engineer - Level 3 or 4 (AHT)", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-10-26T19:23:01.285190+00:00"}
+{"job_id": "d6d8f81d225ca86f", "title": "Reinforcement Learning Engineer", "company": "Bugcrowd", "source": "greenhouse", "first_seen": "2026-10-26T19:23:01.285190+00:00"}
+{"job_id": "6c4d7c2c4c30bbb8", "title": "Site Reliability Engineer II", "company": "F5", "source": "workday", "first_seen": "2026-10-26T19:23:01.285190+00:00"}
