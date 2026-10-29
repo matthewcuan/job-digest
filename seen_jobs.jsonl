@@ -1,10 +1,3 @@
-{"job_id": "fa9852e23be7360c", "title": "Senior Software Engineer II - Agentic Intelligence", "company": "Honeycomb.io", "source": "greenhouse", "first_seen": "2026-07-31T15:31:28.149362+00:00"}
-{"job_id": "e4c47c6bedb77905", "title": "AI Engineer — GTM Analytics", "company": "Databricks", "source": "greenhouse", "first_seen": "2026-07-31T15:31:28.149362+00:00"}
-{"job_id": "8b2cf5e4a397ebfa", "title": "Endpoint Security Engineer III - Nessus", "company": "CACI", "source": "workday", "first_seen": "2026-07-31T15:31:28.149362+00:00"}
-{"job_id": "8566e9b6d5430810", "title": "Naval Marine Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-07-31T15:31:28.149362+00:00"}
-{"job_id": "1f7efe84f953bca0", "title": "Software Engineer - Webex Web Clients", "company": "Cisco", "source": "workday", "first_seen": "2026-07-31T15:31:28.149362+00:00"}
-{"job_id": "8b06f9f3aea4b05c", "title": "Software Engineer - Level 3/4", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-07-31T15:31:28.149362+00:00"}
-{"job_id": "0982c79cf39fa8e9", "title": "Sr. Engineer II, Cloud - CTIO (Hybrid)", "company": "CrowdStrike", "source": "workday", "first_seen": "2026-07-31T15:31:28.149362+00:00"}
 {"job_id": "45aca4c5a94a8d28", "title": "Fullstack Software Engineer II - Admin UX - Platform Applications", "company": "Elastic", "source": "greenhouse", "first_seen": "2026-08-01T14:41:54.994811+00:00"}
 {"job_id": "1fc52d7855db8833", "title": "Sr. Cloud Engineer, Falcon Cloud Security (Hybrid)", "company": "CrowdStrike", "source": "workday", "first_seen": "2026-08-01T14:41:54.994811+00:00"}
 {"job_id": "f067d12eec02d7b9", "title": "Software Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-08-01T14:41:54.994811+00:00"}
@@ -736,3 +729,16 @@
 {"job_id": "136ee0399a273686", "title": "Senior Manger, Product Security Engineering", "company": "F5", "source": "workday", "first_seen": "2026-10-28T18:53:39.476475+00:00"}
 {"job_id": "f349b19c3982cc9f", "title": "Engineering Technician 2", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-10-28T18:53:39.476475+00:00"}
 {"job_id": "65388812fa88974a", "title": "Sr. Security Engineer", "company": "F5", "source": "workday", "first_seen": "2026-10-28T18:53:39.476475+00:00"}
+{"job_id": "a659526f3e3be34e", "title": "Senior Software Engineer,  AI Infrastructure Development Platform", "company": "Skydio", "source": "ashby", "first_seen": "2026-10-29T18:59:02.934596+00:00"}
+{"job_id": "5d2e3af95d6d01f7", "title": "Modeling and Simulation Engineer (3/4)", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-10-29T18:59:02.934596+00:00"}
+{"job_id": "dccfef488bc2a07c", "title": "Chief Engineer - Airbreathing Propulsion Test", "company": "Hermeus", "source": "lever", "first_seen": "2026-10-29T18:59:02.934596+00:00"}
+{"job_id": "0b3426267e6eac21", "title": "Modeling and Simulation Engineer", "company": "SAIC", "source": "indeed", "first_seen": "2026-10-29T18:59:02.934596+00:00"}
+{"job_id": "bfc15951bd404415", "title": "Desktop Applications Engineer, Duo Desktop", "company": "Cisco", "source": "workday", "first_seen": "2026-10-29T18:59:02.934596+00:00"}
+{"job_id": "c6cfe600a076bd88", "title": "Software Engineer - Level 2 or 3 - Space AHT", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-10-29T18:59:02.934596+00:00"}
+{"job_id": "4962d184c5d84e7e", "title": "Machine Learning Engineer 2", "company": "Twilio", "source": "greenhouse", "first_seen": "2026-10-29T18:59:02.934596+00:00"}
+{"job_id": "e569d53392fc37cf", "title": "Environmental Health & Safety Engineer", "company": "Leidos", "source": "indeed", "first_seen": "2026-10-29T18:59:02.934596+00:00"}
+{"job_id": "7264c259e95a009a", "title": "Technical Consulting Engineer", "company": "Cisco", "source": "workday", "first_seen": "2026-10-29T18:59:02.934596+00:00"}
+{"job_id": "948b267383bff765", "title": "Build Engineer", "company": "Hermeus", "source": "lever", "first_seen": "2026-10-29T18:59:02.934596+00:00"}
+{"job_id": "50b247b0b0c0a260", "title": "ICAM Engineer", "company": "Booz Allen Hamilton", "source": "indeed", "first_seen": "2026-10-29T18:59:02.934596+00:00"}
+{"job_id": "f036f2c8a548d3ae", "title": "Electronics Engineer", "company": "Leidos", "source": "indeed", "first_seen": "2026-10-29T18:59:02.934596+00:00"}
+{"job_id": "d23dc9ad8d4feb4d", "title": "Engineering Technician", "company": "Cisco", "source": "workday", "first_seen": "2026-10-29T18:59:02.934596+00:00"}
