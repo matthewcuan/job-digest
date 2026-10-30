@@ -1,10 +1,3 @@
-{"job_id": "45aca4c5a94a8d28", "title": "Fullstack Software Engineer II - Admin UX - Platform Applications", "company": "Elastic", "source": "greenhouse", "first_seen": "2026-08-01T14:41:54.994811+00:00"}
-{"job_id": "1fc52d7855db8833", "title": "Sr. Cloud Engineer, Falcon Cloud Security (Hybrid)", "company": "CrowdStrike", "source": "workday", "first_seen": "2026-08-01T14:41:54.994811+00:00"}
-{"job_id": "f067d12eec02d7b9", "title": "Software Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-08-01T14:41:54.994811+00:00"}
-{"job_id": "745a944425b397d1", "title": "Outside Plant Design Engineer - Inside Plant", "company": "CACI", "source": "workday", "first_seen": "2026-08-01T14:41:54.994811+00:00"}
-{"job_id": "9d3c5d295ac0effb", "title": "2026 Associate Aeronautical Engineer / Aeronautical Engineer", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-08-01T14:41:54.994811+00:00"}
-{"job_id": "086be6e1e3b24aeb", "title": "Senior Signal Processing Engineer", "company": "Leidos", "source": "indeed", "first_seen": "2026-08-01T14:41:54.994811+00:00"}
-{"job_id": "cad7e44acf93c603", "title": "Engineering Technician 4", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-08-01T14:41:54.994811+00:00"}
 {"job_id": "96dfea4cb50d6075", "title": "Firmware Engineer", "company": "Helsing", "source": "greenhouse", "first_seen": "2026-08-03T15:57:11.465243+00:00"}
 {"job_id": "c8d0d144ea206467", "title": "Sr. Software Engineer, Vendor Semantics and Developer Experience (Remote)", "company": "CrowdStrike", "source": "workday", "first_seen": "2026-08-03T15:57:11.465243+00:00"}
 {"job_id": "bcc75f22b9c6600b", "title": "NAVWAR Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-08-03T15:57:11.465243+00:00"}
@@ -742,3 +735,20 @@
 {"job_id": "50b247b0b0c0a260", "title": "ICAM Engineer", "company": "Booz Allen Hamilton", "source": "indeed", "first_seen": "2026-10-29T18:59:02.934596+00:00"}
 {"job_id": "f036f2c8a548d3ae", "title": "Electronics Engineer", "company": "Leidos", "source": "indeed", "first_seen": "2026-10-29T18:59:02.934596+00:00"}
 {"job_id": "d23dc9ad8d4feb4d", "title": "Engineering Technician", "company": "Cisco", "source": "workday", "first_seen": "2026-10-29T18:59:02.934596+00:00"}
+{"job_id": "38c2889fa630ee96", "title": "Senior Software Engineer", "company": "Vannevar", "source": "greenhouse", "first_seen": "2026-10-30T18:49:38.434924+00:00"}
+{"job_id": "b041e95e8d70a96d", "title": "Senior Software Engineer ", "company": "Two Six Technologies", "source": "greenhouse", "first_seen": "2026-10-30T18:49:38.434924+00:00"}
+{"job_id": "977f0e1ef84fbe41", "title": "Senior Software Engineer, Edge Security", "company": "Fastly", "source": "greenhouse", "first_seen": "2026-10-30T18:49:38.434924+00:00"}
+{"job_id": "7a65a82f098391f4", "title": "Data Engineering Technical Leader - CX AI", "company": "Cisco", "source": "workday", "first_seen": "2026-10-30T18:49:38.434924+00:00"}
+{"job_id": "a931021f41308db3", "title": "Cloud DevSecOps Engineer - SOCEUR", "company": "CACI", "source": "workday", "first_seen": "2026-10-30T18:49:38.434924+00:00"}
+{"job_id": "17e92ff2ba7dabdc", "title": "IT Endpoint Engineer", "company": "Vannevar", "source": "greenhouse", "first_seen": "2026-10-30T18:49:38.434924+00:00"}
+{"job_id": "3281e2d1f3cd25bf", "title": "Senior Thermal Engineering Technical Leader", "company": "Cisco", "source": "workday", "first_seen": "2026-10-30T18:49:38.434924+00:00"}
+{"job_id": "955f5de10a2bb4c5", "title": "Associate/Engineer Tooling Level 1/2 (B-Shift)", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-10-30T18:49:38.434924+00:00"}
+{"job_id": "65aeb9ae48859e11", "title": "Guidance Navigation Control (GNC) Engineer", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-10-30T18:49:38.434924+00:00"}
+{"job_id": "f63d2ccaaa61c723", "title": "PNT Chief Engineer", "company": "Booz Allen Hamilton", "source": "indeed", "first_seen": "2026-10-30T18:49:38.434924+00:00"}
+{"job_id": "383f654fd64580e9", "title": "DevOps Platform Engineer, Senior", "company": "Booz Allen Hamilton", "source": "indeed", "first_seen": "2026-10-30T18:49:38.434924+00:00"}
+{"job_id": "6c25fa4a37363f85", "title": "ASIC Layout Engineer", "company": "Cisco", "source": "workday", "first_seen": "2026-10-30T18:49:38.434924+00:00"}
+{"job_id": "acc1f602119c6c94", "title": "Senior Network Engineer Architect", "company": "Leidos", "source": "indeed", "first_seen": "2026-10-30T18:49:38.434924+00:00"}
+{"job_id": "b02859397c16b2bc", "title": "Senior Circuit Design Engineer", "company": "Cisco", "source": "workday", "first_seen": "2026-10-30T18:49:38.434924+00:00"}
+{"job_id": "1ae28bfe1d70b415", "title": "Radar Signal Processing Engineer", "company": "Leidos", "source": "indeed", "first_seen": "2026-10-30T18:49:38.434924+00:00"}
+{"job_id": "641497ebd45959b8", "title": "Sr. Software Engineer - Sensor, MacOS  (Hybrid)", "company": "CrowdStrike", "source": "workday", "first_seen": "2026-10-30T18:49:38.434924+00:00"}
+{"job_id": "2339053d9d57a074", "title": "Communications Network Engineer Mid", "company": "Leidos", "source": "indeed", "first_seen": "2026-10-30T18:49:38.434924+00:00"}
