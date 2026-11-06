@@ -1,10 +1,3 @@
-{"job_id": "799c9fcf2a014039", "title": "Enterprise Platform Engineer", "company": "Abnormal", "source": "greenhouse", "first_seen": "2026-08-08T13:59:42.616450+00:00"}
-{"job_id": "542232e0073a4af7", "title": "Software Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-08-08T13:59:42.616450+00:00"}
-{"job_id": "9f0caa65775612e4", "title": "Application Security Engineer II", "company": "Abnormal", "source": "greenhouse", "first_seen": "2026-08-08T13:59:42.616450+00:00"}
-{"job_id": "9aa1c692dbfa716d", "title": "Privacy Engineer", "company": "Robinhood", "source": "greenhouse", "first_seen": "2026-08-08T13:59:42.616450+00:00"}
-{"job_id": "4458cee951618008", "title": "Space Vehicle and Payload Engineer", "company": "SAIC", "source": "indeed", "first_seen": "2026-08-08T13:59:42.616450+00:00"}
-{"job_id": "1d789e0db80f6a4b", "title": "Embedded Software Engineer - Photonics", "company": "CACI", "source": "workday", "first_seen": "2026-08-08T13:59:42.616450+00:00"}
-{"job_id": "abfe8618c0966b7c", "title": "SATCOM Engineer III", "company": "CACI", "source": "workday", "first_seen": "2026-08-08T13:59:42.616450+00:00"}
 {"job_id": "e31fd18ccde84a6d", "title": "Machine Learning Engineer II (Underwriting ML)", "company": "Affirm", "source": "greenhouse", "first_seen": "2026-08-09T14:01:40.902073+00:00"}
 {"job_id": "308ed95c04a3081f", "title": "Coating Engineering Team Lead", "company": "CACI", "source": "workday", "first_seen": "2026-08-10T14:33:20.490610+00:00"}
 {"job_id": "f3546ac4fa070362", "title": "Software Engineering Technical Leader", "company": "Cisco", "source": "workday", "first_seen": "2026-08-10T14:33:20.490610+00:00"}
@@ -762,3 +755,16 @@
 {"job_id": "c9d1a4ec6cb470e7", "title": "Software Engineer | Infrastructure", "company": "Gecko Robotics", "source": "ashby", "first_seen": "2026-11-05T20:42:08.860503+00:00"}
 {"job_id": "00f9e313f78f8699", "title": "Backend Software Engineer - Data Connectors", "company": "Palantir", "source": "lever", "first_seen": "2026-11-05T20:42:08.860503+00:00"}
 {"job_id": "8e370e262eb7c3b7", "title": "Senior Devops Engineer", "company": "F5", "source": "workday", "first_seen": "2026-11-05T20:42:08.860503+00:00"}
+{"job_id": "2ae60d7641dde155", "title": "Senior Software Engineer, AI Security", "company": "Tanium", "source": "greenhouse", "first_seen": "2026-11-06T19:58:58.146163+00:00"}
+{"job_id": "b52f457900ccd245", "title": "Applied AI Engineer", "company": "Scale AI", "source": "greenhouse", "first_seen": "2026-11-06T19:58:58.146163+00:00"}
+{"job_id": "936af98bdd4489bb", "title": "Full-Stack Software Engineer, (Forward Deployed), GPS", "company": "Scale AI", "source": "greenhouse", "first_seen": "2026-11-06T19:58:58.146163+00:00"}
+{"job_id": "5fd4c512c6b143c1", "title": "Applied AI Engineer II", "company": "Tanium", "source": "greenhouse", "first_seen": "2026-11-06T19:58:58.146163+00:00"}
+{"job_id": "8983d330e1e33bd9", "title": "Customer Success Engineer", "company": "GitLab", "source": "greenhouse", "first_seen": "2026-11-06T19:58:58.146163+00:00"}
+{"job_id": "f31453ba4cfb6082", "title": "Senior Network Engineer (Firewall)", "company": "CACI", "source": "workday", "first_seen": "2026-11-06T19:58:58.146163+00:00"}
+{"job_id": "6924a977ed90ce9e", "title": "SME Network Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-11-06T19:58:58.146163+00:00"}
+{"job_id": "0690e32046487c07", "title": "2027 Associate Software Engineer - Boulder CO", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-11-06T19:58:58.146163+00:00"}
+{"job_id": "0c47dcb5f8200144", "title": "Lead Automation Test Engineer - Level 4", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-11-06T19:58:58.146163+00:00"}
+{"job_id": "ff1ac919aa33d736", "title": "Maritime Software Integration and DevOps Engineer", "company": "Booz Allen Hamilton", "source": "indeed", "first_seen": "2026-11-06T19:58:58.146163+00:00"}
+{"job_id": "dd98be39c66f1e0a", "title": "Senior Software Engineer", "company": "SAIC", "source": "indeed", "first_seen": "2026-11-06T19:58:58.146163+00:00"}
+{"job_id": "1bd68201ecc3aee3", "title": "Consulting Engineer", "company": "MongoDB", "source": "greenhouse", "first_seen": "2026-11-06T19:58:58.146163+00:00"}
+{"job_id": "103d4cd6db850c25", "title": "Software Test Engineer, Senior", "company": "Booz Allen Hamilton", "source": "indeed", "first_seen": "2026-11-06T19:58:58.146163+00:00"}
