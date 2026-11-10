@@ -1,15 +1,3 @@
-{"job_id": "f2a507861ac42f6d", "title": "Forward Deployed Engineer, Applied AI", "company": "Snowflake", "source": "ashby", "first_seen": "2026-08-12T14:33:36.931558+00:00"}
-{"job_id": "2b12e6edcc27eed1", "title": "GCP DevOps Engineer", "company": "Sonatype", "source": "lever", "first_seen": "2026-08-12T14:33:36.931558+00:00"}
-{"job_id": "fbd2997bdcf1a949", "title": "Senior Solution Engineer - Washington, D.C.", "company": "Tanium", "source": "greenhouse", "first_seen": "2026-08-12T14:33:36.931558+00:00"}
-{"job_id": "9cbbd7f3b2539877", "title": "2027  Associate Engineer GNC / Engineer GNC - CA", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-08-12T14:33:36.931558+00:00"}
-{"job_id": "7d327f7af33ec19e", "title": "Launch Vehicle Software Integration Engineer", "company": "MANTECH", "source": "indeed", "first_seen": "2026-08-12T14:33:36.931558+00:00"}
-{"job_id": "d087920c88bcf910", "title": "Cloud Engineer", "company": "Cisco", "source": "workday", "first_seen": "2026-08-12T14:33:36.931558+00:00"}
-{"job_id": "c722428f574b7e03", "title": "Site Reliability Engineer III", "company": "F5", "source": "workday", "first_seen": "2026-08-12T14:33:36.931558+00:00"}
-{"job_id": "f6d0d322d5f6047b", "title": "HMGP Engineer-PowerBuilder Developer", "company": "CACI", "source": "workday", "first_seen": "2026-08-12T14:33:36.931558+00:00"}
-{"job_id": "09150d12cc9e619c", "title": "Software Engineer", "company": "Proofpoint", "source": "workday", "first_seen": "2026-08-12T14:33:36.931558+00:00"}
-{"job_id": "b39d563f1680c501", "title": "RVP, Solution Engineering - Central", "company": "Tanium", "source": "greenhouse", "first_seen": "2026-08-12T14:33:36.931558+00:00"}
-{"job_id": "1bec299461d83c66", "title": "Sr. Engineer, AI - AI Detection and Response (AIDR) (Hybrid)", "company": "CrowdStrike", "source": "workday", "first_seen": "2026-08-12T14:33:36.931558+00:00"}
-{"job_id": "f39bad860730de9e", "title": "Sr Engineer, Software", "company": "F5", "source": "workday", "first_seen": "2026-08-12T14:33:36.931558+00:00"}
 {"job_id": "ff010afac13b2c01", "title": "Sr Backend Engineer, Billing", "company": "LaunchDarkly", "source": "greenhouse", "first_seen": "2026-08-13T14:34:24.536775+00:00"}
 {"job_id": "2e55db65f879e665", "title": "Sr Backend Engineer, Identity & Access Management", "company": "LaunchDarkly", "source": "greenhouse", "first_seen": "2026-08-13T14:34:24.536775+00:00"}
 {"job_id": "84a61cb01ea24e52", "title": "Executive Business Partner, Engineering", "company": "Tailscale", "source": "greenhouse", "first_seen": "2026-08-13T14:34:24.536775+00:00"}
@@ -767,3 +755,12 @@
 {"job_id": "6795761677c67b3c", "title": "Sr. Engineer - Dev Experience Sensor", "company": "CrowdStrike", "source": "workday", "first_seen": "2026-11-09T23:01:02.304337+00:00"}
 {"job_id": "022b09395c40eaf4", "title": "Engineer Propulsion Level 3/4", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-11-09T23:01:02.304337+00:00"}
 {"job_id": "f93792f85a8bcbae", "title": "2027 Associate Electronics Engineer/Electronics Engineer", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-11-09T23:01:02.304337+00:00"}
+{"job_id": "eb69ce9931180fbd", "title": "Forward Deployed Engineer", "company": "Sentry", "source": "ashby", "first_seen": "2026-11-10T20:29:44.087659+00:00"}
+{"job_id": "52bb006d953500b1", "title": "Senior Forward Deployed Engineer", "company": "Cisco", "source": "workday", "first_seen": "2026-11-10T20:29:44.087659+00:00"}
+{"job_id": "a8ba73c962380f16", "title": "Data Center Operations Engineer", "company": "Cloudflare", "source": "greenhouse", "first_seen": "2026-11-10T20:29:44.087659+00:00"}
+{"job_id": "edc730de88fe0be1", "title": "MEM/Intune Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-11-10T20:29:44.087659+00:00"}
+{"job_id": "137603936a4c9a2b", "title": "Advanced Packaging Design Engineer (Hybrid)", "company": "Cisco", "source": "workday", "first_seen": "2026-11-10T20:29:44.087659+00:00"}
+{"job_id": "dbe79184e54b0956", "title": "Associate Aeronautical / Aeronautical Engineer - Flight Test VMS", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-11-10T20:29:44.087659+00:00"}
+{"job_id": "f20a1d0267da9aea", "title": "Software Engineer (CUDA/GPU) - Level 4", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-11-10T20:29:44.087659+00:00"}
+{"job_id": "ca93ea56c0e52c88", "title": "Sr Software Engineer", "company": "F5", "source": "workday", "first_seen": "2026-11-10T20:29:44.087659+00:00"}
+{"job_id": "2aa7ec27f3fe32d2", "title": "Managed Security Services Engineer III", "company": "F5", "source": "workday", "first_seen": "2026-11-10T20:29:44.087659+00:00"}
