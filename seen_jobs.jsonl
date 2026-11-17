@@ -1,13 +1,3 @@
-{"job_id": "3756bd0591cca091", "title": "Associate Software Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-08-19T13:59:57.324246+00:00"}
-{"job_id": "5a7bfbdcdb520589", "title": "Senior Full Stack Engineer, Enterprise, Feature Management", "company": "LaunchDarkly", "source": "greenhouse", "first_seen": "2026-08-19T13:59:57.324246+00:00"}
-{"job_id": "7b3d4635a3e84eb9", "title": "Windows Infrastructure Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-08-19T13:59:57.324246+00:00"}
-{"job_id": "8f01e0cac1bb519b", "title": "Sr. Security Engineer - Incident Response", "company": "F5", "source": "workday", "first_seen": "2026-08-19T13:59:57.324246+00:00"}
-{"job_id": "5064892fa3f80645", "title": "Electromechanical Engineer Level 3 - Linthicum", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-08-19T13:59:57.324246+00:00"}
-{"job_id": "920f313d3d74ac2c", "title": "GNC Engineer: Actuators - Level 3/4 (Chandler)", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-08-19T13:59:57.324246+00:00"}
-{"job_id": "4da933d290bc4248", "title": "Antenna Test Engineer -2nd Shift", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-08-19T13:59:57.324246+00:00"}
-{"job_id": "9c3bc34174c569f6", "title": "Mission Operations Chief Engineer, MUSV", "company": "Saronic", "source": "ashby", "first_seen": "2026-08-19T13:59:57.324246+00:00"}
-{"job_id": "3509268373cc73e8", "title": "Test Engineer / Scientist", "company": "CACI", "source": "workday", "first_seen": "2026-08-19T13:59:57.324246+00:00"}
-{"job_id": "2cef6d5681374406", "title": "Machine Learning Engineer, Detection and Tracking", "company": "Helsing", "source": "greenhouse", "first_seen": "2026-08-19T13:59:57.324246+00:00"}
 {"job_id": "80f494f2c59a0a5a", "title": "Senior Software Engineer, Backend ", "company": "Plaid", "source": "ashby", "first_seen": "2026-08-20T14:02:33.721891+00:00"}
 {"job_id": "922f1c25a967029d", "title": "Head of Engineering, AI Platform", "company": "Gusto, Inc.", "source": "greenhouse", "first_seen": "2026-08-20T14:02:33.721891+00:00"}
 {"job_id": "b8da8763147d5ec8", "title": "Senior Software Engineer - Observe by Snowflake, Data Management", "company": "Snowflake", "source": "ashby", "first_seen": "2026-08-20T14:02:33.721891+00:00"}
@@ -746,3 +736,8 @@
 {"job_id": "361e21afde03d1d8", "title": "Integration and Risk Engineer", "company": "Booz Allen Hamilton", "source": "indeed", "first_seen": "2026-11-14T18:45:44.490840+00:00"}
 {"job_id": "cc36ed3b64498ba9", "title": "2027 Associate Tool Engineer/Tool Engineer", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-11-14T18:45:44.490840+00:00"}
 {"job_id": "09d006e248818168", "title": "Sr Software Engineer - Cloud Infrastructure/SRE ", "company": "Corelight", "source": "greenhouse", "first_seen": "2026-11-16T22:56:38.412048+00:00"}
+{"job_id": "f7bc275eca7ead78", "title": "Senior Software Engineer II - Agentic Intelligence", "company": "Honeycomb.io", "source": "greenhouse", "first_seen": "2026-11-17T21:48:31.746583+00:00"}
+{"job_id": "156a6e314ea3fff6", "title": "Network Engineer, Senior", "company": "Booz Allen Hamilton", "source": "indeed", "first_seen": "2026-11-17T21:48:31.746583+00:00"}
+{"job_id": "5d9ff46580f7fac2", "title": "Software Engineer TS/SCI w Poly (Junior to Senior Levels)", "company": "Leidos", "source": "indeed", "first_seen": "2026-11-17T21:48:31.746583+00:00"}
+{"job_id": "0c1b462b753a126a", "title": "Forward Deployed Engineer (Secret Clearance Required)", "company": "Vannevar", "source": "greenhouse", "first_seen": "2026-11-17T21:48:31.746583+00:00"}
+{"job_id": "f8898a536ee1c4bf", "title": "Application Security Engineer (Part time - Friday to Monday)", "company": "Bugcrowd", "source": "greenhouse", "first_seen": "2026-11-17T21:48:31.746583+00:00"}
