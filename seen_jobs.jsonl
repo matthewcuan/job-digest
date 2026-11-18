@@ -1,13 +1,3 @@
-{"job_id": "80f494f2c59a0a5a", "title": "Senior Software Engineer, Backend ", "company": "Plaid", "source": "ashby", "first_seen": "2026-08-20T14:02:33.721891+00:00"}
-{"job_id": "922f1c25a967029d", "title": "Head of Engineering, AI Platform", "company": "Gusto, Inc.", "source": "greenhouse", "first_seen": "2026-08-20T14:02:33.721891+00:00"}
-{"job_id": "b8da8763147d5ec8", "title": "Senior Software Engineer - Observe by Snowflake, Data Management", "company": "Snowflake", "source": "ashby", "first_seen": "2026-08-20T14:02:33.721891+00:00"}
-{"job_id": "a1c5ca3f24770651", "title": "Software Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-08-20T14:02:33.721891+00:00"}
-{"job_id": "9b7530c455785117", "title": "Network Engineer IV", "company": "CACI", "source": "workday", "first_seen": "2026-08-20T14:02:33.721891+00:00"}
-{"job_id": "f750455136d76ffc", "title": "Senior DevOps Engineer ", "company": "Two Six Technologies", "source": "greenhouse", "first_seen": "2026-08-20T14:02:33.721891+00:00"}
-{"job_id": "67c49ef62a5c2da8", "title": "Sr Dir of Mfg & Test Engineering", "company": "F5", "source": "workday", "first_seen": "2026-08-20T14:02:33.721891+00:00"}
-{"job_id": "0d80865f7ac4ca5c", "title": "Senior AI/ML Engineer", "company": "PagerDuty", "source": "greenhouse", "first_seen": "2026-08-20T14:02:33.721891+00:00"}
-{"job_id": "5035ff8e7b804e06", "title": "Memory Layout Design Engineer", "company": "Cisco", "source": "workday", "first_seen": "2026-08-20T14:02:33.721891+00:00"}
-{"job_id": "6a0e20b7a5d5143f", "title": "Senior Flight Software Engineer", "company": "Hermeus", "source": "lever", "first_seen": "2026-08-20T14:02:33.721891+00:00"}
 {"job_id": "c102a632663398b7", "title": "Senior Backend Engineer, Experimentation", "company": "LaunchDarkly", "source": "greenhouse", "first_seen": "2026-08-21T14:00:42.673193+00:00"}
 {"job_id": "0fc015bcefc531a0", "title": "Developer Relations Engineer (San Francisco, CA)", "company": "Supabase", "source": "ashby", "first_seen": "2026-08-21T14:00:42.673193+00:00"}
 {"job_id": "0288ec2ba8d4e2a7", "title": "Senior Software Engineer, Cloud Growth", "company": "Temporal Technologies", "source": "greenhouse", "first_seen": "2026-08-21T14:00:42.673193+00:00"}
@@ -741,3 +731,18 @@
 {"job_id": "5d9ff46580f7fac2", "title": "Software Engineer TS/SCI w Poly (Junior to Senior Levels)", "company": "Leidos", "source": "indeed", "first_seen": "2026-11-17T21:48:31.746583+00:00"}
 {"job_id": "0c1b462b753a126a", "title": "Forward Deployed Engineer (Secret Clearance Required)", "company": "Vannevar", "source": "greenhouse", "first_seen": "2026-11-17T21:48:31.746583+00:00"}
 {"job_id": "f8898a536ee1c4bf", "title": "Application Security Engineer (Part time - Friday to Monday)", "company": "Bugcrowd", "source": "greenhouse", "first_seen": "2026-11-17T21:48:31.746583+00:00"}
+{"job_id": "2b4a9c0f1cb3c631", "title": "Lead Embedded Software Engineer", "company": "Two Six Technologies", "source": "greenhouse", "first_seen": "2026-11-18T21:29:12.290120+00:00"}
+{"job_id": "6d887817401b10bd", "title": "Cross Domain Solution Engineer", "company": "Booz Allen Hamilton", "source": "indeed", "first_seen": "2026-11-18T21:29:12.290120+00:00"}
+{"job_id": "73cb54e547552a97", "title": "Software Engineer - Cybersecurity R&D", "company": "CACI", "source": "workday", "first_seen": "2026-11-18T21:29:12.290120+00:00"}
+{"job_id": "cf57c3b0819268a4", "title": "Triton Program Security Coordinator Engineer 3/4", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-11-18T21:29:12.290120+00:00"}
+{"job_id": "09a19957b614fb83", "title": "ASIC DFT Engineer", "company": "Cisco", "source": "workday", "first_seen": "2026-11-18T21:29:12.290120+00:00"}
+{"job_id": "575580425c6d7b5b", "title": "Senior Data Platform Engineer", "company": "SailPoint", "source": "workday", "first_seen": "2026-11-18T21:29:12.290120+00:00"}
+{"job_id": "554c22aad71b25f4", "title": "Software Engineer III, Cloud  – Platform Autonomy (Hybrid)", "company": "CrowdStrike", "source": "workday", "first_seen": "2026-11-18T21:29:12.290120+00:00"}
+{"job_id": "a286f924edbff13c", "title": "Advanced Packaging Design Engineer (Hybrid)", "company": "Cisco", "source": "workday", "first_seen": "2026-11-18T21:29:12.290120+00:00"}
+{"job_id": "b0504d7ba5625f65", "title": "UI/UX Engineer", "company": "Leidos", "source": "indeed", "first_seen": "2026-11-18T21:29:12.290120+00:00"}
+{"job_id": "1c62e1f30f6b182f", "title": "Senior Test Engineer", "company": "SAIC", "source": "indeed", "first_seen": "2026-11-18T21:29:12.290120+00:00"}
+{"job_id": "18117f704e807ff1", "title": "Site Reliability Engineer II - FedRamp", "company": "F5", "source": "workday", "first_seen": "2026-11-18T21:29:12.290120+00:00"}
+{"job_id": "3e4c5807e6598746", "title": "Modeling and Simulation Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-11-18T21:29:12.290120+00:00"}
+{"job_id": "a4c7cfe4d1b6a5f6", "title": "Senior ASIC Design Verification Engineer", "company": "Cisco", "source": "workday", "first_seen": "2026-11-18T21:29:12.290120+00:00"}
+{"job_id": "4f09a40de6e750f0", "title": "ASIC DFT DV Engineer", "company": "Cisco", "source": "workday", "first_seen": "2026-11-18T21:29:12.290120+00:00"}
+{"job_id": "257c6a6976113429", "title": "Software Development Engineer III - Gainsight", "company": "F5", "source": "workday", "first_seen": "2026-11-18T21:29:12.290120+00:00"}
