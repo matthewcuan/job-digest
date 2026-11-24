@@ -1,11 +1,3 @@
-{"job_id": "31b2ba0d05bce5ea", "title": "Cloud Pipeline Data Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-08-26T14:06:44.126519+00:00"}
-{"job_id": "ab767d31c5007475", "title": "AWS Database Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-08-26T14:06:44.126519+00:00"}
-{"job_id": "6886235e4ab3dc19", "title": "Data Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-08-26T14:06:44.126519+00:00"}
-{"job_id": "f1bb0e2f2ee73d00", "title": "Robotics Autonomy Engineer", "company": "Booz Allen Hamilton", "source": "indeed", "first_seen": "2026-08-26T14:06:44.126519+00:00"}
-{"job_id": "94fb2e5dd665d48c", "title": "Security Operations Engineer", "company": "Tailscale", "source": "greenhouse", "first_seen": "2026-08-26T14:06:44.126519+00:00"}
-{"job_id": "24a81f5c93e0f7f8", "title": "Security Detection Engineer III", "company": "F5", "source": "workday", "first_seen": "2026-08-26T14:06:44.126519+00:00"}
-{"job_id": "66858c19bdd34e3e", "title": "Signal Processing Engineer", "company": "Leidos", "source": "indeed", "first_seen": "2026-08-26T14:06:44.126519+00:00"}
-{"job_id": "34a696d0e6f96444", "title": "Machine Learning Engineer II", "company": "PagerDuty", "source": "greenhouse", "first_seen": "2026-08-26T14:06:44.126519+00:00"}
 {"job_id": "100d470862ee76d0", "title": "Data Engineer", "company": "CACI", "source": "workday", "first_seen": "2026-08-27T22:59:23.194679+00:00"}
 {"job_id": "4be9eba5cfc53d57", "title": "Senior Software Engineer - Backend & AI", "company": "Cisco", "source": "workday", "first_seen": "2026-08-27T22:59:23.194679+00:00"}
 {"job_id": "ce18a343baaee992", "title": "Software Engineer -- Expert", "company": "CACI", "source": "workday", "first_seen": "2026-08-27T22:59:23.194679+00:00"}
@@ -728,3 +720,9 @@
 {"job_id": "ce05a09974a91495", "title": "Senior ASIC STA Engineer", "company": "Cisco", "source": "workday", "first_seen": "2026-11-21T20:09:41.867622+00:00"}
 {"job_id": "b42b3353c11bf8d6", "title": "Reliability Engineer Level 3", "company": "Northrop Grumman", "source": "workday", "first_seen": "2026-11-24T00:59:04.985065+00:00"}
 {"job_id": "0e5ccd921989a6ff", "title": "Backup Engineer", "company": "Leidos", "source": "workday", "first_seen": "2026-11-24T00:59:04.985065+00:00"}
+{"job_id": "1d5fd9ea550214c6", "title": "Backend Software Engineer", "company": "Cisco", "source": "workday", "first_seen": "2026-11-24T23:04:15.195811+00:00"}
+{"job_id": "02a9ce419e3d4ced", "title": "FED, Customer Success Engineer ", "company": "Orca Security", "source": "greenhouse", "first_seen": "2026-11-24T23:04:15.195811+00:00"}
+{"job_id": "f68563d956cbde8e", "title": "Network Security Engineer", "company": "Booz Allen Hamilton", "source": "indeed", "first_seen": "2026-11-24T23:04:15.195811+00:00"}
+{"job_id": "e8ff2efa6aa84427", "title": "Security Engineer – Container Security", "company": "Leidos", "source": "indeed", "first_seen": "2026-11-24T23:04:15.195811+00:00"}
+{"job_id": "80915ea9c81af735", "title": "Identity Security Engineer", "company": "SailPoint", "source": "workday", "first_seen": "2026-11-24T23:04:15.195811+00:00"}
+{"job_id": "620f11cb695809cc", "title": "ASIC Engineering Technical Leader", "company": "Cisco", "source": "workday", "first_seen": "2026-11-24T23:04:15.195811+00:00"}
